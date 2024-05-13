@@ -1,13 +1,46 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <!-- TODO 修改网页SVG -->
-    <link rel="icon" type="image/svg+xml" href="./src/image/tenzor.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>挑战网首页</title>
-  </head>
-  <body>
-    <script type="module" src="./src/main.ts"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- TODO 修改网页SVG -->
+  <link rel="icon" type="image/svg+xml" href="./src/image/tenzor.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>挑战网首页</title>
+</head>
+
+<body>
+  <!-- FIXME 左边有个箭头 -->
+  <object data="./src/image/jishu.svg" type="image/svg+xml"
+    class="enter-logo relative left-[calc(50%-7.315rem)] top-[28.68vh] w-[14.63rem] h-[8.4875rem]"></object>
+  <object data="./src//image/meigong.svg" type="image/svg+xml"
+    class="enter-logo relative left-[calc(50%-7.599rem)]  top-[calc(28.68vh-3.73rem)] w-[7.099rem] h-[12.296rem]"></object>
+  <object data="./src/image/shipin.svg" type="image/svg+xml"
+    class="enter-logo relative left-[calc(50%+0.5rem)] top-[calc(28.68vh-16rem)] w-[7.099rem] h-[12.296rem]"></object>>
+  <object data="./src/image/logo.svg" type="image/svg+xml"
+    class="enter-logo relative left-[calc(50%-9.46875rem)] top-[calc(28.68vh-16rem)] w-[18.9375rem] h-[9.634rem]"></object>>
+  <object style="opacity: 0;" data="./src/image/star.svg" type="image/svg+xml"
+    class="enter-logo relative left-[calc(50%-9.6875rem)] top-[calc(5vh-15rem)] w-[19.375rem] h-[3.3125rem]"></object>>
+
+  <div class="building absolute w-[100vw] h-[31.92vh] top-[100vh] flex justify-around">
+    <img src="./src/image/building-1.svg" alt="library"
+      class="building-library relative w-[25.925vw] h-[31.92vh] top-0">
+    <img src="./src/image/building-2.svg" alt="gate" class="building-gate relative rig w-[27.80vw] h-[15.634vh] top-0">
+    <img src="./src/image/building-3.svg" alt="classroom"
+      class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0">
+  </div>
+
+  <!-- FIXME 分辨率 -->
+  <img src="./src/image/title-bg.png"
+    class="title-bg absolute w-[117.9375rem] h-[88.5rem] left-[calc(50%-50rem)] top-[-33.43vh] opacity-0">
+  <div class="absolute w-[105.4375] h-[40.1875] top-[12.87vh] left-[calc(50%-52.71875rem)]">
+    <img src="./src/image/title.png" alt="TIAO" class="title-1 relative z-20 opacity-0" style="clip-path:xywh(0 0 100% 50%);transform-origin:25% 50%;scale: 0.1;">
+    <img src="./src/image/title.png" alt="ZHAN" class="title-2 relative z-30 top-[-40.1875rem] opacity-0" style="clip-path:xywh(0 50% 100% 50%);transform-origin:75% 50%;scale: 0.1;">
+  </div>
+
+  <img src="./src/image/list.svg" alt="list" class="list absolute w-[5.875rem] h-[5.5rem] top-[3.4259vh] left-[2.03125vw] opacity-0">
+  <img src="./src/image/mail.svg" alt="mail" class="mail absolute w-[6.4375rem] h-[6.4375rem] top-[3.4259vh] right-[3.33333vw] opacity-0">
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
 </html>

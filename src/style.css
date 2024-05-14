@@ -3,11 +3,26 @@
   padding: 0;
 }
 
-body{
-  width: 100vw;
-  height: 100vh;
-  cursor: pointer;
-  background-color: white;
+body {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+
+.intro {
+  position: relative;
+  color: white;
+  /* 怎么没用 */
+  font-size: 30px;
+  /* TODO 得导入字体 */
+  font-family: "Alimama ShuHeiTi";
+  font-weight: bold;
+  width: 38.3em;
+  height: 8.03em;
+  top: 31.4vh;
+  text-align: center;
+}
+
+.bg-mask>* {
+  opacity: 1;
 }

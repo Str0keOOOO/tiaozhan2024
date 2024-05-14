@@ -11,35 +11,93 @@
 
 <body>
   <!-- FIXME 左边有个箭头 -->
-  <object data="./src/image/jishu.svg" type="image/svg+xml"
-    class="enter-logo relative left-[calc(50%-7.315rem)] top-[28.68vh] w-[14.63rem] h-[8.4875rem]"></object>
-  <object data="./src//image/meigong.svg" type="image/svg+xml"
-    class="enter-logo relative left-[calc(50%-7.599rem)]  top-[calc(28.68vh-3.73rem)] w-[7.099rem] h-[12.296rem]"></object>
-  <object data="./src/image/shipin.svg" type="image/svg+xml"
-    class="enter-logo relative left-[calc(50%+0.5rem)] top-[calc(28.68vh-16rem)] w-[7.099rem] h-[12.296rem]"></object>>
-  <object data="./src/image/logo.svg" type="image/svg+xml"
-    class="enter-logo relative left-[calc(50%-9.46875rem)] top-[calc(28.68vh-16rem)] w-[18.9375rem] h-[9.634rem]"></object>>
-  <object style="opacity: 0;" data="./src/image/star.svg" type="image/svg+xml"
-    class="enter-logo relative left-[calc(50%-9.6875rem)] top-[calc(5vh-15rem)] w-[19.375rem] h-[3.3125rem]"></object>>
+  <!-- 相对位置再调一下 -->
+  <div class="bg-1 bg-white cursor-pointer w-[100vw] h-[100vh]">
+    <object data="./src/image/jishu.svg" type="image/svg+xml"
+      class="enter-logo relative left-[calc(50%-7.315rem)] top-[28.68vh] w-[14.63rem] h-[8.4875rem]"></object>
+    <object data="./src//image/meigong.svg" type="image/svg+xml"
+      class="enter-logo relative left-[calc(50%-7.599rem)]  top-[calc(28.68vh-3.73rem)] w-[7.099rem] h-[12.296rem]"></object>
+    <object data="./src/image/shipin.svg" type="image/svg+xml"
+      class="enter-logo relative left-[calc(50%+0.5rem)] top-[calc(28.68vh-16rem)] w-[7.099rem] h-[12.296rem]"></object>
+    <object data="./src/image/logo.svg" type="image/svg+xml"
+      class="enter-logo relative left-[calc(50%-9.46875rem)] top-[calc(28.68vh-16rem)] w-[18.9375rem] h-[9.634rem]"></object>
+    <object style="opacity: 0;" data="./src/image/star.svg" type="image/svg+xml"
+      class="enter-logo relative left-[calc(50%-9.6875rem)] top-[calc(5vh-15rem)] w-[19.375rem] h-[3.3125rem]"></object>
+  </div>
 
-  <div class="building absolute w-[100vw] h-[31.92vh] top-[100vh] flex justify-around">
-    <img src="./src/image/building-1.svg" alt="library"
-      class="building-library relative w-[25.925vw] h-[31.92vh] top-0">
-    <img src="./src/image/building-2.svg" alt="gate" class="building-gate relative rig w-[27.80vw] h-[15.634vh] top-0">
-    <img src="./src/image/building-3.svg" alt="classroom"
-      class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0">
+  <!-- TODO 这里学校好像在他所在矩形下面矩形是有透明度的 -->
+  <div class="bg-title fixed bg-black w-[100vw] h-[100vh] ">
+    <div class="building fixed w-[100vw] h-[31.92vh] top-[100vh] flex justify-around ">
+      <img src="./src/image/building-1.svg" alt="library"
+        class="building-library relative w-[25.925vw] h-[31.92vh] top-0">
+      <img src="./src/image/building-2.svg" alt="gate"
+        class="building-gate relative rig w-[27.80vw] h-[15.634vh] top-0">
+      <img src="./src/image/building-3.svg" alt="classroom"
+        class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0">
+    </div>
   </div>
 
   <!-- FIXME 分辨率 -->
   <img src="./src/image/title-bg.png"
-    class="title-bg absolute w-[117.9375rem] h-[88.5rem] left-[calc(50%-50rem)] top-[-33.43vh] opacity-0">
-  <div class="absolute w-[105.4375] h-[40.1875] top-[12.87vh] left-[calc(50%-52.71875rem)]">
-    <img src="./src/image/title.png" alt="TIAO" class="title-1 relative z-20 opacity-0" style="clip-path:xywh(0 0 100% 50%);transform-origin:25% 50%;scale: 0.1;">
-    <img src="./src/image/title.png" alt="ZHAN" class="title-2 relative z-30 top-[-40.1875rem] opacity-0" style="clip-path:xywh(0 50% 100% 50%);transform-origin:75% 50%;scale: 0.1;">
+    class="title-bg fixed w-[117.9375rem] h-[88.5rem] left-[calc(50%-50rem)] top-[-33.43vh] opacity-0 ">
+  <div class="fixed w-[105.4375] h-[40.1875] top-[12.87vh] left-[calc(50%-52.71875rem)] ">
+    <img src="./src/image/title.png" alt="TIAO" class="title-1 relative opacity-0"
+      style="clip-path:xywh(0 0 100% 50%);transform-origin:25% 50%;scale: 0.1;">
+    <img src="./src/image/title.png" alt="ZHAN" class="title-2 relative top-[-40.1875rem] opacity-0"
+      style="clip-path:xywh(0 50% 100% 50%);transform-origin:75% 50%;scale: 0.1;">
+  </div>
+  <!-- FIXME 不能只搞透明度不然还是能被点击 -->
+  <img src="./src/image/list.svg" alt="list"
+    class="list absolute w-[5.875rem] h-[5.5rem] top-[3.4259vh] left-[2.03125vw] opacity-0 hover:scale-110 hover:cursor-pointer transition-all">
+  <img src="./src/image/mail.svg" alt="mail"
+    class="mail absolute w-[6.4375rem] h-[6.4375rem] top-[3.4259vh] right-[3.33333vw] opacity-0 hover:scale-110 hover:cursor-pointer transition-all">
+
+  <!--FIXME  好像left坐标没找对暂时瞪眼法解决的 -->
+  <!-- TODO 居中和尺寸没有搞找时间搞一下 -->
+  <ul
+    class="sidebar-left absolute w-[31.09vw] h-[120.28vh] top-[-6vh] right-[100vw] bg-[#414141] z-40 flex flex-col justify-evenly items-center">
+    <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48" draggable="false">
+    <div>
+      <li class="text-white">挑战首页</li>
+      <li class="text-[#ACACAC]"><a href="https://tuanwei.xjtu.edu.cn/" target="_blank">交大青年之声</a></li>
+      <li class="text-[#ACACAC]"><a href="https://shijian.tiaozhan.com/" target="_blank">社会实践平台</a></li>
+      <li class="text-[#ACACAC]"><a href="https://tuanwei.xjtu.edu.cn/apply/" target="_blank">公共资源申请</a></li>
+    </div>
+  </ul>
+  <div
+    class="sidebar-right absolute w-[31.09vw] h-[120.28vh] top-[-6vh] left-[100vw] bg-[#414141] z-40 flex flex-col justify-evenly items-center">
+    <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48" draggable="false">
+    <div>
+      <div>联系邮箱:</div>
+      <a href="mailto:tiaozhan@tiaozhan.com">tiaozhan@tiaozhan.com</a>
+    </div>
   </div>
 
-  <img src="./src/image/list.svg" alt="list" class="list absolute w-[5.875rem] h-[5.5rem] top-[3.4259vh] left-[2.03125vw] opacity-0">
-  <img src="./src/image/mail.svg" alt="mail" class="mail absolute w-[6.4375rem] h-[6.4375rem] top-[3.4259vh] right-[3.33333vw] opacity-0">
+  <img src="./src/image/bottom-arrow.svg" alt="下拉"
+    class="bottom-arrow absolute w-[1.915rem] h-[1.05rem] top-[96.9vh] left-[calc(50%-0.9575rem)]">
+
+  <div class="bg-2 bg-black w-[100vw] h-[100vh]">
+    <div
+      class="bg-mask bg-gradient-to-t from-black to-transparent w-[100vw] h-[100vh] top-[100vh] flex flex-col items-center z-10 overflow-hidden opacity-85">
+      <div class="intro">不了解挑战网？<br>
+        挑战网于2001年成立，长期致力于互联网新媒体的产品研发，在校团委的指导下，已掌握大量的专业知识并形成了完整的部门
+        体系。同时，挑战网不断为交大师生提供更加便捷优质的服务，积极参与各类比赛，并将影响力辐射至校园之外的广阔天地。
+      </div>
+      <!-- FIXME 不居中 -->
+      <div class="intro text-[#FF7958] w-[5em] h-[3em] translate-y-[2.41vh]">
+        了解更多<br>点击辉光管
+      </div>
+      <img src="./src/image/bottom-arrow.svg" alt="下拉"
+        class="bottom-arrow relative w-[1.915rem] h-[1.05rem] translate-y-[36vh]">
+      <object data="./src/image/monitor-mid.svg" type="image/svg+xml"
+        class="monitor-mid relative w-[38vw] h-[86.94vh] top-[40vh]"></object>
+      <object data="./src/image/monitor-left.svg" type="image/svg+xml"
+        class="monitor-mid absolute w-[29.1vw] h-[96.93vh] top-[102.54vh] left-[-20.41vw]"></object>
+      <object data="./src/image/monitor-right.svg" type="image/svg+xml"
+        class="monitor-mid absolute w-[39.01vw] h-[96.36vh] top-[103.8vh] left-[94.7vw]"></object>
+    </div>
+  </div>
+
   <script type="module" src="./src/main.ts"></script>
 </body>
 

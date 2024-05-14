@@ -1,26 +1,28 @@
 import anime from "animejs"
 
+// FIXME 还没弄
 var isEnter: boolean = false
 export async function enter() {
-  if (!isEnter) {
-    var body = document.body
-    body.addEventListener("click", () => {
-      bodyAnime()
+  document.body.addEventListener("click", () => {
+    if (!isEnter) {
+      bgAnime()
       logoColor()
       logoRotate()
       buildingUp()
       title()
       sidebar()
       // FIXME 元素上的cursor有问题
-      body.style.cursor = "default"
-    })
-  }
+      document.body.style.cursor = "default"
+      document.body.style.overflowY="scroll";
+      isEnter = true
+    }
+  })
 }
 
-function bodyAnime() {
-  var body = document.body
+
+function bgAnime() {
   anime({
-    targets: body,
+    targets: document.querySelector('.bg-1'),
     backgroundColor: '#000000',
   })
 }
@@ -60,15 +62,15 @@ function logoColor() {
   anime({
     targets: logo[3],
     top: [
-      {value:'-53vh',duration:100,delay:2500}
+      { value: '-53vh', duration: 100, delay: 2500 }
     ],
     opacity: [
-      {value:0,duration:200,delay:0},
-      {value:1,duration:500,delay:2500}
+      { value: 0, duration: 200, delay: 0 },
+      { value: 1, duration: 500, delay: 2500 }
     ],
     scale: [
-      {value:0.1,duration:200,delay:0},
-      {value:0.5,duration:500,delay:2500}
+      { value: 0.1, duration: 200, delay: 0 },
+      { value: 0.5, duration: 500, delay: 2500 }
     ],
     duration: 200,
     delay: 0,
@@ -192,19 +194,33 @@ function title() {
   }
 }
 
-function sidebar(){
+function sidebar() {
   // 时间点3000
   anime({
     targets: document.querySelector('.list'),
-    opacity:1,
-    easing:'linear',
+    opacity: 1,
+    easing: 'linear',
     duration: 500,
     delay: 2500
   })
   anime({
     targets: document.querySelector('.mail'),
-    opacity:1,
-    easing:'linear',
+    opacity: 1,
+    easing: 'linear',
+    duration: 500,
+    delay: 2500
+  })
+  anime({
+    targets: document.querySelector('.sidebar-left'),
+    right: '97.5vw',
+    easing: 'linear',
+    duration: 500,
+    delay: 2500
+  })
+  anime({
+    targets: document.querySelector('.sidebar-right'),
+    left: '97.5vw',
+    easing: 'linear',
     duration: 500,
     delay: 2500
   })

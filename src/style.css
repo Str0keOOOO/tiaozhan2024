@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Alimama ShuHeiTi';
 }
 
 body {
@@ -12,17 +13,16 @@ body {
 .intro {
   position: relative;
   color: white;
-  /* 怎么没用 */
-  font-size: 30px;
-  /* TODO 得导入字体 */
-  font-family: "Alimama ShuHeiTi";
+  font-size: 1.5625vw;
   font-weight: bold;
-  width: 38.3em;
-  height: 8.03em;
+  width: 59.84375vw;
+  height: 22.31481481vh;
   top: 31.4vh;
   text-align: center;
+  line-height: 2.60vw;
 }
 
-.bg-mask>* {
-  opacity: 1;
+@font-face {
+  font-family: 'Alimama ShuHeiTi';
+  src: url(./css/AlimamaShuHeiTi-Bold.ttf);
 }

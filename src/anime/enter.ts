@@ -1,8 +1,23 @@
 import anime from "animejs"
+import { scrollToTop } from "./scrollToTop"
+
+let bodyMask = document.querySelector('.body-mask') as any
+let list = document.querySelector('.list') as any
+let mail = document.querySelector('.mail') as any
+let enterLogoMask = document.querySelector('.enter-logo-mask') as any
+let tiaozhan = document.querySelector('.tiaozhan') as any
+let logo = document.querySelectorAll('.enter-logo') as any
+let jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
+let meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
+let meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
+let shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
+let building = document.querySelector('.building') as any
+let buildingLibrary = document.querySelector('.building-library')
+let buildingGate = document.querySelector('.building-gate')
+let buildingClassroom = document.querySelector('.building-classroom')
 
 var isEnter: boolean = false
 export async function enterAnime() {
-  var bodyMask = document.querySelector('.body-mask') as any
   bodyMask.addEventListener("click", () => {
     if (!isEnter) {
       bgAnime()
@@ -12,25 +27,19 @@ export async function enterAnime() {
       title()
       sidebar()
       document.body.style.overflowY = "visible";
-      var tiaozhan = document.querySelector('.tiaozhan') as any
       tiaozhan.style.overflow = 'visible'
       bodyMask.style.display = 'none'
       setTimeout(() => {
         document.body.style.overflowY = "scroll";
-        var list = document.querySelector('.list') as any
         list.style.visibility = 'visible'
-        var mail = document.querySelector('.mail') as any
         mail.style.visibility = 'visible'
-        var enterLogoMask = document.querySelector('.enter-logo-mask') as any
         enterLogoMask.style.display = 'block'
       }, 3000);
       document.body.style.cursor = "default"
       isEnter = true
     }
   })
-  var enterLogoMask = document.querySelector('.enter-logo-mask') as any
   enterLogoMask.addEventListener('click', () => {
-    console.log(2);
     if (isEnter) {
       bgAnimeBack()
       scrollToTop()
@@ -41,14 +50,10 @@ export async function enterAnime() {
       document.body.style.overflowY = "hidden";
       enterLogoMask.style.display = 'none'
       setTimeout(() => {
-        var list = document.querySelector('.list') as any
         list.style.visibility = 'hidden'
-        var mail = document.querySelector('.mail') as any
         mail.style.visibility = 'hidden'
-        var enterLogoMask = document.querySelector('.enter-logo-mask') as any
         enterLogoMask.style.display = 'none'
         document.body.style.cursor = "pointer"
-        var bodyMask = document.querySelector('.body-mask') as any
         bodyMask.style.display = 'block'
       }, 2000);
       isEnter = false
@@ -64,11 +69,7 @@ function bgAnime() {
 }
 
 function logoColor() {
-  var logo = document.querySelectorAll('.enter-logo') as any
-  var jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
-  var meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
-  var meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
-  var shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
+
   anime({
     targets: jishuLine,
     stroke: '#0AFFE6',
@@ -117,7 +118,6 @@ function logoColor() {
 }
 
 function logoRotate() {
-  var logo = document.querySelectorAll('.enter-logo')
   anime({
     targets: logo[0],
     translateY: '7.31rem',
@@ -159,10 +159,6 @@ function logoRotate() {
 }
 
 function buildingUp() {
-  var building = document.querySelector('.building') as any
-  var buildingLibrary = document.querySelector('.building-library')
-  var buildingGate = document.querySelector('.building-gate')
-  var buildingClassroom = document.querySelector('.building-classroom')
   building.style.opacity = '1'
   anime({
     targets: building,
@@ -256,7 +252,6 @@ function sidebar() {
 }
 // 回退动画
 function bgAnimeBack() {
-  var logo = document.querySelectorAll('.enter-logo') as any
   anime({
     targets: logo[3],
     translateY: 0,
@@ -285,19 +280,6 @@ function bgAnimeBack() {
     duration: 500,
     delay: 0
   })
-}
-
-function scrollToTop() {
-  var topHeight = document.documentElement.scrollTop
-  var speed = topHeight / 10 > 100 ? topHeight / 10 : 100
-  scrollBy(0, -speed)
-  // 模拟鼠标向上滚动事件
-  var scrolldelay = setTimeout('scrollToTop()', 50) as any
-  // 清除滚动事件，避免无法向下移动
-  if (topHeight === 0) {
-    clearTimeout(scrolldelay);
-    scrolldelay = null;
-  }
 }
 
 function titleBack() {
@@ -351,11 +333,6 @@ function sidebarBack() {
 }
 
 function colorBack() {
-  var logo = document.querySelectorAll('.enter-logo') as any
-  var jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
-  var meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
-  var meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
-  var shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
   anime({
     targets: document.querySelector('.bg-1'),
     backgroundColor: '#FFFFFF',
@@ -389,10 +366,6 @@ function colorBack() {
 }
 
 function buildingDown() {
-  var building = document.querySelector('.building')
-  var buildingLibrary = document.querySelector('.building-library')
-  var buildingGate = document.querySelector('.building-gate')
-  var buildingClassroom = document.querySelector('.building-classroom')
   anime({
     targets: building,
     opacity: { value: 0, duration: 200, delay: 0 },

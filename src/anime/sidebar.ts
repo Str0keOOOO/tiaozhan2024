@@ -1,11 +1,13 @@
 import anime from "animejs";
+import { scrollToTop } from "./scrollToTop";
+
+let sidebarLeft = document.querySelector('.sidebar-left')
+let sidebarRight = document.querySelector('.sidebar-right')
+let list = document.querySelector('.list') as any
+let mail = document.querySelector('.mail') as any
+let mask = document.querySelector('.sidebar-mask') as any
 
 export async function sidebar() {
-  var sidebarLeft = document.querySelector('.sidebar-left')
-  var sidebarRight = document.querySelector('.sidebar-right')
-  var list = document.querySelector('.list') as any
-  var mail = document.querySelector('.mail') as any
-  var mask = document.querySelector('.sidebar-mask') as any
   list.addEventListener('click', () => {
     scrollToTop()
     document.body.style.overflowY = "hidden";
@@ -62,17 +64,4 @@ export async function sidebar() {
       duration: 200,
     })
   })
-}
-
-function scrollToTop() {
-  var topHeight = document.documentElement.scrollTop
-  var speed = topHeight / 10 > 100 ? topHeight / 10 : 100
-  scrollBy(0, -speed)
-  // 模拟鼠标向上滚动事件
-  var scrolldelay = setTimeout('scrollToTop()', 50) as any
-  // 清除滚动事件，避免无法向下移动
-  if (topHeight === 0) {
-    clearTimeout(scrolldelay);
-    scrolldelay = null;
-  }
 }

@@ -40,6 +40,7 @@
       class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0 ml-[7.14vw]">
     <div class="building-mask w-[100%] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
   </div>
+  <!-- FIXME 后期改一下不让他压缩 -->
   <img src="./src/image/title-bg.png"
     class="title-bg fixed w-[98.28125vw] h-[131.11vh] left-[1.71875vw] top-[-33.43vh] opacity-0 z-20">
   <div class="fixed w-[87.8646vw] h-[59.537vh] top-[12.9vh] left-[6.09375vw] z-20">
@@ -91,12 +92,23 @@
       <img src="./src/image/bottom-arrow.svg" alt="下拉"
         class="bottom-arrow relative w-[1.915rem] h-[1.05rem] translate-y-[36vh]">
       <object data="./src/image/monitor-mid.svg" type="image/svg+xml"
-        class="monitor-mid relative w-[38vw] h-[86.94vh] top-[40vh] z-50"></object>
+        class="monitor-mid relative w-[38vw] h-[86.94vh] top-[40vh]"></object>
       <object data="./src/image/monitor-left.svg" type="image/svg+xml"
         class="monitor-left absolute w-[29.1vw] h-[96.93vh] top-[2.54vh] left-[-20.41vw]"></object>
       <object data="./src/image/monitor-right.svg" type="image/svg+xml"
         class="monitor-right absolute w-[39.01vw] h-[96.36vh] top-[3.8vh] left-[94.7vw]"></object>
     </div>
+  </div>
+  <!-- FIXME  大小有问题 -->
+  <div
+    class="monitor-mid-mask absolute w-[26.6146vw] h-[20.3278vh] left-[36.213vw] top-[170.4vh] z-50 flex justify-between">
+    <div class="mid-lamp-left w-[26%] h-[100%] cursor-pointer"></div>
+    <div class="mid-lamp-mid w-[26%] h-[100%] cursor-pointer"></div>
+    <div class="mid-lamp-right w-[26%] h-[100%] cursor-pointer"></div>
+  </div>
+  <div class="monitor-left-mask absolute w-[6.5vw] h-[61vh] left-[-7.815vw] top-[116.885vh] z-50 flex flex-col justify-between">
+    <div class="left-lamp-up w-[100%] h-[31.414%] cursor-pointer"></div>
+    <div class="left-lamp-down w-[100%] h-[32.414%] cursor-pointer"></div>
   </div>
   <script type="module" src="./src/main.ts"></script>
 </body>

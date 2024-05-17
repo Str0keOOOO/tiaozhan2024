@@ -2692,14 +2692,14 @@
     <g id="光下" transform="translate(173 1717)">
       <text id="部_门-3" data-name="部
 门" transform="translate(10 89)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">部</tspan><tspan x="0" y="117">门</tspan></text>
-      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)"/>
-      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)"/>
+      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)" opacity="0"/>
+      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)" opacity="0"/>
     </g>
     <g id="光上" transform="translate(173 1257)">
       <text id="历_程-3" data-name="历
 程" transform="translate(11 90)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">历</tspan><tspan x="0" y="117">程</tspan></text>
-      <circle id="椭圆_19-2" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)"/>
-      <circle id="椭圆_20-2" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)"/>
+      <circle id="椭圆_19-2" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)" opacity="0"/>
+      <circle id="椭圆_20-2" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)" opacity="0"/>
     </g>
   </g>
 </svg>

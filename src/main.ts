@@ -5,8 +5,7 @@ import { sidebar } from './anime/sidebar'
 import { monitor } from './anime/monitor'
 import { toTop } from './anime/scrollToTop'
 
-// FIXME  怎么没用
-// window.onbeforeunload = toTop
+window.onbeforeunload = toTop
 
 enterAnime()
 sidebar()

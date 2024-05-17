@@ -16,5 +16,4 @@ export async function toTop() {
   document.documentElement.scrollTop = 0;
   // 非ie
   document.body.scrollTop = 0;
-  document.body.style.overflowY = 'hidden'
 }

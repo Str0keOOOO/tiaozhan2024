@@ -4,10 +4,6 @@
       <stop offset="0" stop-color="#b3a090"/>
       <stop offset="1" stop-color="#a9a19a"/>
     </linearGradient>
-    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#c0ffd7" stop-opacity="0.341"/>
-      <stop offset="1" stop-color="#c0ffd7" stop-opacity="0"/>
-    </radialGradient>
   </defs>
   <g id="左显示器-整体" transform="translate(77 -1111.3)">
     <g id="铜线2" transform="translate(-18)">
@@ -2690,16 +2686,28 @@
       </g>
     </g>
     <g id="光下" transform="translate(173 1717)">
+      <defs>
+        <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="#c0ffd7" stop-opacity="0.341"/>
+          <stop offset="1" stop-color="#c0ffd7" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
       <text id="部_门-3" data-name="部
 门" transform="translate(10 89)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">部</tspan><tspan x="0" y="117">门</tspan></text>
       <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)" opacity="0"/>
       <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)" opacity="0"/>
     </g>
     <g id="光上" transform="translate(173 1257)">
+      <defs>
+        <radialGradient id="radial-gradient_1" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+          <stop offset="0" stop-color="#c0ffd7" stop-opacity="0.341"/>
+          <stop offset="1" stop-color="#c0ffd7" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
       <text id="历_程-3" data-name="历
-程" transform="translate(11 90)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">历</tspan><tspan x="0" y="117">程</tspan></text>
-      <circle id="椭圆_19-2" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)" opacity="0"/>
-      <circle id="椭圆_20-2" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)" opacity="0"/>
+    程" transform="translate(11 90)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">历</tspan><tspan x="0" y="117">程</tspan></text>
+      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient_1)" opacity="0"/>
+      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient_1)" opacity="0"/>
     </g>
   </g>
 </svg>

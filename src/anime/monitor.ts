@@ -1,22 +1,5 @@
 import anime from "animejs"
 
-// let dict: { [key1: string]: { [key2: string]: number } } = {
-//   blank: {
-//     meigong: 1,
-//     jishu: 2,
-//     shiping: 3,
-//   },
-//   licheng: {
-//     qi: 4,
-//     cheng: 5,
-//     zhuan: 6
-//   },
-//   bumen: {
-//     meigong: 7,
-//     jishu: 8,
-//     shiping: 9,
-//   }
-// }
 let monitorMid = document.querySelector('.monitor-mid') as any
 let monitorLeft = document.querySelector('.monitor-left') as any
 let monitorRight = document.querySelector('.monitor-right') as any
@@ -44,6 +27,22 @@ let leftMaskDown = document.querySelector('.left-lamp-down') as any
 let rightCanvas = monitorRight.contentDocument.querySelector('#真_显示屏')
 let rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
 
+// 记录状态
+let dict: { [key1: string]: any[] } = {
+  licheng: [
+    midMaskLeft,
+    midMaskMid,
+    midMaskRight,
+  ],
+  bumen: [
+    midMaskLeft,
+    midMaskMid,
+    midMaskRight,
+  ]
+}
+let state1: string
+let state2: any
+
 export async function monitor() {
   midLampControl()
   cursorPointer()
@@ -62,7 +61,6 @@ export async function monitor() {
   leftLampControl()
   rightMonitorshow(leftMaskUp)
   rightMonitorshow(leftMaskDown)
-
 }
 
 function cursorPointer() {
@@ -84,11 +82,13 @@ function midLampMidControl() {
   midLampMidLine.forEach((line: any) => {
     line.style.transition = "stroke 0.5s";
   });
-  midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis)
-  midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis)
+  midLampMid.querySelector('#承').style.transition = "fill 0.5s"
+  midLampMid.querySelector('#承_连接线').style.transition = "stroke 0.5s"
+  midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
+  midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
 }
 
-function midLampMidRemoveOverLis() {
+function midLampMidRemoveOverLis1() {
   midLampMid.querySelector('#光').style.opacity = '0.52'
   midLampMid.querySelector('#技_连接线').style.stroke = '#0AFFE6'
   midLampMid.querySelector('#技术部 path').style.stroke = '#0AFFE6'
@@ -97,7 +97,7 @@ function midLampMidRemoveOverLis() {
   });
 }
 
-function midLampMidRemoveOutLis() {
+function midLampMidRemoveOutLis1() {
   midLampMid.querySelector('#光').style.opacity = '0'
   midLampMid.querySelector('#技_连接线').style.stroke = '#6e6e6e'
   midLampMid.querySelector('#技术部 path').style.stroke = '#6e6e6e'
@@ -106,17 +106,31 @@ function midLampMidRemoveOutLis() {
   });
 }
 
+function midLampMidRemoveOverLis2() {
+  midLampMid.querySelector('#光').style.opacity = '0.52'
+  midLampMid.querySelector('#承').style.fill = '#0AFFE6'
+  midLampMid.querySelector('#承_连接线').style.stroke = '#0AFFE6'
+}
+
+function midLampMidRemoveOutLis2() {
+  midLampMid.querySelector('#光').style.opacity = '0'
+  midLampMid.querySelector('#承').style.fill = '#6E6E6E'
+  midLampMid.querySelector('#承_连接线').style.stroke = '#6E6E6E'
+}
+
 function midLampLeftControl() {
   midLampLeft.querySelector('#光').style.transition = "opacity 0.5s";
   midLampLeft.querySelector('#美_连接线').style.transition = "stroke 0.5s";
   midLampLeft.querySelector('#美工部 line').style.transition = "stroke 0.5s";
   midLampLeft.querySelector('#美工部 path').style.transition = "stroke 0.5s";
   midLampLeft.querySelector('#美工部 circle').style.transition = "fill 0.5s";
-  midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis)
-  midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis)
+  midLampLeft.querySelector('#起').style.transition = "fill 0.5s"
+  midLampLeft.querySelector('#起_连接线').style.transition = "stroke 0.5s"
+  midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis1)
+  midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis1)
 }
 
-function midLampLeftRemoveOverLis() {
+function midLampLeftRemoveOverLis1() {
   midLampLeft.querySelector('#光').style.opacity = '0.52'
   midLampLeft.querySelector('#美_连接线').style.stroke = '#74DDFF'
   midLampLeft.querySelector('#美工部 line').style.stroke = '#74DDFF'
@@ -124,7 +138,7 @@ function midLampLeftRemoveOverLis() {
   midLampLeft.querySelector('#美工部 circle').style.fill = '#74DDFF'
 }
 
-function midLampLeftRemoveOutLis() {
+function midLampLeftRemoveOutLis1() {
   midLampLeft.querySelector('#光').style.opacity = '0'
   midLampLeft.querySelector('#美_连接线').style.stroke = '#6e6e6e'
   midLampLeft.querySelector('#美工部 line').style.stroke = '#6e6e6e'
@@ -132,17 +146,32 @@ function midLampLeftRemoveOutLis() {
   midLampLeft.querySelector('#美工部 circle').style.fill = '#6e6e6e'
 }
 
+function midLampLeftRemoveOverLis2() {
+  midLampLeft.querySelector('#光').style.opacity = '0.52'
+  midLampLeft.querySelector('#起').style.fill = '#74DDFF'
+  midLampLeft.querySelector('#起_连接线').style.stroke = '#74DDFF'
+}
+
+function midLampLeftRemoveOutLis2() {
+  midLampLeft.querySelector('#光').style.opacity = '0'
+  midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
+  midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
+}
+
+
 function midLampRightControl() {
   midLampRight.querySelector('#光').style.transition = "opacity 0.5s";
   midLampRight.querySelector('#视_连接线').style.transition = "stroke 0.5s";
   midLampRightPath.forEach((path: any) => {
     path.style.transition = "stroke 0.5s";
   });
-  midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis)
-  midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis)
+  midLampRight.querySelector('#终').style.transition = "fill 0.5s"
+  midLampRight.querySelector('#终_连接线').style.transition = "stroke 0.5s"
+  midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
+  midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
 }
 
-function midLampRightRemoveOverLis() {
+function midLampRightRemoveOverLis1() {
   midLampRight.querySelector('#光').style.opacity = '0.52'
   midLampRight.querySelector('#视_连接线').style.stroke = '#B95FFF'
   midLampRightPath.forEach((path: any) => {
@@ -150,13 +179,26 @@ function midLampRightRemoveOverLis() {
   });
 }
 
-function midLampRightRemoveOutLis() {
+function midLampRightRemoveOutLis1() {
   midLampRight.querySelector('#光').style.opacity = '0'
   midLampRight.querySelector('#视_连接线').style.stroke = '#6e6e6e'
   midLampRightPath.forEach((path: any) => {
     path.style.stroke = '#6e6e6e'
   });
 }
+
+function midLampRightRemoveOverLis2() {
+  midLampRight.querySelector('#光').style.opacity = '0.52'
+  midLampRight.querySelector('#终').style.fill = '#B95FFF'
+  midLampRight.querySelector('#终_连接线').style.stroke = '#B95FFF'
+}
+
+function midLampRightRemoveOutLis2() {
+  midLampRight.querySelector('#光').style.opacity = '0'
+  midLampRight.querySelector('#终').style.fill = '#6E6E6E'
+  midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
+}
+
 
 function midUp(el: any) {
   el.addEventListener('click', () => {
@@ -239,8 +281,6 @@ function leftLampUpControl() {
     leftLampUpCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
     })
-  })
-  leftMaskUp.addEventListener('click', () => {
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#F99360',
@@ -360,14 +400,25 @@ function leftLampDownControl() {
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7"
     })
-    midLampLeftRemoveOverLis()
-    midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis)
-    midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis)
+    midLampLeftRemoveOverLis1()
+    midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
+    midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
   })
 }
 // 右边机器出来
 function rightMonitorshow(el: any) {
   el.addEventListener('click', () => {
+    switch (el) {
+      case leftMaskUp:
+        state1 = "licheng"
+        state2 = midMaskLeft
+        break
+      case leftMaskDown:
+        state1 = "bumen"
+        state2 = midMaskLeft
+        break
+    }
+    showLampCanvas()
     anime({
       targets: [monitorMid, document.querySelector('.monitor-mid-mask')],
       translateY: '-53.2vh',
@@ -416,8 +467,192 @@ function rightMonitorshow(el: any) {
       delay: 0
     })
   })
+
 }
 
+function showLampCanvas() {
+  // 初始状态
+  showLampCanvasInitial()
+  // 变化状态
+  Object.values(dict[state1]).forEach((el) => {
+    el.addEventListener('click', showLampCanvasThen)
+  })
+}
+
+function showLampCanvasInitial() {
+  midLampLeftRemoveOutLis1()
+  midLampLeftRemoveOutLis2()
+  midLampMidRemoveOutLis1()
+  midLampMidRemoveOutLis2()
+  midLampRightRemoveOutLis1()
+  midLampRightRemoveOutLis2()
+  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
+  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
+  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis2)
+  midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
+  midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
+  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
+  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
+  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
+  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis2)
+  midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
+  midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
+  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
+  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
+  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
+  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis2)
+  midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
+  midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
+  if (state1 == "licheng") {
+    midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis2)
+    midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis2)
+    midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis2)
+    midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis2)
+    midLampLeftRemoveOverLis2()
+    midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
+    midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
+  } else {
+    midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
+    midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
+    midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
+    midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
+    midLampLeftRemoveOverLis1()
+    midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
+    midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
+  }
+}
+
+function showLampCanvasOn(el: any) {
+  switch (el.target) {
+    case midMaskLeft:
+      midLampLeft.querySelector('#光').style.opacity = '1'
+      break
+    case midMaskMid:
+      midLampMid.querySelector('#光').style.opacity = '1'
+      break
+    case midMaskRight:
+      midLampRight.querySelector('#光').style.opacity = '1'
+      break
+  }
+}
+
+function showLampCanvasOff(el: any) {
+  switch (el.target) {
+    case midMaskLeft:
+      midLampLeft.querySelector('#光').style.opacity = '0.52'
+      break
+    case midMaskMid:
+      midLampMid.querySelector('#光').style.opacity = '0.52'
+      break
+    case midMaskRight:
+      midLampRight.querySelector('#光').style.opacity = '0.52'
+      break
+  }
+}
+
+function showLampCanvasThen(el: any) {
+  let state2Initial = state2
+  state2 = el.target
+  if (state1 == "licheng") {
+    switch (state2) {
+      case midMaskLeft:
+        midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
+        midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis2)
+        midLampLeftRemoveOverLis2()
+        midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
+        midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
+        break
+      case midMaskMid:
+        midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
+        midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis2)
+        midLampMidRemoveOverLis2()
+        midMaskMid.addEventListener('mouseover', showLampCanvasOn)
+        midMaskMid.addEventListener('mouseout', showLampCanvasOff)
+        break
+      case midMaskRight:
+        midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
+        midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis2)
+        midLampRightRemoveOverLis2()
+        midMaskRight.addEventListener('mouseover', showLampCanvasOn)
+        midMaskRight.addEventListener('mouseout', showLampCanvasOff)
+        break
+    }
+    if (state2Initial != state2) {
+      switch (state2Initial) {
+        case midMaskLeft:
+          midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
+          midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
+          midLampLeftRemoveOutLis2()
+          midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis2)
+          midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis2)
+          break
+        case midMaskMid:
+          midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
+          midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
+          midLampMidRemoveOutLis2()
+          midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis2)
+          midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis2)
+          break
+        case midMaskRight:
+          midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
+          midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
+          midLampRightRemoveOutLis2()
+          midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis2)
+          midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis2)
+          break
+      }
+    }
+  } else {
+    switch (state2) {
+      case midMaskLeft:
+        midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
+        midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+        midLampLeftRemoveOverLis1()
+        midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
+        midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
+        break
+      case midMaskMid:
+        midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
+        midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
+        midLampMidRemoveOverLis1()
+        midMaskMid.addEventListener('mouseover', showLampCanvasOn)
+        midMaskMid.addEventListener('mouseout', showLampCanvasOff)
+        break
+      case midMaskRight:
+        midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
+        midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
+        midLampRightRemoveOverLis1()
+        midMaskRight.addEventListener('mouseover', showLampCanvasOn)
+        midMaskRight.addEventListener('mouseout', showLampCanvasOff)
+        break
+    }
+    switch (state2Initial) {
+      case midMaskLeft:
+        midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
+        midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
+        midLampLeftRemoveOutLis1()
+        midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis1)
+        midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis1)
+        break
+      case midMaskMid:
+        midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
+        midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
+        midLampMidRemoveOutLis1()
+        midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
+        midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
+        break
+      case midMaskRight:
+        midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
+        midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
+        midLampRightRemoveOutLis1()
+        midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
+        midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
+        break
+    }
+  }
+}
+//  返回
 function monitorReturn() {
   if (midUpBool) {
     anime({
@@ -463,9 +698,97 @@ function monitorReturn() {
       duration: 1000,
       delay: 0
     })
-    midLampLeftRemoveOutLis()
-    midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis)
-    midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis)
     midUpBool = false
   }
+  midMaskLeft.removeEventListener('click', showLampCanvasThen)
+  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
+  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
+  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis2)
+  midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
+  midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
+  midMaskMid.removeEventListener('click', showLampCanvasThen)
+  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
+  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
+  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
+  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis2)
+  midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
+  midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
+  midMaskRight.removeEventListener('click', showLampCanvasThen)
+  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
+  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
+  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
+  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis2)
+  midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
+  midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
+  midLampLeftRemoveOutLis1()
+  midLampLeftRemoveOutLis2()
+  midLampMidRemoveOutLis1()
+  midLampMidRemoveOutLis2()
+  midLampRightRemoveOutLis1()
+  midLampRightRemoveOutLis2()
+  midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis1)
+  midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis1)
+  midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
+  midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
+  midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
+  midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
+  // 侧边还原颜色
+  anime({
+    targets: leftLampDown.querySelector('#部_门-3'),
+    fill: '#c0ffd7',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: monitorLeft.contentDocument.querySelector('#部_门'),
+    fill: '#91F8B6',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+    stroke: '#c0ffd7',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+    stroke: '#c0ffd7',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: leftLampUp.querySelector('#历_程-3'),
+    fill: '#c0ffd7',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+    fill: '#91F8B6',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+    stroke: '#c0ffd7',
+    easing: 'linear',
+    duration: 500,
+    delay: 0
+  })
+  anime({
+    targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+    stopColor: "#ff9747"
+  })
+  anime({
+    targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+    stopColor: "#c0ffd7"
+  })
 }

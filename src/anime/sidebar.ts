@@ -6,7 +6,7 @@ let sidebarRight = document.querySelector('.sidebar-right')
 let list = document.querySelector('.list') as any
 let mail = document.querySelector('.mail') as any
 let mask = document.querySelector('.sidebar-mask') as any
-
+// FIXME 需要修从头开始的时候sidebar消失的bug
 export async function sidebar() {
   list.addEventListener('click', () => {
     scrollToTop()

@@ -1,4 +1,5 @@
 import anime from "animejs"
+import { changeEl } from "./changeEl"
 
 let monitorMid = document.querySelector('.monitor-mid') as any
 let monitorLeft = document.querySelector('.monitor-left') as any
@@ -15,16 +16,23 @@ let midMaskLeft = document.querySelector('.mid-lamp-left') as any
 let midMaskRight = document.querySelector('.mid-lamp-right') as any
 let midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
 let midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
-let midCanvas = monitorMid.contentDocument.querySelector('#内容')
+// 
+let midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
+let midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
+let midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
+// 
 let midUpBool: boolean = false
-let midCanvasInt: number = 100000002 // js的取余数循环和正常人不一样我赌他不按一亿次
+let midCanvasInt1: number = 120000000 // js的取余数循环和正常人不一样我赌他不按一亿次
+let midCanvasInt2: number = 120000000 // js的取余数循环和正常人不一样我赌他不按一亿次
+let midCanvasInt3: number = 120000000 // js的取余数循环和正常人不一样我赌他不按一亿次
 // FIXME 起程终的可选找时间去掉都检查一下
 let leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
 let leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
 let leftMaskUp = document.querySelector('.left-lamp-up') as any
 let leftMaskDown = document.querySelector('.left-lamp-down') as any
 
-let rightCanvas = monitorRight.contentDocument.querySelector('#真_显示屏')
+let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
+let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
 let rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
 
 // 记录状态
@@ -51,12 +59,26 @@ export async function monitor() {
   midUp(midMaskRight)
   midButtonReturn.addEventListener('click', monitorReturn)
   midButtonLeft.addEventListener('click', () => {
-    midCanvasInt--
+    if (state1 == "licheng") {
+      midCanvasInt2--
+    } else if (state1 == "bumen") {
+      midCanvasInt3--
+    } else {
+      midCanvasInt1--
+    }
     midCanvasShow()
+    rightCanvasShow()
   })
   midButtonRight.addEventListener('click', () => {
-    midCanvasInt++
+    if (state1 == "licheng") {
+      midCanvasInt2++
+    } else if (state1 == "bumen") {
+      midCanvasInt3++
+    } else {
+      midCanvasInt1++
+    }
     midCanvasShow()
+    rightCanvasShow()
   })
   leftLampControl()
   rightMonitorshow(leftMaskUp)
@@ -105,6 +127,21 @@ function midLampMidRemoveOutLis1() {
     line.style.stroke = '#6e6e6e'
   });
 }
+function midLampMidRemoveOverLis12() {
+  midLampMid.querySelector('#技_连接线').style.stroke = '#0AFFE6'
+  midLampMid.querySelector('#技术部 path').style.stroke = '#0AFFE6'
+  midLampMidLine.forEach((line: any) => {
+    line.style.stroke = '#0AFFE6'
+  });
+}
+
+function midLampMidRemoveOutLis12() {
+  midLampMid.querySelector('#技_连接线').style.stroke = '#6e6e6e'
+  midLampMid.querySelector('#技术部 path').style.stroke = '#6e6e6e'
+  midLampMidLine.forEach((line: any) => {
+    line.style.stroke = '#6e6e6e'
+  });
+}
 
 function midLampMidRemoveOverLis2() {
   midLampMid.querySelector('#光').style.opacity = '0.52'
@@ -114,6 +151,15 @@ function midLampMidRemoveOverLis2() {
 
 function midLampMidRemoveOutLis2() {
   midLampMid.querySelector('#光').style.opacity = '0'
+  midLampMid.querySelector('#承').style.fill = '#6E6E6E'
+  midLampMid.querySelector('#承_连接线').style.stroke = '#6E6E6E'
+}
+function midLampMidRemoveOverLis22() {
+  midLampMid.querySelector('#承').style.fill = '#0AFFE6'
+  midLampMid.querySelector('#承_连接线').style.stroke = '#0AFFE6'
+}
+
+function midLampMidRemoveOutLis22() {
   midLampMid.querySelector('#承').style.fill = '#6E6E6E'
   midLampMid.querySelector('#承_连接线').style.stroke = '#6E6E6E'
 }
@@ -145,6 +191,19 @@ function midLampLeftRemoveOutLis1() {
   midLampLeft.querySelector('#美工部 path').style.stroke = '#6e6e6e'
   midLampLeft.querySelector('#美工部 circle').style.fill = '#6e6e6e'
 }
+function midLampLeftRemoveOverLis12() {
+  midLampLeft.querySelector('#美_连接线').style.stroke = '#74DDFF'
+  midLampLeft.querySelector('#美工部 line').style.stroke = '#74DDFF'
+  midLampLeft.querySelector('#美工部 path').style.stroke = '#74DDFF'
+  midLampLeft.querySelector('#美工部 circle').style.fill = '#74DDFF'
+}
+
+function midLampLeftRemoveOutLis12() {
+  midLampLeft.querySelector('#美_连接线').style.stroke = '#6e6e6e'
+  midLampLeft.querySelector('#美工部 line').style.stroke = '#6e6e6e'
+  midLampLeft.querySelector('#美工部 path').style.stroke = '#6e6e6e'
+  midLampLeft.querySelector('#美工部 circle').style.fill = '#6e6e6e'
+}
 
 function midLampLeftRemoveOverLis2() {
   midLampLeft.querySelector('#光').style.opacity = '0.52'
@@ -154,6 +213,15 @@ function midLampLeftRemoveOverLis2() {
 
 function midLampLeftRemoveOutLis2() {
   midLampLeft.querySelector('#光').style.opacity = '0'
+  midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
+  midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
+}
+function midLampLeftRemoveOverLis22() {
+  midLampLeft.querySelector('#起').style.fill = '#74DDFF'
+  midLampLeft.querySelector('#起_连接线').style.stroke = '#74DDFF'
+}
+
+function midLampLeftRemoveOutLis22() {
   midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
 }
@@ -186,6 +254,19 @@ function midLampRightRemoveOutLis1() {
     path.style.stroke = '#6e6e6e'
   });
 }
+function midLampRightRemoveOverLis12() {
+  midLampRight.querySelector('#视_连接线').style.stroke = '#B95FFF'
+  midLampRightPath.forEach((path: any) => {
+    path.style.stroke = '#B95FFF'
+  });
+}
+
+function midLampRightRemoveOutLis12() {
+  midLampRight.querySelector('#视_连接线').style.stroke = '#6e6e6e'
+  midLampRightPath.forEach((path: any) => {
+    path.style.stroke = '#6e6e6e'
+  });
+}
 
 function midLampRightRemoveOverLis2() {
   midLampRight.querySelector('#光').style.opacity = '0.52'
@@ -198,9 +279,21 @@ function midLampRightRemoveOutLis2() {
   midLampRight.querySelector('#终').style.fill = '#6E6E6E'
   midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
 }
+function midLampRightRemoveOverLis22() {
+  midLampRight.querySelector('#终').style.fill = '#B95FFF'
+  midLampRight.querySelector('#终_连接线').style.stroke = '#B95FFF'
+}
+
+function midLampRightRemoveOutLis22() {
+  midLampRight.querySelector('#终').style.fill = '#6E6E6E'
+  midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
+}
 
 
 function midUp(el: any) {
+  midCanvas1.style.opacity = "0"
+  midCanvas2.style.opacity = "1"
+  midCanvas3.style.opacity = "0"
   el.addEventListener('click', () => {
     if (!midUpBool) {
       anime({
@@ -223,38 +316,87 @@ function midUp(el: any) {
         duration: 1000,
         delay: 0
       })
-      anime({
-        targets: midCanvas,
-        opacity: 1,
-        duration: 1000,
-        delay: 0
-      })
+      changeEl(midCanvas1)
       midUpBool = true
     }
   })
 }
 
 function midCanvasShow() {
-  switch (midCanvasInt % 3) {
-    case 0:
-      anime({
-        targets: midCanvas,
-        translateY: 0,
-      })
-      break
-    case 1:
-      anime({
-        targets: midCanvas,
-        translateY: '21vh',
-      })
-      break
-    case 2:
-      anime({
-        targets: midCanvas,
-        translateY: '40vh',
-      })
-      break
+  // 部门
+  if (state1 == "bumen") {
+    switch (midCanvasInt3 % 3) {
+      case 0:
+        state2 = midMaskLeft
+        anime({
+          targets: midCanvas3,
+          translateY: 0,
+        })
+        break
+      case 1:
+        state2 = midMaskMid
+        anime({
+          targets: midCanvas3,
+          translateY: '21vh',
+        })
+        break
+      case 2:
+        state2 = midMaskRight
+        anime({
+          targets: midCanvas3,
+          translateY: '40vh',
+        })
+        break
+    }
+  } else if (state1 == "licheng") {
+    // 历程
+    switch (midCanvasInt2 % 3) {
+      case 0:
+        state2 = midMaskLeft
+        anime({
+          targets: midCanvas2,
+          translateY: 0,
+        })
+        break
+      case 1:
+        state2 = midMaskMid
+        anime({
+          targets: midCanvas2,
+          translateY: '21vh',
+        })
+        break
+      case 2:
+        state2 = midMaskRight
+        anime({
+          targets: midCanvas2,
+          translateY: '40vh',
+        })
+        break
+    }
+  } else {
+    switch (midCanvasInt1 % 3) {
+      case 0:
+        anime({
+          targets: midCanvas1,
+          translateY: 0,
+        })
+        break
+      case 1:
+        anime({
+          targets: midCanvas1,
+          translateY: '21vh',
+        })
+        break
+      case 2:
+        anime({
+          targets: midCanvas1,
+          translateY: '40vh',
+        })
+        break
+    }
   }
+  showLampCanvasThen(undefined)
+  rightCanvasShow()
 }
 
 function leftLampControl() {
@@ -278,6 +420,7 @@ function leftLampUpControl() {
     })
   })
   leftMaskUp.addEventListener('click', () => {
+    changeEl(midCanvas2)
     leftLampUpCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
     })
@@ -350,6 +493,7 @@ function leftLampDownControl() {
     });
   })
   leftMaskDown.addEventListener('click', () => {
+    changeEl(midCanvas3)
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#F99360',
@@ -408,6 +552,34 @@ function leftLampDownControl() {
 // 右边机器出来
 function rightMonitorshow(el: any) {
   el.addEventListener('click', () => {
+    if (el == leftMaskUp) {
+      anime({
+        targets: rightCanvas1,
+        opacity: 0.83,
+        duration: 1000,
+        delay: 0
+      })
+      anime({
+        targets: rightCanvas2,
+        opacity: 0,
+        duration: 1000,
+        delay: 0
+      })
+    }
+    else if (el == leftMaskDown) {
+      anime({
+        targets: rightCanvas1,
+        opacity: 0,
+        duration: 1000,
+        delay: 0
+      })
+      anime({
+        targets: rightCanvas2,
+        opacity: 0.83,
+        duration: 1000,
+        delay: 0
+      })
+    }
     switch (el) {
       case leftMaskUp:
         state1 = "licheng"
@@ -452,7 +624,7 @@ function rightMonitorshow(el: any) {
       delay: 0
     })
     anime({
-      targets: rightCanvas,
+      targets: [rightCanvas1, rightCanvas2],
       translateX: '2.2vw',
       translateY: '1.2vh',
       easing: 'linear',
@@ -486,37 +658,55 @@ function showLampCanvasInitial() {
   midLampMidRemoveOutLis2()
   midLampRightRemoveOutLis1()
   midLampRightRemoveOutLis2()
+  midLampLeftRemoveOutLis12()
+  midLampLeftRemoveOutLis22()
+  midLampMidRemoveOutLis12()
+  midLampMidRemoveOutLis22()
+  midLampRightRemoveOutLis12()
+  midLampRightRemoveOutLis22()
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
   midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
   midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis2)
+  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis12)
+  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis22)
+  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis12)
+  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis22)
   midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
   midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
   midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
   midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
   midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
   midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis2)
+  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis12)
+  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis22)
+  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis12)
+  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis22)
   midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
   midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
   midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
   midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
   midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
   midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis2)
+  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis12)
+  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis22)
+  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis12)
+  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis22)
   midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
   midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
   if (state1 == "licheng") {
-    midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis2)
-    midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis2)
-    midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis2)
-    midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis2)
+    midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis22)
+    midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis22)
+    midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis22)
+    midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis22)
     midLampLeftRemoveOverLis2()
     midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
     midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
-  } else {
-    midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
-    midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
-    midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
-    midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
+  } else if (state1 == "bumen") {
+    midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis12)
+    midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis12)
+    midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis12)
+    midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis12)
     midLampLeftRemoveOverLis1()
     midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
     midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
@@ -552,27 +742,68 @@ function showLampCanvasOff(el: any) {
 }
 
 function showLampCanvasThen(el: any) {
-  let state2Initial = state2
-  state2 = el.target
+  let state2Initial
+  if (el != undefined) {
+    state2Initial = state2
+    state2 = el.target
+    if (state1 == "licheng") {
+      switch (state2) {
+        case midMaskLeft:
+          midCanvasInt2 = 120000000
+          break
+        case midMaskMid:
+          midCanvasInt2 = 120000001
+          break
+        case midMaskRight:
+          midCanvasInt2 = 120000002
+          break
+      }
+    } else if (state1 == "bumen") {
+      switch (state2) {
+        case midMaskLeft:
+          midCanvasInt3 = 120000000
+          break
+        case midMaskMid:
+          midCanvasInt3 = 120000001
+          break
+        case midMaskRight:
+          midCanvasInt3 = 120000002
+          break
+      }
+    }
+    midCanvasShow()
+  } else {
+    switch (state2) {
+      case midMaskLeft:
+        state2Initial = midMaskRight
+        break
+      case midMaskMid:
+        state2Initial = midMaskLeft
+        break
+      case midMaskRight:
+        state2Initial = midMaskMid
+        break
+    }
+  }
   if (state1 == "licheng") {
     switch (state2) {
       case midMaskLeft:
-        midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
-        midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis2)
+        midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis22)
+        midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis22)
         midLampLeftRemoveOverLis2()
         midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
         midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
         break
       case midMaskMid:
-        midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
-        midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis2)
+        midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis22)
+        midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis22)
         midLampMidRemoveOverLis2()
         midMaskMid.addEventListener('mouseover', showLampCanvasOn)
         midMaskMid.addEventListener('mouseout', showLampCanvasOff)
         break
       case midMaskRight:
-        midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
-        midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis2)
+        midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis22)
+        midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis22)
         midLampRightRemoveOverLis2()
         midMaskRight.addEventListener('mouseover', showLampCanvasOn)
         midMaskRight.addEventListener('mouseout', showLampCanvasOff)
@@ -584,76 +815,82 @@ function showLampCanvasThen(el: any) {
           midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
           midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
           midLampLeftRemoveOutLis2()
-          midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis2)
-          midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis2)
+          midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis22)
+          midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis22)
           break
         case midMaskMid:
           midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
           midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
           midLampMidRemoveOutLis2()
-          midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis2)
-          midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis2)
+          midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis22)
+          midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis22)
           break
         case midMaskRight:
           midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
           midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
           midLampRightRemoveOutLis2()
-          midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis2)
-          midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis2)
+          midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis22)
+          midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis22)
           break
       }
     }
-  } else {
+  } else if (state1 == "bumen") {
     switch (state2) {
       case midMaskLeft:
-        midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
-        midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+        midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis12)
+        midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis12)
         midLampLeftRemoveOverLis1()
         midMaskLeft.addEventListener('mouseover', showLampCanvasOn)
         midMaskLeft.addEventListener('mouseout', showLampCanvasOff)
         break
       case midMaskMid:
-        midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
-        midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
+        midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis12)
+        midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis12)
         midLampMidRemoveOverLis1()
         midMaskMid.addEventListener('mouseover', showLampCanvasOn)
         midMaskMid.addEventListener('mouseout', showLampCanvasOff)
         break
       case midMaskRight:
-        midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
-        midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
+        midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis12)
+        midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis12)
         midLampRightRemoveOverLis1()
         midMaskRight.addEventListener('mouseover', showLampCanvasOn)
         midMaskRight.addEventListener('mouseout', showLampCanvasOff)
         break
     }
-    switch (state2Initial) {
-      case midMaskLeft:
-        midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
-        midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
-        midLampLeftRemoveOutLis1()
-        midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis1)
-        midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis1)
-        break
-      case midMaskMid:
-        midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
-        midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
-        midLampMidRemoveOutLis1()
-        midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
-        midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
-        break
-      case midMaskRight:
-        midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
-        midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
-        midLampRightRemoveOutLis1()
-        midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
-        midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
-        break
+    if (state2Initial != state2) {
+      switch (state2Initial) {
+        case midMaskLeft:
+          midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
+          midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
+          midLampLeftRemoveOutLis1()
+          midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis12)
+          midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis12)
+          break
+        case midMaskMid:
+          midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
+          midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
+          midLampMidRemoveOutLis1()
+          midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis12)
+          midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis12)
+          break
+        case midMaskRight:
+          midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
+          midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
+          midLampRightRemoveOutLis1()
+          midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis12)
+          midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis12)
+          break
+      }
     }
   }
 }
 //  返回
 function monitorReturn() {
+  state1 = ''
+  midCanvasInt1 = 120000000
+  midCanvasInt2 = 120000000
+  midCanvasInt3 = 120000000
   if (midUpBool) {
     anime({
       targets: [monitorMid, document.querySelector('.monitor-mid-mask')],
@@ -678,7 +915,7 @@ function monitorReturn() {
       delay: 0
     })
     anime({
-      targets: rightCanvas,
+      targets: [rightCanvas1, rightCanvas2],
       translateX: 0,
       translateY: 0,
       easing: 'linear',
@@ -698,8 +935,10 @@ function monitorReturn() {
       duration: 1000,
       delay: 0
     })
+
     midUpBool = false
   }
+  changeEl(midCanvas2)
   midMaskLeft.removeEventListener('click', showLampCanvasThen)
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
@@ -791,4 +1030,68 @@ function monitorReturn() {
     targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
     stopColor: "#c0ffd7"
   })
+}
+
+function rightCanvasShow() {
+  if (state1 == "licheng") {
+    switch (midCanvasInt2 % 3) {
+      case 0:
+        anime({
+          targets: rightCanvas1,
+          translateY: 0,
+          easing: 'linear',
+          duration: 1000,
+          delay: 0
+        })
+        break
+      case 1:
+        anime({
+          targets: rightCanvas1,
+          translateY: '110vh',
+          easing: 'linear',
+          duration: 1000,
+          delay: 0
+        })
+        break
+      case 2:
+        anime({
+          targets: rightCanvas1,
+          translateY: '240vh',
+          easing: 'linear',
+          duration: 1000,
+          delay: 0
+        })
+        break
+    }
+  } else if (state1 == "bumen") {
+    switch (midCanvasInt3 % 3) {
+      case 0:
+        anime({
+          targets: rightCanvas2,
+          translateY: 0,
+          easing: 'linear',
+          duration: 1000,
+          delay: 0
+        })
+        break
+      case 1:
+        anime({
+          targets: rightCanvas2,
+          translateY: '110vh',
+          easing: 'linear',
+          duration: 1000,
+          delay: 0
+        })
+        break
+      case 2:
+        anime({
+          targets: rightCanvas2,
+          translateY: '240vh',
+          easing: 'linear',
+          duration: 1000,
+          delay: 0
+        })
+        break
+    }
+  }
 }

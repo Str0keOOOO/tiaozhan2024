@@ -1180,7 +1180,7 @@ function showLampCanvasThen(el: any) {
   }
 }
 //  返回
-function monitorReturn() {
+export function monitorReturn() {
   state1 = ''
   midCanvasInt1 = 120000000
   midCanvasInt2 = 120000000

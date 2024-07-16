@@ -1,5 +1,6 @@
 import anime from "animejs"
 import { scrollToTop } from "./scrollToTop"
+import { monitorReturn } from "./monitor"
 
 let bodyMask = document.querySelector('.body-mask') as any
 let list = document.querySelector('.list') as any
@@ -49,6 +50,7 @@ export async function enterAnime() {
       colorBack()
       buildingDown()
       enterLogoAnimeBack()
+      monitorReturn()
       document.body.style.overflowY = "hidden";
       enterLogoMask.style.display = 'none'
       setTimeout(() => {

@@ -27,10 +27,10 @@ body {
   src: url(./css/AlimamaShuHeiTi-Bold.ttf);
 }
 
-.sidebar-right a {  
-  white-space: nowrap;  
-  overflow: hidden;  
-  text-overflow: ellipsis;  
-  display: block; /* 或者 inline-block，取决于您的布局 */  
-  max-width: 100%; /* 确保最大宽度不超过容器 */  
+.sidebar-right a {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  max-width: 100%;
 }

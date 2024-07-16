@@ -4,7 +4,7 @@ import { enterAnime } from './anime/enter'
 import { sidebar } from './anime/sidebar'
 import { monitor } from './anime/monitor'
 import { toTop } from './anime/scrollToTop'
-import { resizeElementToShortSide } from './anime/monitorMask'
+// import { resizeElementToShortSide } from './anime/monitorMask'
 
 window.onbeforeunload = toTop
 

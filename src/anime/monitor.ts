@@ -11,24 +11,29 @@ let midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
 let midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
 let midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
 let midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
-let midMaskMid = document.querySelector('.mid-lamp-mid') as any
-let midMaskLeft = document.querySelector('.mid-lamp-left') as any
-let midMaskRight = document.querySelector('.mid-lamp-right') as any
+let midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
+let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
+let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
 let midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
 let midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
-// 
+
 let midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
 let midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
 let midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
-// 
+
 let midUpBool: boolean = false
 let midCanvasInt1: number = 120000000
 let midCanvasInt2: number = 120000000
 let midCanvasInt3: number = 120000000
 let leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
 let leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
-let leftMaskUp = document.querySelector('.left-lamp-up') as any
-let leftMaskDown = document.querySelector('.left-lamp-down') as any
+
+let leftMaskUp1 = monitorLeft.contentDocument.querySelector('#矩形_60')
+let leftMaskDown1 = monitorLeft.contentDocument.querySelector('#矩形_61')
+let leftMaskUp2 = leftLampUp.querySelector('#椭圆_19')
+let leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
+let leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
+let leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
 
 let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
 let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
@@ -80,8 +85,12 @@ export async function monitor() {
     rightCanvasShow()
   })
   leftLampControl()
-  rightMonitorshow(leftMaskUp)
-  rightMonitorshow(leftMaskDown)
+  rightMonitorshow(leftMaskUp1)
+  rightMonitorshow(leftMaskUp2)
+  rightMonitorshow(leftMaskUp3)
+  rightMonitorshow(leftMaskDown1)
+  rightMonitorshow(leftMaskDown2)
+  rightMonitorshow(leftMaskDown3)
 }
 
 function cursorPointer() {
@@ -296,14 +305,14 @@ function midUp(el: any) {
   el.addEventListener('click', () => {
     if (!midUpBool) {
       anime({
-        targets: [monitorMid, document.querySelector('.monitor-mid-mask')],
+        targets: monitorMid,
         translateY: '-45.5vh',
         easing: 'linear',
         duration: 500,
         delay: 0
       })
       anime({
-        targets: [monitorLeft, document.querySelector('.monitor-left-mask')],
+        targets: monitorLeft,
         translateX: '19.48vw',
         easing: 'linear',
         duration: 500,
@@ -408,17 +417,17 @@ function leftLampUpControl() {
   leftLampUpCircle.forEach((circle: any) => {
     circle.style.transition = "opacity 0.5s"
   });
-  leftMaskUp.addEventListener('mouseover', () => {
+  leftMaskUp1.addEventListener('mouseover', () => {
     leftLampUpCircle.forEach((circle: any) => {
       circle.style.opacity = '1'
     })
   })
-  leftMaskUp.addEventListener('mouseout', () => {
+  leftMaskUp1.addEventListener('mouseout', () => {
     leftLampUpCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp.addEventListener('click', () => {
+  leftMaskUp1.addEventListener('click', () => {
     changeEl(midCanvas2)
     leftLampUpCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
@@ -439,6 +448,141 @@ function leftLampUpControl() {
     })
     anime({
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      fill: '#F99360',
+      stroke: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: leftLampDown.querySelector('#部_门-3'),
+      fill: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      fill: '#91F8B6',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      stroke: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      stopColor: "#ff9747"
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      stopColor: "#c0ffd7"
+    })
+  })
+  leftMaskUp2.addEventListener('mouseover', () => {
+    leftLampUpCircle.forEach((circle: any) => {
+      circle.style.opacity = '1'
+    })
+  })
+  leftMaskUp2.addEventListener('mouseout', () => {
+    leftLampUpCircle.forEach((circle: any) => {
+      circle.style.opacity = '0'
+    })
+  })
+  leftMaskUp2.addEventListener('click', () => {
+    changeEl(midCanvas2)
+    leftLampUpCircle.forEach((circle: any) => {
+      circle.style.opacity = '0'
+    })
+    anime({
+      targets: leftLampUp.querySelector('#历_程-3'),
+      fill: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      fill: '#F44D33',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      fill: '#F99360',
+      stroke: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: leftLampDown.querySelector('#部_门-3'),
+      fill: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      fill: '#91F8B6',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      stroke: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      stopColor: "#ff9747"
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      stopColor: "#c0ffd7"
+    })
+  })
+  leftMaskUp3.addEventListener('mouseover', () => {
+    leftLampUpCircle.forEach((circle: any) => {
+      circle.style.opacity = '1'
+    })
+  })
+  leftMaskUp3.addEventListener('mouseout', () => {
+    leftLampUpCircle.forEach((circle: any) => {
+      circle.style.opacity = '0'
+    })
+  })
+  leftMaskUp3.addEventListener('click', () => {
+    changeEl(midCanvas2)
+    leftLampUpCircle.forEach((circle: any) => {
+      circle.style.opacity = '0'
+    })
+    anime({
+      targets: leftLampUp.querySelector('#历_程-3'),
+      fill: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      fill: '#F44D33',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      fill: '#F99360',
       stroke: '#F99360',
       easing: 'linear',
       duration: 500,
@@ -481,17 +625,17 @@ function leftLampDownControl() {
   leftLampDownCircle.forEach((circle: any) => {
     circle.style.transition = "opacity 0.5s"
   });
-  leftMaskDown.addEventListener('mouseover', () => {
+  leftMaskDown1.addEventListener('mouseover', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '1'
     });
   })
-  leftMaskDown.addEventListener('mouseout', () => {
+  leftMaskDown1.addEventListener('mouseout', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
     });
   })
-  leftMaskDown.addEventListener('click', () => {
+  leftMaskDown1.addEventListener('click', () => {
     changeEl(midCanvas3)
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
@@ -530,6 +674,141 @@ function leftLampDownControl() {
     })
     anime({
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      fill: '#c0ffd7',
+      stroke: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      stopColor: "#ff9747"
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      stopColor: "#c0ffd7"
+    })
+    midLampLeftRemoveOverLis1()
+    midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
+    midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+  })
+  leftMaskDown2.addEventListener('mouseover', () => {
+    leftLampDownCircle.forEach((circle: any) => {
+      circle.style.opacity = '1'
+    });
+  })
+  leftMaskDown2.addEventListener('mouseout', () => {
+    leftLampDownCircle.forEach((circle: any) => {
+      circle.style.opacity = '0'
+    });
+  })
+  leftMaskDown2.addEventListener('click', () => {
+    changeEl(midCanvas3)
+    anime({
+      targets: leftLampDown.querySelector('#部_门-3'),
+      fill: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      fill: '#F44D33',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      stroke: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: leftLampUp.querySelector('#历_程-3'),
+      fill: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      fill: '#91F8B6',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      fill: '#c0ffd7',
+      stroke: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      stopColor: "#ff9747"
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      stopColor: "#c0ffd7"
+    })
+    midLampLeftRemoveOverLis1()
+    midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
+    midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+  })
+  leftMaskDown3.addEventListener('mouseover', () => {
+    leftLampDownCircle.forEach((circle: any) => {
+      circle.style.opacity = '1'
+    });
+  })
+  leftMaskDown3.addEventListener('mouseout', () => {
+    leftLampDownCircle.forEach((circle: any) => {
+      circle.style.opacity = '0'
+    });
+  })
+  leftMaskDown3.addEventListener('click', () => {
+    changeEl(midCanvas3)
+    anime({
+      targets: leftLampDown.querySelector('#部_门-3'),
+      fill: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      fill: '#F44D33',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      stroke: '#F99360',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: leftLampUp.querySelector('#历_程-3'),
+      fill: '#c0ffd7',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      fill: '#91F8B6',
+      easing: 'linear',
+      duration: 500,
+      delay: 0
+    })
+    anime({
+      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'linear',
       duration: 500,
@@ -551,7 +830,7 @@ function leftLampDownControl() {
 // 右边机器出来
 function rightMonitorshow(el: any) {
   el.addEventListener('click', () => {
-    if (el == leftMaskUp) {
+    if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: rightCanvas1,
         opacity: 0.83,
@@ -565,7 +844,7 @@ function rightMonitorshow(el: any) {
         delay: 0
       })
     }
-    else if (el == leftMaskDown) {
+    else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: rightCanvas1,
         opacity: 0,
@@ -580,35 +859,51 @@ function rightMonitorshow(el: any) {
       })
     }
     switch (el) {
-      case leftMaskUp:
+      case leftMaskUp1:
         state1 = "licheng"
         state2 = midMaskLeft
         break
-      case leftMaskDown:
+      case leftMaskUp2:
+        state1 = "licheng"
+        state2 = midMaskLeft
+        break
+      case leftMaskUp3:
+        state1 = "licheng"
+        state2 = midMaskLeft
+        break
+      case leftMaskDown1:
+        state1 = "bumen"
+        state2 = midMaskLeft
+        break
+      case leftMaskDown2:
+        state1 = "bumen"
+        state2 = midMaskLeft
+        break
+      case leftMaskDown3:
         state1 = "bumen"
         state2 = midMaskLeft
         break
     }
     showLampCanvas()
     anime({
-      targets: [monitorMid, document.querySelector('.monitor-mid-mask')],
+      targets: monitorMid,
       translateY: '-53.2vh',
       translateX: '-8.2vw',
       easing: 'linear',
       duration: 500,
       delay: 0
     })
-    if (el == leftMaskUp) {
+    if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
-        targets: [monitorLeft, document.querySelector('.monitor-left-mask')],
+        targets: monitorLeft,
         translateX: '14vw',
         easing: 'linear',
         duration: 500,
         delay: 0
       })
-    } else if (el == leftMaskDown) {
+    } else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
-        targets: [monitorLeft, document.querySelector('.monitor-left-mask')],
+        targets: monitorLeft,
         translateX: '14.61vw',
         easing: 'linear',
         duration: 500,
@@ -892,7 +1187,7 @@ function monitorReturn() {
   midCanvasInt3 = 120000000
   if (midUpBool) {
     anime({
-      targets: [monitorMid, document.querySelector('.monitor-mid-mask')],
+      targets: monitorMid,
       translateY: 0,
       translateX: 0,
       easing: 'linear',
@@ -900,7 +1195,7 @@ function monitorReturn() {
       delay: 0
     })
     anime({
-      targets: [monitorLeft, document.querySelector('.monitor-left-mask')],
+      targets: monitorLeft,
       translateX: 0,
       easing: 'linear',
       duration: 500,
@@ -1016,6 +1311,7 @@ function monitorReturn() {
   })
   anime({
     targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+    fill: '#c0ffd7',
     stroke: '#c0ffd7',
     easing: 'linear',
     duration: 500,

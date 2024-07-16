@@ -1,5 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="729.965" height="942.573" viewBox="0 0 729.965 942.573">
   <defs>
+    <style>  
+      #光 {  
+        cursor: pointer;  
+      }  
+    </style>  
     <clipPath id="clip-path">
       <rect id="显示屏" width="376.093" height="129" rx="30" transform="translate(645.907 1616)" fill="#24201c"/>
     </clipPath>

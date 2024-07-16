@@ -1,5 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="558.668" height="1057.873" viewBox="0 0 558.668 1057.873">
   <defs>
+    <style>  
+      #矩形_60 {  
+        cursor: pointer;  
+      }  
+      #矩形_61 {  
+        cursor: pointer;  
+      }  
+      #椭圆_19 {  
+        cursor: pointer;  
+      }  
+      #椭圆_20 {  
+        cursor: pointer;  
+      }  
+    </style>  
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#b3a090"/>
       <stop offset="1" stop-color="#a9a19a"/>

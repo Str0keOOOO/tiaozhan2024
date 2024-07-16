@@ -22,10 +22,9 @@ let midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内
 let midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
 // 
 let midUpBool: boolean = false
-let midCanvasInt1: number = 120000000 // js的取余数循环和正常人不一样我赌他不按一亿次
-let midCanvasInt2: number = 120000000 // js的取余数循环和正常人不一样我赌他不按一亿次
-let midCanvasInt3: number = 120000000 // js的取余数循环和正常人不一样我赌他不按一亿次
-// FIXME 起程终的可选找时间去掉都检查一下
+let midCanvasInt1: number = 120000000
+let midCanvasInt2: number = 120000000
+let midCanvasInt3: number = 120000000
 let leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
 let leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
 let leftMaskUp = document.querySelector('.left-lamp-up') as any

@@ -9,7 +9,6 @@
 </head>
 
 <body>
-  <!-- FIXME 按tab会跑出去怎么办 -->
   <div class="absolute body-mask bg-transparent w-[100vw] h-[100vh] top-0 z-50 cursor-pointer"></div>
   <div class="bg-1 bg-white w-[100vw] h-[100vh] flex flex-col justify-center items-center">
     <div class="tiaozhan h-[17.15rem]">
@@ -24,9 +23,8 @@
     </div>
     <object data="./src/image/logo.svg" type="image/svg+xml"
       class="enter-logo relative mt-[1.325rem] w-[18.9375rem] h-[9.634rem] z-30"></object>
-      <!-- FIXME onhover放大变色效果 -->
     <object style="opacity: 0;" data="./src/image/star.svg" type="image/svg+xml"
-      class="enter-logo relative top-[-8.609rem] w-[19.375rem] h-[3.3125rem] z-30"></object>
+      class="enter-logo relative top-[-8.609rem] h-[3.3125rem] z-[35]" id="enter-logo"></object>
     <div
       class="enter-logo-mask absolute w-[10.3125rem] h-[5.19875rem] top-[5.1667vh] opacity-0 cursor-pointer hidden z-40">
     </div>
@@ -41,13 +39,13 @@
       class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0 ml-[7.14vw]">
     <div class="building-mask w-[100%] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
   </div>
-  <!-- FIXME 后期改一下不让他压缩 -->
   <img src="./src/image/title-bg.png"
-    class="title-bg fixed w-[98.28125vw] h-[131.11vh] left-[1.71875vw] top-[-33.43vh] opacity-0 z-20">
+    class="title-bg fixed w-[98.28125vw] h-[131.11vh] left-[1.71875vw] top-[-21vh] opacity-0 z-20 object-contain">
   <div class="fixed w-[87.8646vw] h-[59.537vh] top-[12.9vh] left-[6.09375vw] z-20">
-    <img src="./src/image/title.png" alt="TIAO" class="title-1 opacity-0 w-[100%] h-[100%]"
+    <img src="./src/image/title.png" alt="TIAO" class="title-1 opacity-0 w-[100%] h-[100%] object-contain"
       style="clip-path:xywh(0 0 100% 50%);transform-origin:25% 50%;scale: 0.1;">
-    <img src="./src/image/title.png" alt="ZHAN" class="title-2 relative opacity-0 w-[100%] h-[100%] top-[-100%]"
+    <img src="./src/image/title.png" alt="ZHAN"
+      class="title-2 relative opacity-0 w-[100%] h-[100%] top-[-100%] object-contain"
       style="clip-path:xywh(0 50% 100% 50%);transform-origin:75% 50%;scale: 0.1;">
   </div>
   <img src="./src/image/list.svg" alt="list"
@@ -71,9 +69,9 @@
   <div
     class="sidebar-right absolute w-[31.09vw] h-[120.28vh] top-[-6vh] left-[100vw] bg-[#414141] z-40 flex flex-col items-center rounded-[2.9375rem]">
     <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
-    <div class="flex items-center flex-col text-white mt-[19.66vh] text-[187.5%]">
+    <div class="flex items-center flex-col text-white mt-[19.66vh] text-[187.5%] whitespace-normal w-[100%]">
       <div>联系邮箱:</div>
-      <a href="mailto:tiaozhan@tiaozhan.com">tiaozhan@tiaozhan.com</a>
+      <a href="mailto:tiaozhan@tiaozhan.com" tabindex="-1">tiaozhan@tiaozhan.com</a>
     </div>
   </div>
 
@@ -100,14 +98,19 @@
         class="monitor-right absolute w-[39.01vw] h-[96.36vh] top-[3.8vh] left-[94.7vw]"></object>
     </div>
   </div>
-  <!-- FIXME  大小有问题 -->
-  <div
-    class="monitor-mid-mask absolute w-[26.6146vw] h-[20.3278vh] left-[36.213vw] top-[170.4vh] z-50 flex justify-between">
+  <!-- FIXME  位置有问题 -->
+  <!-- class="title-bg fixed w-[98.28125vw] h-[131.11vh] left-[1.71875vw] top-[-21vh] opacity-0 z-20 object-contain"> -->
+  <!-- <img src="./src/image/monitor-left-mask.png"
+    class="monitor-mid-mask absolute w-[26.62vw] h-[20.33vh] left-[36.213vw] top-[170.4vh] z-50 object-contain">
+  <div class=" absolute w-[26.62vw] h-[20.33vh] left-[36.213vw] top-[170.4vh] z-50 flex justify-between">
     <div class="mid-lamp-left w-[26%] h-[100%] cursor-pointer"></div>
     <div class="mid-lamp-mid w-[26%] h-[100%] cursor-pointer"></div>
     <div class="mid-lamp-right w-[26%] h-[100%] cursor-pointer"></div>
-  </div>
-  <div class="monitor-left-mask absolute w-[6.5vw] h-[61vh] left-[-7.815vw] top-[116.885vh] z-50 flex flex-col justify-between">
+  </div> -->
+
+
+  <div
+    class="monitor-left-mask absolute w-[6.5vw] h-[61vh] left-[-7.815vw] top-[116.885vh] z-50 flex flex-col justify-between">
     <div class="left-lamp-up w-[100%] h-[31.414%] cursor-pointer"></div>
     <div class="left-lamp-down w-[100%] h-[32.414%] cursor-pointer"></div>
   </div>

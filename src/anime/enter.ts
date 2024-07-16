@@ -34,6 +34,7 @@ export async function enterAnime() {
         list.style.visibility = 'visible'
         mail.style.visibility = 'visible'
         enterLogoMask.style.display = 'block'
+        enterLogoAnime()
       }, 3000);
       document.body.style.cursor = "default"
       isEnter = true
@@ -47,6 +48,7 @@ export async function enterAnime() {
       sidebarBack()
       colorBack()
       buildingDown()
+      enterLogoAnimeBack()
       document.body.style.overflowY = "hidden";
       enterLogoMask.style.display = 'none'
       setTimeout(() => {
@@ -55,6 +57,7 @@ export async function enterAnime() {
         enterLogoMask.style.display = 'none'
         document.body.style.cursor = "pointer"
         bodyMask.style.display = 'block'
+
       }, 2000);
       isEnter = false
     }
@@ -230,6 +233,7 @@ function sidebar() {
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
+    opacity: 1,
     right: '97.3vw',
     easing: 'linear',
     duration: 500,
@@ -237,6 +241,7 @@ function sidebar() {
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
+    opacity: 1,
     left: '98vw',
     easing: 'linear',
     duration: 500,
@@ -250,6 +255,7 @@ function sidebar() {
     delay: 2500
   })
 }
+
 // 回退动画
 function bgAnimeBack() {
   anime({
@@ -320,12 +326,14 @@ function sidebarBack() {
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
+    right: '100vw',
     opacity: 0,
     duration: 500,
     delay: 0
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
+    left: '100vw',
     opacity: 0,
     duration: 500,
     delay: 0
@@ -402,4 +410,35 @@ function buildingDown() {
     duration: 1000,
     delay: 0
   })
+}
+
+// enterlogo的放大效果
+let enterLogo = document.querySelector('#enter-logo') as any
+function enterLogoAnime() {
+  enterLogo.style.transition = 'all 300ms'
+  enterLogo.style.transformOrigin = "50% 450%"
+  enterLogo.addEventListener('mouseover', enterLogoAnimeover)
+  enterLogo.addEventListener('mouseout', enterLogoAnimeout)
+}
+
+function enterLogoAnimeBack() {
+  enterLogo.style.transition = ''
+  enterLogo.style.transformOrigin = ''
+  enterLogo.removeEventListener('mouseover', enterLogoAnimeover)
+  enterLogo.removeEventListener('mouseout', enterLogoAnimeout)
+}
+
+function enterLogoAnimeover() {
+  enterLogo.style.scale = '1.2'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#FFAB95'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#FFAB95'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#FFAB95'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[7].style.fill = '#FFAB95'
+}
+function enterLogoAnimeout() {
+  enterLogo.style.scale = '1'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#ff7958'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#ff7958'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#ff7958'
+  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[7].style.fill = '#ff7958'
 }

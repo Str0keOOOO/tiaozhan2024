@@ -14,14 +14,16 @@ export async function sidebar() {
     anime({
       targets: sidebarLeft,
       right: '70vw',
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 500,
+      delay: 0
     })
     anime({
       targets: mask,
       opacity: 0.75,
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 500,
+      delay: 0
     })
   })
   mail.addEventListener('click', () => {
@@ -31,14 +33,16 @@ export async function sidebar() {
     anime({
       targets: sidebarRight,
       left: '70vw',
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 500,
+      delay: 0
     })
     anime({
       targets: mask,
       opacity: 0.75,
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 500,
+      delay: 0
     })
   })
   mask.addEventListener('click', () => {
@@ -47,20 +51,23 @@ export async function sidebar() {
     anime({
       targets: sidebarLeft,
       right: '98vw',
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 300,
+      delay: 0
     })
     anime({
       targets: sidebarRight,
       left: '98vw',
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 300,
+      delay: 0
     })
     anime({
       targets: mask,
       opacity: 0,
-      easing: 'linear',
-      duration: 200,
+      easing: 'easeInOutCubic',
+      duration: 300,
+      delay: 0
     })
   })
 }

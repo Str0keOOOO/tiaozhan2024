@@ -50,12 +50,10 @@
       </g>
     </g>
 
-
-    
     <g id="真_显示屏-1" data-name="真 显示屏" transform="translate(6.067 10.867)" opacity="0.83" clip-path="url(#clip-path)">
-      <g id="内容" transform="translate(0 -20)">
+      <g id="内容" transform="translate(0 -10)">
         <rect id="底" width="528" height="3368" transform="translate(1255.933 -1245.867)" fill="#423e3b"/>
-        <g id="箭头" transform="translate(1715.725 -906.867)">
+        <g id="箭头" transform="translate(1715.725 -775)">
           <g id="重复网格_4" data-name="重复网格 4" opacity="0.42" clip-path="url(#clip-path-2)">
             <g transform="translate(-1341.725 -1282.141)">
               <path id="navigate-rightt" d="M320.822,193.247a2.636,2.636,0,0,0,0,3.824L344.081,219.5l-23.259,22.425a2.636,2.636,0,0,0,0,3.824,2.879,2.879,0,0,0,3.966,0l25.242-24.337a2.636,2.636,0,0,0,0-3.824l-25.242-24.337A2.879,2.879,0,0,0,320.822,193.247Z" transform="translate(1588.262 962.141) rotate(90)" fill="#b49279"/>
@@ -257,7 +255,7 @@
     <g id="真_显示屏-2" data-name="真 显示屏" transform="translate(6.067 10.867)" opacity="0.83" clip-path="url(#clip-path)">
       <g id="内容" data-name="内容">
         <rect id="底-2" data-name="底" width="528" height="3368" transform="translate(1255.933 -1245.867)" fill="#423e3b"/>
-        <g id="箭头-2" data-name="箭头" transform="translate(1715.725 -905.867)">
+        <g id="箭头-2" data-name="箭头" transform="translate(1715.725 -775)">
           <g id="重复网格_4-2" data-name="重复网格 4" opacity="0.42" clip-path="url(#clip-path-4)">
             <g transform="translate(-1341.725 -1282.141)">
               <path id="navigate-rightt-60" data-name="navigate-rightt" d="M320.822,193.247a2.636,2.636,0,0,0,0,3.824L344.081,219.5l-23.259,22.425a2.636,2.636,0,0,0,0,3.824,2.879,2.879,0,0,0,3.966,0l25.242-24.337a2.636,2.636,0,0,0,0-3.824l-25.242-24.337A2.879,2.879,0,0,0,320.822,193.247Z" transform="translate(1588.262 962.141) rotate(90)" fill="#b49279"/>
@@ -443,9 +441,6 @@
         自2001年成立至今，挑战网已经走过了21年的历程、今天的tenzor，是用代码敲击梦想的守夜人，是用镜头勾勒感动的艺术家，是把美感融入作品的制作人，更是在大时代浪潮下的大学生新媒体之路的开拓者。我们的故事也从末结束……" transform="translate(1275.781 -905.867)" fill="#fff" font-size="35" font-family="AlimamaShuHeiTi-Bold, Alimama ShuHeiTi" font-weight="700"><tspan x="0" y="34">终</tspan><tspan font-size="30"><tspan x="0" y="94" xml:space="preserve">        自2001年成立至今，挑战网</tspan><tspan x="0" y="154">已经走过了21年的历程、今天的</tspan><tspan x="0" y="214">tenzor，是用代码敲击梦想的守</tspan><tspan x="0" y="274">夜人，是用镜头勾勒感动的艺术</tspan><tspan x="0" y="334">家，是把美感融入作品的制作</tspan><tspan x="0" y="394">人，更是在大时代浪潮下的大学</tspan><tspan x="0" y="454">生新媒体之路的开拓者。我们的</tspan><tspan x="0" y="514">故事也从末结束……</tspan></tspan></text>
       </g>
     </g>
-
-
-
 
     <g id="齿轮侧面" clip-path="url(#clip-path-5)">
       <g id="齿轮_侧面" data-name="齿轮 侧面" transform="translate(0 -119)">

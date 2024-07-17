@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./src/image/tenzor.png" />
+  <link rel="icon" type="image/svg+xml" href="./tenzor.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>挑战网首页</title>
 </head>
@@ -39,6 +39,7 @@
       class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0 ml-[7.14vw]">
     <div class="building-mask w-[100%] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
   </div>
+
   <img src="./src/image/title-bg.png"
     class="title-bg fixed w-[98.28125vw] h-[131.11vh] left-[1.71875vw] top-[-21vh] opacity-0 z-20 object-contain">
   <div class="fixed w-[87.8646vw] h-[59.537vh] top-[12.9vh] left-[6.09375vw] z-20">
@@ -48,12 +49,13 @@
       class="title-2 relative opacity-0 w-[100%] h-[100%] top-[-100%] object-contain"
       style="clip-path:xywh(0 50% 100% 50%);transform-origin:75% 50%;scale: 0.1;">
   </div>
-  <img src="./src/image/list.svg" alt="list"
-    class="list absolute w-[5.875rem] h-[5.5rem] top-[3.4259vh] left-[2.03125vw] opacity-0 hover:scale-110 hover:cursor-pointer transition-all z-30 invisible">
-  <img src="./src/image/mail.svg" alt="mail"
-    class="mail absolute w-[6.4375rem] h-[6.4375rem] top-[3.4259vh] right-[3.33333vw] opacity-0 hover:scale-110 hover:cursor-pointer transition-all z-30 invisible">
 
-  <div class="sidebar-mask absolute w-[100vw] h-[100vh] top-0 bg-black opacity-0 hidden cursor-pointer z-30">
+  <img src="./src/image/list.svg" alt="list"
+    class="list absolute w-[5.875rem] h-[5.5rem] top-[3.4259vh] left-[2.03125vw] opacity-0 hover:scale-[1.2] origin-top-left hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
+  <img src="./src/image/mail.svg" alt="mail"
+    class="mail absolute w-[6.4375rem] h-[6.4375rem] top-[3.4259vh] right-[3.33333vw] opacity-0 hover:scale-[1.2] origin-top-right hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
+
+  <div class="sidebar-mask absolute w-[100vw] h-[100vh] top-0 bg-black opacity-0 hidden cursor-pointer z-[36]">
   </div>
   <div
     class="sidebar-left absolute w-[31.09vw] h-[120.28vh] top-[-6vh] right-[100vw] bg-[#414141] z-40 flex flex-col items-center rounded-[2.9375rem] text-[187.5%]">
@@ -97,12 +99,6 @@
       <object data="./src/image/monitor-right.svg" type="image/svg+xml"
         class="monitor-right absolute w-[39.01vw] h-[96.36vh] top-[3.8vh] left-[94.7vw]"></object>
     </div>
-  </div>
-
-  <div
-    class="monitor-left-mask absolute w-[6.5vw] h-[61vh] left-[-7.815vw] top-[116.885vh] z-[-50] flex flex-col justify-between">
-    <div class="left-lamp-up w-[100%] h-[31.414%] cursor-pointer"></div>
-    <div class="left-lamp-down w-[100%] h-[32.414%] cursor-pointer"></div>
   </div>
   <script type="module" src="./src/main.ts"></script>
 </body>

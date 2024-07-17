@@ -17,7 +17,7 @@ let buildingLibrary = document.querySelector('.building-library')
 let buildingGate = document.querySelector('.building-gate')
 let buildingClassroom = document.querySelector('.building-classroom')
 
-var isEnter: boolean = false
+let isEnter: boolean = false
 export async function enterAnime() {
   bodyMask.addEventListener("click", () => {
     if (!isEnter) {
@@ -27,7 +27,7 @@ export async function enterAnime() {
       buildingUp()
       title()
       sidebar()
-      document.body.style.overflowY = "visible";
+      document.body.style.overflowY = "hidden";
       tiaozhan.style.overflow = 'visible'
       bodyMask.style.display = 'none'
       setTimeout(() => {
@@ -36,7 +36,7 @@ export async function enterAnime() {
         mail.style.visibility = 'visible'
         enterLogoMask.style.display = 'block'
         enterLogoAnime()
-      }, 3000);
+      }, 3600);
       document.body.style.cursor = "default"
       isEnter = true
     }
@@ -59,8 +59,7 @@ export async function enterAnime() {
         enterLogoMask.style.display = 'none'
         document.body.style.cursor = "pointer"
         bodyMask.style.display = 'block'
-
-      }, 2000);
+      }, 1601);
       isEnter = false
     }
   })
@@ -70,55 +69,62 @@ function bgAnime() {
   anime({
     targets: document.querySelector('.bg-1'),
     backgroundColor: '#000000',
+    easing: 'easeOutCubic',
+    duration: 1000,
+    delay: 0
   })
 }
 
 function logoColor() {
-
   anime({
     targets: jishuLine,
     stroke: '#0AFFE6',
-    duration: 2000,
+    easing: 'easeOutCubic',
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: meigongLine,
     stroke: '#74DDFF',
-    duration: 2000,
+    easing: 'easeOutCubic',
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: meigongCircle,
     fill: '#74DDFF',
-    duration: 2000,
+    easing: 'easeOutCubic',
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: shipingLine,
     stroke: '#B95FFF',
-    duration: 2000,
+    easing: 'easeOutCubic',
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: logo[3],
     translateY: [
-      { value: '-2rem', duration: 2000, delay: 0 },
-      { value: '-55.165vh', duration: 100, delay: 500 }
+      { value: '-2rem', easing: 'easeOutCubic', duration: 1000, delay: 0 },
+      { value: '-55.165vh', easing: 'linear', duration: 1, delay: 0 }
     ],
     opacity: [
-      { value: 0, duration: 2000, delay: 0 },
-      { value: 1, duration: 500, delay: 500 }
+      { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 0 },
+      { value: 1, easing: 'linear', duration: 500, delay: 2100 }
     ],
     scale: [
-      { value: 0.1, duration: 2000, delay: 0 },
-      { value: 0.5, duration: 500, delay: 500 }
+      { value: 0.1, easing: 'easeOutCubic', duration: 1000, delay: 0 },
+      { value: 0.5, easing: 'linear', duration: 500, delay: 2100 }
     ],
   })
   anime({
     targets: logo[4],
     opacity: 1,
-    duration: 200,
-    easing: 'linear'
+    easing: 'easeOutCubic',
+    duration: 1000,
+    delay: 0
   })
 }
 
@@ -126,69 +132,77 @@ function logoRotate() {
   anime({
     targets: logo[0],
     translateY: '7.31rem',
-    opacity: { value: 0, duration: 1000, delay: 2000 },
+    opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
     rotate: 90,
-    duration: 1000,
+    easing: 'easeOutCubic',
+    duration: 800,
     delay: 1000
   })
   anime({
     targets: logo[1],
     translateY: '0.05rem',
     translateX: [
-      { value: '-15.28rem', duration: 1000, delay: 1000 },
-      { value: '4.24rem', duration: 1000, delay: 0 }
+      { value: '-15.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
+      { value: '4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 1300 }
     ],
-    opacity: { value: 0, duration: 1000, delay: 2000 },
+    opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
     rotate: 30,
-    duration: 1000,
+    easing: 'easeOutCubic',
+    duration: 800,
     delay: 1000
   })
   anime({
     targets: logo[2],
     translateY: '-0.1rem',
     translateX: [
-      { value: '15.28rem', duration: 1000, delay: 1000 },
-      { value: '-4.24rem', duration: 1000, delay: 0 }
+      { value: '15.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
+      { value: '-4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 1300 }
     ],
-    opacity: { value: 0, duration: 1000, delay: 2000 },
+    opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
     rotate: -30,
-    duration: 1000,
+    easing: 'easeOutCubic',
+    duration: 800,
     delay: 1000
   })
   anime({
     targets: logo[4],
     translateY: '12.125rem',
-    duration: 1000,
+    easing: 'easeOutCubic',
+    duration: 800,
     delay: 1000
   })
 }
-
+// FIXME 对齐到底部
+// FIXME 包括monitor同样的问题
 function buildingUp() {
   building.style.opacity = '1'
   anime({
     targets: building,
     translateY: '-31.92vh',
-    easing: 'linear',
-    duration: 100,
-    delay: 2000
+    easing: 'easeOutCubic',
+    duration: 300,
+    delay: 1800
   })
   anime({
     targets: buildingLibrary,
     top: '0vh',
-    duration: 100,
-    delay: 2000
+    easing: 'easeOutCubic',
+    duration: 300,
+    delay: 1800
   })
   anime({
     targets: buildingGate,
     top: '16.284vh',
-    duration: 100,
-    delay: 2000
+    easing: 'easeOutCubic',
+    duration: 300,
+    delay: 1800
   })
   anime({
     targets: buildingClassroom,
     top: '0.437vh',
-    duration: 100,
-    delay: 2000
+    easing: 'easeOutCubic',
+    duration: 300,
+    delay: 1800
   })
 }
 
@@ -196,25 +210,25 @@ function title() {
   anime({
     targets: document.querySelector('.title-bg'),
     opacity: 1,
-    easing: 'linear',
-    duration: 500,
-    delay: 2500
+    easing: 'easeOutCubic',
+    duration: 1000,
+    delay: 2100
   })
   anime({
     targets: document.querySelector('.title-1'),
     scale: 10,
     opacity: 1,
-    easing: 'linear',
-    duration: 500,
-    delay: 2500
+    easing: 'easeOutCubic',
+    duration: 1000,
+    delay: 2100
   })
   anime({
     targets: document.querySelector('.title-2'),
     scale: 10,
     opacity: 1,
-    easing: 'linear',
-    duration: 500,
-    delay: 2500
+    easing: 'easeOutCubic',
+    duration: 1000,
+    delay: 2100
   })
 }
 
@@ -224,14 +238,14 @@ function sidebar() {
     opacity: 1,
     easing: 'linear',
     duration: 500,
-    delay: 2500
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.mail'),
     opacity: 1,
     easing: 'linear',
     duration: 500,
-    delay: 2500
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
@@ -239,7 +253,7 @@ function sidebar() {
     right: '97.3vw',
     easing: 'linear',
     duration: 500,
-    delay: 2500
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
@@ -247,14 +261,14 @@ function sidebar() {
     left: '98vw',
     easing: 'linear',
     duration: 500,
-    delay: 2500
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.bottom-arrow'),
     opacity: 1,
     easing: 'linear',
     duration: 500,
-    delay: 2500
+    delay: 3100
   })
 }
 
@@ -264,28 +278,32 @@ function bgAnimeBack() {
     targets: logo[3],
     translateY: 0,
     scale: 1,
-    duration: 1000,
-    delay: 0
+    easing: 'easeInOutCubic',
+    duration: 800,
+    delay: 1
   })
   anime({
     targets: [document.querySelector('.tiaozhan'), logo[0], logo[1], logo[2]],
     opacity: 1,
-    duration: 5000,
-    delay: 0
+    easing: 'easeInOutCubic',
+    duration: 800,
+    delay: 1
   })
   anime({
     targets: [logo[0], logo[1], logo[2]],
     translateY: 0,
     translateX: 0,
     rotate: 0,
+    easing: 'linear',
     duration: 1,
     delay: 0,
   })
   anime({
     targets: logo[4],
     opacity: 0,
-    translateY: { value: 0, duration: 1, delay: 500 },
-    duration: 500,
+    translateY: { value: 0, duration: 1, delay: 800 },
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
 }
@@ -294,21 +312,24 @@ function titleBack() {
   anime({
     targets: document.querySelector('.title-bg'),
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: document.querySelector('.title-1'),
     scale: 10,
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: document.querySelector('.title-2'),
     scale: 10,
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
 }
@@ -317,27 +338,31 @@ function sidebarBack() {
   anime({
     targets: document.querySelector('.list'),
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: document.querySelector('.mail'),
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
     right: '100vw',
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
     left: '100vw',
     opacity: 0,
-    duration: 500,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
 }
@@ -346,31 +371,36 @@ function colorBack() {
   anime({
     targets: document.querySelector('.bg-1'),
     backgroundColor: '#FFFFFF',
-    duration: 1000,
-    delay: 1000
+    easing: 'easeInOutCubic',
+    duration: 800,
+    delay: 801
   })
   anime({
     targets: jishuLine,
     stroke: '#FF3300',
-    duration: 1000,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: meigongLine,
     stroke: '#FF3300',
-    duration: 1000,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: meigongCircle,
     fill: '#FF3300',
-    duration: 1000,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
   anime({
     targets: shipingLine,
     stroke: '#FF3300',
-    duration: 1000,
+    easing: 'easeInOutCubic',
+    duration: 800,
     delay: 0
   })
 }
@@ -378,46 +408,46 @@ function colorBack() {
 function buildingDown() {
   anime({
     targets: building,
-    opacity: { value: 0, duration: 200, delay: 0 },
+    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 0 },
     translateY: 0,
     easing: 'linear',
     duration: 1,
-    delay: 900
+    delay: 800
   })
   anime({
     targets: buildingLibrary,
     top: 0,
     easing: 'linear',
     duration: 1,
-    delay: 900
+    delay: 800
   })
   anime({
     targets: buildingGate,
     top: 0,
     easing: 'linear',
     duration: 1,
-    delay: 900
+    delay: 800
   })
   anime({
     targets: buildingClassroom,
     top: 0,
     easing: 'linear',
     duration: 1,
-    delay: 900
+    delay: 800
   })
   anime({
     targets: document.querySelector('.bottom-arrow'),
     opacity: 0,
     easing: 'linear',
-    duration: 1000,
-    delay: 0
+    duration: 1,
+    delay: 800
   })
 }
 
 // enterlogo的放大效果
 let enterLogo = document.querySelector('#enter-logo') as any
 function enterLogoAnime() {
-  enterLogo.style.transition = 'all 300ms'
+  enterLogo.style.transition = 'all 300ms ease-out'
   enterLogo.style.transformOrigin = "50% 450%"
   enterLogo.addEventListener('mouseover', enterLogoAnimeover)
   enterLogo.addEventListener('mouseout', enterLogoAnimeout)
@@ -431,7 +461,7 @@ function enterLogoAnimeBack() {
 }
 
 function enterLogoAnimeover() {
-  enterLogo.style.scale = '1.2'
+  enterLogo.style.scale = '1.15'
   Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#FFAB95'
   Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#FFAB95'
   Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#FFAB95'

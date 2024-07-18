@@ -1,5 +1,6 @@
 import anime from "animejs"
 import { changeEl } from "./changeEl"
+import { cogsShow } from "./cogsshow"
 
 let monitorMid = document.querySelector('.monitor-mid') as any
 let monitorLeft = document.querySelector('.monitor-left') as any
@@ -11,6 +12,7 @@ let midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
 let midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
 let midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
 let midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
+let midButtonInitial: string
 let midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
 let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
 let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
@@ -56,6 +58,8 @@ let state1: string
 let state2: any
 
 export async function monitor() {
+  rightCanvas1.style.opacity = '0'
+  rightCanvas2.style.opacity = '0'
   midLampControl()
   cursorPointer()
   midButtonHover()
@@ -64,6 +68,7 @@ export async function monitor() {
   midUp(midMaskRight)
   midButtonReturn.addEventListener('click', monitorReturn)
   midButtonLeft.addEventListener('click', () => {
+    midButtonInitial = 'left'
     if (state1 == "licheng") {
       midCanvasInt2--
     } else if (state1 == "bumen") {
@@ -74,8 +79,10 @@ export async function monitor() {
     //FIXME  这里尺寸有问题和之前一起修
     midCanvasShow()
     rightCanvasShow()
+    cogsShow(state1, state2)
   })
   midButtonRight.addEventListener('click', () => {
+    midButtonInitial = 'right'
     if (state1 == "licheng") {
       midCanvasInt2++
     } else if (state1 == "bumen") {
@@ -85,6 +92,7 @@ export async function monitor() {
     }
     midCanvasShow()
     rightCanvasShow()
+    cogsShow(state1, state2)
   })
   leftLampControl()
   rightMonitorshow(leftMaskUp1)
@@ -99,12 +107,6 @@ function cursorPointer() {
   midButtonReturn.style.cursor = 'pointer'
   midButtonLeft.style.cursor = 'pointer'
   midButtonRight.style.cursor = 'pointer'
-}
-
-function midLampControl() {
-  midLampMidControl()
-  midLampLeftControl()
-  midLampRightControl()
 }
 
 function midButtonHover() {
@@ -159,6 +161,12 @@ function midButtonHover() {
     midButtonRight.querySelector('#navigate-rightt').style.stroke = '#707070'
     midButtonRight.querySelector('#navigate-rightt').style.fill = '#FF7958'
   })
+}
+
+function midLampControl() {
+  midLampMidControl()
+  midLampLeftControl()
+  midLampRightControl()
 }
 
 function midLampMidControl() {
@@ -218,6 +226,7 @@ function midLampMidRemoveOutLis2() {
   midLampMid.querySelector('#承').style.fill = '#6E6E6E'
   midLampMid.querySelector('#承_连接线').style.stroke = '#6E6E6E'
 }
+
 function midLampMidRemoveOverLis22() {
   midLampMid.querySelector('#承').style.fill = '#0AFFE6'
   midLampMid.querySelector('#承_连接线').style.stroke = '#0AFFE6'
@@ -280,6 +289,7 @@ function midLampLeftRemoveOutLis2() {
   midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
 }
+
 function midLampLeftRemoveOverLis22() {
   midLampLeft.querySelector('#起').style.fill = '#74DDFF'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#74DDFF'
@@ -289,7 +299,6 @@ function midLampLeftRemoveOutLis22() {
   midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
 }
-
 
 function midLampRightControl() {
   midLampRight.querySelector('#光').style.transition = "opacity 300ms ease-out";
@@ -318,6 +327,7 @@ function midLampRightRemoveOutLis1() {
     path.style.stroke = '#6e6e6e'
   });
 }
+
 function midLampRightRemoveOverLis12() {
   midLampRight.querySelector('#视_连接线').style.stroke = '#B95FFF'
   midLampRightPath.forEach((path: any) => {
@@ -343,6 +353,7 @@ function midLampRightRemoveOutLis2() {
   midLampRight.querySelector('#终').style.fill = '#6E6E6E'
   midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
 }
+
 function midLampRightRemoveOverLis22() {
   midLampRight.querySelector('#终').style.fill = '#B95FFF'
   midLampRight.querySelector('#终_连接线').style.stroke = '#B95FFF'
@@ -352,7 +363,6 @@ function midLampRightRemoveOutLis22() {
   midLampRight.querySelector('#终').style.fill = '#6E6E6E'
   midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
 }
-
 
 function midUp(el: any) {
   midCanvas1.style.opacity = "0"
@@ -388,14 +398,13 @@ function midUp(el: any) {
 }
 
 function midCanvasShow() {
-  // 部门
   if (state1 == "bumen") {
     switch (midCanvasInt3 % 3) {
       case 0:
         state2 = midMaskLeft
         anime({
           targets: midCanvas3,
-          translateY: 0,
+          transform: "translate(0 3)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -405,7 +414,7 @@ function midCanvasShow() {
         state2 = midMaskMid
         anime({
           targets: midCanvas3,
-          translateY: '21vh',
+          transform: "translate(0 168)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -415,7 +424,7 @@ function midCanvasShow() {
         state2 = midMaskRight
         anime({
           targets: midCanvas3,
-          translateY: '40vh',
+          transform: "translate(0 332)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -423,13 +432,12 @@ function midCanvasShow() {
         break
     }
   } else if (state1 == "licheng") {
-    // 历程
     switch (midCanvasInt2 % 3) {
       case 0:
         state2 = midMaskLeft
         anime({
           targets: midCanvas2,
-          translateY: 0,
+          transform: "translate(0 7)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -439,7 +447,7 @@ function midCanvasShow() {
         state2 = midMaskMid
         anime({
           targets: midCanvas2,
-          translateY: '21vh',
+          transform: "translate(0 138)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -449,7 +457,7 @@ function midCanvasShow() {
         state2 = midMaskRight
         anime({
           targets: midCanvas2,
-          translateY: '40vh',
+          transform: "translate(0 312)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -461,7 +469,7 @@ function midCanvasShow() {
       case 0:
         anime({
           targets: midCanvas1,
-          translateY: 0,
+          transform: "translate(0 5)",
           easing: 'easeInOutCubic',
           duration: 800,
           delay: 0
@@ -470,7 +478,7 @@ function midCanvasShow() {
       case 1:
         anime({
           targets: midCanvas1,
-          translateY: '21vh',
+          transform: "translate(0 168)",
           easing: 'easeInOutCubic',
           duration: 800,
           delay: 0
@@ -479,7 +487,7 @@ function midCanvasShow() {
       case 2:
         anime({
           targets: midCanvas1,
-          translateY: '40vh',
+          transform: "translate(0 329)",
           easing: 'easeInOutCubic',
           duration: 800,
           delay: 0
@@ -489,6 +497,7 @@ function midCanvasShow() {
   }
   showLampCanvasThen(undefined)
   rightCanvasShow()
+  cogsShow(state1, state2)
 }
 
 function leftLampControl() {
@@ -578,6 +587,11 @@ function leftLampUpControl() {
       duration: 1200,
       delay: 0
     })
+    state1 = 'licheng'
+    state2 = midMaskLeft
+    midCanvasInt2 = 120000000
+    midCanvasShow()
+    rightCanvasShow()
   })
   leftMaskUp2.addEventListener('mouseover', () => {
     leftLampUpCircle.forEach((circle: any) => {
@@ -656,6 +670,11 @@ function leftLampUpControl() {
       duration: 1200,
       delay: 0
     })
+    state1 = 'licheng'
+    state2 = midMaskLeft
+    midCanvasInt2 = 120000000
+    midCanvasShow()
+    rightCanvasShow()
   })
   leftMaskUp3.addEventListener('mouseover', () => {
     leftLampUpCircle.forEach((circle: any) => {
@@ -734,6 +753,11 @@ function leftLampUpControl() {
       duration: 1200,
       delay: 0
     })
+    state1 = 'licheng'
+    state2 = midMaskLeft
+    midCanvasInt2 = 120000000
+    midCanvasShow()
+    rightCanvasShow()
   })
 }
 
@@ -819,6 +843,11 @@ function leftLampDownControl() {
     midLampLeftRemoveOverLis1()
     midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
     midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+    state1 = 'bumen'
+    state2 = midMaskLeft
+    midCanvasInt3 = 120000000
+    midCanvasShow()
+    rightCanvasShow()
   })
   leftMaskDown2.addEventListener('mouseover', () => {
     leftLampDownCircle.forEach((circle: any) => {
@@ -897,6 +926,11 @@ function leftLampDownControl() {
     midLampLeftRemoveOverLis1()
     midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
     midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+    state1 = 'bumen'
+    state2 = midMaskLeft
+    midCanvasInt3 = 120000000
+    midCanvasShow()
+    rightCanvasShow()
   })
   leftMaskDown3.addEventListener('mouseover', () => {
     leftLampDownCircle.forEach((circle: any) => {
@@ -975,6 +1009,11 @@ function leftLampDownControl() {
     midLampLeftRemoveOverLis1()
     midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
     midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
+    state1 = 'bumen'
+    state2 = midMaskLeft
+    midCanvasInt3 = 120000000
+    midCanvasShow()
+    rightCanvasShow()
   })
 }
 // 右边机器出来
@@ -1039,6 +1078,7 @@ function rightMonitorshow(el: any) {
         break
     }
     showLampCanvas()
+    cogsShow(state1, state2)
     anime({
       targets: monitorMid,
       translateY: '-53.2vh',
@@ -1087,7 +1127,6 @@ function rightMonitorshow(el: any) {
       delay: 0
     })
   })
-
 }
 
 function showLampCanvas() {
@@ -1220,17 +1259,34 @@ function showLampCanvasThen(el: any) {
       }
     }
     midCanvasShow()
+    rightCanvasShow()
+    cogsShow(state1, state2)
   } else {
-    switch (state2) {
-      case midMaskLeft:
-        state2Initial = midMaskRight
-        break
-      case midMaskMid:
-        state2Initial = midMaskLeft
-        break
-      case midMaskRight:
-        state2Initial = midMaskMid
-        break
+    if (midButtonInitial == 'right') {
+      switch (state2) {
+        case midMaskLeft:
+          state2Initial = midMaskRight
+          break
+        case midMaskMid:
+          state2Initial = midMaskLeft
+          break
+        case midMaskRight:
+          state2Initial = midMaskMid
+          break
+      }
+    }
+    if (midButtonInitial == 'left') {
+      switch (state2) {
+        case midMaskLeft:
+          state2Initial = midMaskMid
+          break
+        case midMaskMid:
+          state2Initial = midMaskRight
+          break
+        case midMaskRight:
+          state2Initial = midMaskLeft
+          break
+      }
     }
   }
   if (state1 == "licheng") {
@@ -1336,6 +1392,7 @@ function showLampCanvasThen(el: any) {
 //  返回
 export function monitorReturn() {
   state1 = ''
+  state2 = undefined
   midCanvasInt1 = 120000000
   midCanvasInt2 = 120000000
   midCanvasInt3 = 120000000
@@ -1386,6 +1443,7 @@ export function monitorReturn() {
     })
     midUpBool = false
   }
+  cogsShow(state1, state2)
   changeEl(midCanvas2, 'easeOutCubic')
   midMaskLeft.removeEventListener('click', showLampCanvasThen)
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)

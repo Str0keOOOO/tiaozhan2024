@@ -17,21 +17,72 @@ function cogsShowLeft(state1: string) {
   let cogs1 = monitorLeft.contentDocument.querySelector('#齿轮')
   let cogs2 = monitorLeft.contentDocument.querySelector('#设置_填充')
   let cogs3 = monitorLeft.contentDocument.querySelector('#设置_填充-2')
-  cogs1.style.transition = "all 1200ms ease-out"
-  cogs2.style.transition = "all 1200ms ease-out"
-  cogs3.style.transition = "all 1200ms ease-out"
   if (state1 == 'licheng') {
-    cogs1.setAttribute('transform', 'translate(243.542 1873.247) rotate(-21)')
-    cogs2.setAttribute('transform', 'translate(273.079 1234.412) rotate(73)')
-    cogs3.setAttribute('transform', 'translate(249.079 1349.412) rotate(-68)')
+    anime({
+      targets: cogs1,
+      transform: 'translate(243.542 1873.247) rotate(-21)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: cogs2,
+      transform: 'translate(273.079 1234.412) rotate(73)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: cogs3,
+      transform: 'translate(249.079 1349.412) rotate(-68)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
   } else if (state1 == 'bumen') {
-    cogs1.setAttribute('transform', 'translate(243.542 1873.247) rotate(56)')
-    cogs2.setAttribute('transform', 'translate(273.079 1234.412) rotate(63)')
-    cogs3.setAttribute('transform', 'translate(249.079 1349.412) rotate(-16)')
+    anime({
+      targets: cogs1,
+      transform: 'translate(243.542 1873.247) rotate(56)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: cogs2,
+      transform: 'translate(273.079 1234.412) rotate(63)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: cogs3,
+      transform: 'translate(249.079 1349.412) rotate(-16)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
   } else {
-    cogs1.setAttribute('transform', 'translate(243.542 1873.247) rotate(10)')
-    cogs2.setAttribute('transform', 'translate(273.079 1234.412) rotate(24)')
-    cogs3.setAttribute('transform', 'translate(249.079 1349.412) rotate(24)')
+    anime({
+      targets: cogs1,
+      transform: 'translate(243.542 1873.247) rotate(10)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: cogs2,
+      transform: 'translate(273.079 1234.412) rotate(24)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: cogs3,
+      transform: 'translate(249.079 1349.412) rotate(24)',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
   }
 }
 

@@ -50,8 +50,8 @@
       </g>
     </g>
 
-    <g id="真_显示屏-1" data-name="真 显示屏" transform="translate(6.067 10.867)" opacity="0.83" clip-path="url(#clip-path)">
-      <g id="内容" transform="translate(0 -10)">
+    <g id="真_显示屏-1" data-name="真 显示屏" transform="translate(10.067 11.867)" opacity="0.83" clip-path="url(#clip-path)">
+      <g id="内容" transform="translate(0 -20)">
         <rect id="底" width="528" height="3368" transform="translate(1255.933 -1245.867)" fill="#423e3b"/>
         <g id="箭头" transform="translate(1715.725 -905)">
           <g id="重复网格_4" data-name="重复网格 4" opacity="0.42" clip-path="url(#clip-path-2)">
@@ -253,7 +253,7 @@
     </g>
 
     <g id="真_显示屏-2" data-name="真 显示屏" transform="translate(6.067 10.867)" opacity="0.83" clip-path="url(#clip-path)">
-      <g id="内容" data-name="内容">
+      <g id="内容" data-name="内容" transform="translate(0 0)">
         <rect id="底-2" data-name="底" width="528" height="3368" transform="translate(1255.933 -1245.867)" fill="#423e3b"/>
         <g id="箭头-2" data-name="箭头" transform="translate(1715.725 -905)">
           <g id="重复网格_4-2" data-name="重复网格 4" opacity="0.42" clip-path="url(#clip-path-4)">

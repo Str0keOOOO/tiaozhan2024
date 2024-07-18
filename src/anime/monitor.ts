@@ -37,8 +37,8 @@ let leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
 let leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
 let leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
 
-let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
-let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
+let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
+let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
 let rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
 
 // 记录状态
@@ -1112,9 +1112,8 @@ function rightMonitorshow(el: any) {
       delay: 0
     })
     anime({
-      targets: [rightCanvas1, rightCanvas2],
-      translateX: '2.2vw',
-      translateY: '1.2vh',
+      targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
+      transform: "translate(10.067 11.867)",
       easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
@@ -1391,6 +1390,20 @@ function showLampCanvasThen(el: any) {
 }
 //  返回
 export function monitorReturn() {
+  anime({
+    targets: rightCanvas1,
+    opacity: 0,
+    easing: 'easeOutCubic',
+    duration: 1200,
+    delay: 0
+  })
+  anime({
+    targets: rightCanvas2,
+    opacity: 0,
+    easing: 'easeOutCubic',
+    duration: 1200,
+    delay: 0
+  })
   state1 = ''
   state2 = undefined
   midCanvasInt1 = 120000000
@@ -1420,9 +1433,8 @@ export function monitorReturn() {
       delay: 0
     })
     anime({
-      targets: [rightCanvas1, rightCanvas2],
-      translateX: 0,
-      translateY: 0,
+      targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
+      transform: "translate(6.067 10.867)",
       easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
@@ -1443,6 +1455,13 @@ export function monitorReturn() {
     })
     midUpBool = false
   }
+  anime({
+    targets: midCanvas2,
+    transform: "translate(0 7)",
+    easing: 'easeInOutCubic',
+    duration: 1200,
+    delay: 0
+  })
   cogsShow(state1, state2)
   changeEl(midCanvas2, 'easeOutCubic')
   midMaskLeft.removeEventListener('click', showLampCanvasThen)
@@ -1553,7 +1572,7 @@ function rightCanvasShow() {
       case 0:
         anime({
           targets: rightCanvas1,
-          translateY: 0,
+          transform: "translate(0 0)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -1562,7 +1581,7 @@ function rightCanvasShow() {
       case 1:
         anime({
           targets: rightCanvas1,
-          translateY: '110vh',
+          transform: "translate(0 1120)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -1571,7 +1590,7 @@ function rightCanvasShow() {
       case 2:
         anime({
           targets: rightCanvas1,
-          translateY: '240vh',
+          transform: "translate(0 2240)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -1583,7 +1602,7 @@ function rightCanvasShow() {
       case 0:
         anime({
           targets: rightCanvas2,
-          translateY: 0,
+          transform: "translate(0 -20)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -1592,7 +1611,7 @@ function rightCanvasShow() {
       case 1:
         anime({
           targets: rightCanvas2,
-          translateY: '110vh',
+          transform: "translate(0 1018)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
@@ -1601,7 +1620,7 @@ function rightCanvasShow() {
       case 2:
         anime({
           targets: rightCanvas2,
-          translateY: '240vh',
+          transform: "translate(0 2167)",
           easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0

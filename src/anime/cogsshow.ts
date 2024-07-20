@@ -307,7 +307,7 @@ function cogsShowRight(state1: string, state2: any) {
       })
       anime({
         targets: sideCogs,
-        transform: "translate(0 -905)",
+        transform: "translate(0 -455)",
         easing: 'easeInOutCubic',
         duration: 1200,
         delay: 0

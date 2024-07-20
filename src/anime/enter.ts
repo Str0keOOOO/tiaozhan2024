@@ -27,7 +27,6 @@ export async function enterAnime() {
       buildingUp()
       title()
       sidebar()
-      document.body.style.overflowY = "hidden";
       tiaozhan.style.overflow = 'visible'
       bodyMask.style.display = 'none'
       setTimeout(() => {
@@ -143,7 +142,7 @@ function logoRotate() {
     translateY: '0.05rem',
     translateX: [
       { value: '-15.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
-      { value: '4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 1300 }
+      { value: '4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 300 }
     ],
     opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
     rotate: 30,
@@ -156,7 +155,7 @@ function logoRotate() {
     translateY: '-0.1rem',
     translateX: [
       { value: '15.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
-      { value: '-4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 1300 }
+      { value: '-4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 300 }
     ],
     opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
     rotate: -30,
@@ -250,7 +249,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-left'),
     opacity: 1,
-    right: '97.3vw',
+    right: '98vw',
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -303,7 +302,7 @@ function bgAnimeBack() {
     opacity: 0,
     translateY: { value: 0, duration: 1, delay: 800 },
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
 }
@@ -313,7 +312,7 @@ function titleBack() {
     targets: document.querySelector('.title-bg'),
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
@@ -321,7 +320,7 @@ function titleBack() {
     scale: 10,
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
@@ -329,7 +328,7 @@ function titleBack() {
     scale: 10,
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
 }
@@ -339,14 +338,14 @@ function sidebarBack() {
     targets: document.querySelector('.list'),
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
     targets: document.querySelector('.mail'),
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
@@ -354,7 +353,7 @@ function sidebarBack() {
     right: '100vw',
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
@@ -362,7 +361,7 @@ function sidebarBack() {
     left: '100vw',
     opacity: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
 }
@@ -379,28 +378,28 @@ function colorBack() {
     targets: jishuLine,
     stroke: '#FF3300',
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
     targets: meigongLine,
     stroke: '#FF3300',
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
     targets: meigongCircle,
     fill: '#FF3300',
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
   anime({
     targets: shipingLine,
     stroke: '#FF3300',
     easing: 'easeInOutCubic',
-    duration: 800,
+    duration: 801,
     delay: 0
   })
 }

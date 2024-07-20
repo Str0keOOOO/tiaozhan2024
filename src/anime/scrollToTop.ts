@@ -11,9 +11,7 @@ export function scrollToTop() {
   }
 }
 
-export async function toTop() {
-  // ie下
-  document.documentElement.scrollTop = 0;
-  // 非ie
-  document.body.scrollTop = 0;
+export function toTop() {
+  window.scrollTo(0, 0);
+  return null
 }

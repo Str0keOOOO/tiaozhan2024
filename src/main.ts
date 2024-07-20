@@ -6,13 +6,12 @@ import { monitor } from './anime/monitor'
 import { toTop } from './anime/scrollToTop'
 import { draggable } from './anime/draggable'
 
-window.onbeforeunload = toTop
-
 enterAnime()
 sidebar()
 monitor()
 draggable()
 
+window.onbeforeunload = toTop
 document.onselectstart = function () { return false }
 document.oncontextmenu = function () { return false }
 document.ondragstart = function () { return false }

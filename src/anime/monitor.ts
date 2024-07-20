@@ -18,6 +18,8 @@ let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
 let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
 let midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
 let midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
+let monitorMidTop = monitorMid.contentDocument.querySelectorAll('.机器上')
+let monitorMidBottom = monitorMid.contentDocument.querySelectorAll('.机器下')
 
 let midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
 let midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
@@ -40,6 +42,8 @@ let leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
 let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
 let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
 let rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
+
+let bgMask = document.querySelector('.bg-mask') as any
 
 // 记录状态
 let dict: { [key1: string]: any[] } = {
@@ -174,8 +178,8 @@ function midLampMidControl() {
   midLampMid.querySelector('#技_连接线').style.transition = "stroke 300ms ease-out"
   midLampMid.querySelector('#技术部 path').style.transition = "stroke 300ms ease-out"
   midLampMidLine.forEach((line: any) => {
-    line.style.transition = "stroke 300ms ease-out";
-  });
+    line.style.transition = "stroke 300ms ease-out"
+  })
   midLampMid.querySelector('#承').style.transition = "fill 300ms ease-out"
   midLampMid.querySelector('#承_连接线').style.transition = "stroke 300ms ease-out"
   midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
@@ -183,66 +187,74 @@ function midLampMidControl() {
 }
 
 function midLampMidRemoveOverLis1() {
+  midLampMid.insertBefore(midLampMid.querySelector('#承'), midLampMid.querySelector('#技术部'))
   midLampMid.querySelector('#光').style.opacity = '0.52'
   midLampMid.querySelector('#技_连接线').style.stroke = '#0AFFE6'
   midLampMid.querySelector('#技术部 path').style.stroke = '#0AFFE6'
   midLampMidLine.forEach((line: any) => {
     line.style.stroke = '#0AFFE6'
-  });
+  })
 }
 
 function midLampMidRemoveOutLis1() {
+  midLampMid.insertBefore(midLampMid.querySelector('#承'), midLampMid.querySelector('#技术部'))
   midLampMid.querySelector('#光').style.opacity = '0'
   midLampMid.querySelector('#技_连接线').style.stroke = '#6e6e6e'
   midLampMid.querySelector('#技术部 path').style.stroke = '#6e6e6e'
   midLampMidLine.forEach((line: any) => {
     line.style.stroke = '#6e6e6e'
-  });
+  })
 }
 function midLampMidRemoveOverLis12() {
+  midLampMid.insertBefore(midLampMid.querySelector('#承'), midLampMid.querySelector('#技术部'))
   midLampMid.querySelector('#技_连接线').style.stroke = '#0AFFE6'
   midLampMid.querySelector('#技术部 path').style.stroke = '#0AFFE6'
   midLampMidLine.forEach((line: any) => {
     line.style.stroke = '#0AFFE6'
-  });
+  })
 }
 
 function midLampMidRemoveOutLis12() {
+  midLampMid.insertBefore(midLampMid.querySelector('#承'), midLampMid.querySelector('#技术部'))
   midLampMid.querySelector('#技_连接线').style.stroke = '#6e6e6e'
   midLampMid.querySelector('#技术部 path').style.stroke = '#6e6e6e'
   midLampMidLine.forEach((line: any) => {
     line.style.stroke = '#6e6e6e'
-  });
+  })
 }
 
 function midLampMidRemoveOverLis2() {
+  midLampMid.insertBefore(midLampMid.querySelector('#技术部'), midLampMid.querySelector('#承'))
   midLampMid.querySelector('#光').style.opacity = '0.52'
   midLampMid.querySelector('#承').style.fill = '#0AFFE6'
   midLampMid.querySelector('#承_连接线').style.stroke = '#0AFFE6'
 }
 
 function midLampMidRemoveOutLis2() {
+  midLampMid.insertBefore(midLampMid.querySelector('#技术部'), midLampMid.querySelector('#承'))
   midLampMid.querySelector('#光').style.opacity = '0'
   midLampMid.querySelector('#承').style.fill = '#6E6E6E'
   midLampMid.querySelector('#承_连接线').style.stroke = '#6E6E6E'
 }
 
 function midLampMidRemoveOverLis22() {
+  midLampMid.insertBefore(midLampMid.querySelector('#技术部'), midLampMid.querySelector('#承'))
   midLampMid.querySelector('#承').style.fill = '#0AFFE6'
   midLampMid.querySelector('#承_连接线').style.stroke = '#0AFFE6'
 }
 
 function midLampMidRemoveOutLis22() {
+  midLampMid.insertBefore(midLampMid.querySelector('#技术部'), midLampMid.querySelector('#承'))
   midLampMid.querySelector('#承').style.fill = '#6E6E6E'
   midLampMid.querySelector('#承_连接线').style.stroke = '#6E6E6E'
 }
 
 function midLampLeftControl() {
-  midLampLeft.querySelector('#光').style.transition = "opacity 300ms ease-out";
-  midLampLeft.querySelector('#美_连接线').style.transition = "stroke 300ms ease-out";
-  midLampLeft.querySelector('#美工部 line').style.transition = "stroke 300ms ease-out";
-  midLampLeft.querySelector('#美工部 path').style.transition = "stroke 300ms ease-out";
-  midLampLeft.querySelector('#美工部 circle').style.transition = "fill 300ms ease-out";
+  midLampLeft.querySelector('#光').style.transition = "opacity 300ms ease-out"
+  midLampLeft.querySelector('#美_连接线').style.transition = "stroke 300ms ease-out"
+  midLampLeft.querySelector('#美工部 line').style.transition = "stroke 300ms ease-out"
+  midLampLeft.querySelector('#美工部 path').style.transition = "stroke 300ms ease-out"
+  midLampLeft.querySelector('#美工部 circle').style.transition = "fill 300ms ease-out"
   midLampLeft.querySelector('#起').style.transition = "fill 300ms ease-out"
   midLampLeft.querySelector('#起_连接线').style.transition = "stroke 300ms ease-out"
   midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis1)
@@ -250,6 +262,7 @@ function midLampLeftControl() {
 }
 
 function midLampLeftRemoveOverLis1() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#起'), midLampLeft.querySelector('#美工部'))
   midLampLeft.querySelector('#光').style.opacity = '0.52'
   midLampLeft.querySelector('#美_连接线').style.stroke = '#74DDFF'
   midLampLeft.querySelector('#美工部 line').style.stroke = '#74DDFF'
@@ -258,6 +271,7 @@ function midLampLeftRemoveOverLis1() {
 }
 
 function midLampLeftRemoveOutLis1() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#起'), midLampLeft.querySelector('#美工部'))
   midLampLeft.querySelector('#光').style.opacity = '0'
   midLampLeft.querySelector('#美_连接线').style.stroke = '#6e6e6e'
   midLampLeft.querySelector('#美工部 line').style.stroke = '#6e6e6e'
@@ -265,6 +279,7 @@ function midLampLeftRemoveOutLis1() {
   midLampLeft.querySelector('#美工部 circle').style.fill = '#6e6e6e'
 }
 function midLampLeftRemoveOverLis12() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#起'), midLampLeft.querySelector('#美工部'))
   midLampLeft.querySelector('#美_连接线').style.stroke = '#74DDFF'
   midLampLeft.querySelector('#美工部 line').style.stroke = '#74DDFF'
   midLampLeft.querySelector('#美工部 path').style.stroke = '#74DDFF'
@@ -272,6 +287,7 @@ function midLampLeftRemoveOverLis12() {
 }
 
 function midLampLeftRemoveOutLis12() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#起'), midLampLeft.querySelector('#美工部'))
   midLampLeft.querySelector('#美_连接线').style.stroke = '#6e6e6e'
   midLampLeft.querySelector('#美工部 line').style.stroke = '#6e6e6e'
   midLampLeft.querySelector('#美工部 path').style.stroke = '#6e6e6e'
@@ -279,33 +295,37 @@ function midLampLeftRemoveOutLis12() {
 }
 
 function midLampLeftRemoveOverLis2() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#美工部'), midLampLeft.querySelector('#起'))
   midLampLeft.querySelector('#光').style.opacity = '0.52'
   midLampLeft.querySelector('#起').style.fill = '#74DDFF'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#74DDFF'
 }
 
 function midLampLeftRemoveOutLis2() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#美工部'), midLampLeft.querySelector('#起'))
   midLampLeft.querySelector('#光').style.opacity = '0'
   midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
 }
 
 function midLampLeftRemoveOverLis22() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#美工部'), midLampLeft.querySelector('#起'))
   midLampLeft.querySelector('#起').style.fill = '#74DDFF'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#74DDFF'
 }
 
 function midLampLeftRemoveOutLis22() {
+  midLampLeft.insertBefore(midLampLeft.querySelector('#美工部'), midLampLeft.querySelector('#起'))
   midLampLeft.querySelector('#起').style.fill = '#6E6E6E'
   midLampLeft.querySelector('#起_连接线').style.stroke = '#6E6E6E'
 }
 
 function midLampRightControl() {
-  midLampRight.querySelector('#光').style.transition = "opacity 300ms ease-out";
-  midLampRight.querySelector('#视_连接线').style.transition = "stroke 300ms ease-out";
+  midLampRight.querySelector('#光').style.transition = "opacity 300ms ease-out"
+  midLampRight.querySelector('#视_连接线').style.transition = "stroke 300ms ease-out"
   midLampRightPath.forEach((path: any) => {
-    path.style.transition = "stroke 300ms ease-out";
-  });
+    path.style.transition = "stroke 300ms ease-out"
+  })
   midLampRight.querySelector('#终').style.transition = "fill 300ms ease-out"
   midLampRight.querySelector('#终_连接线').style.transition = "stroke 300ms ease-out"
   midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
@@ -313,53 +333,61 @@ function midLampRightControl() {
 }
 
 function midLampRightRemoveOverLis1() {
+  midLampRight.insertBefore(midLampRight.querySelector('#终'), midLampRight.querySelector('#视频部'))
   midLampRight.querySelector('#光').style.opacity = '0.52'
   midLampRight.querySelector('#视_连接线').style.stroke = '#B95FFF'
   midLampRightPath.forEach((path: any) => {
     path.style.stroke = '#B95FFF'
-  });
+  })
 }
 
 function midLampRightRemoveOutLis1() {
+  midLampRight.insertBefore(midLampRight.querySelector('#终'), midLampRight.querySelector('#视频部'))
   midLampRight.querySelector('#光').style.opacity = '0'
   midLampRight.querySelector('#视_连接线').style.stroke = '#6e6e6e'
   midLampRightPath.forEach((path: any) => {
     path.style.stroke = '#6e6e6e'
-  });
+  })
 }
 
 function midLampRightRemoveOverLis12() {
+  midLampRight.insertBefore(midLampRight.querySelector('#终'), midLampRight.querySelector('#视频部'))
   midLampRight.querySelector('#视_连接线').style.stroke = '#B95FFF'
   midLampRightPath.forEach((path: any) => {
     path.style.stroke = '#B95FFF'
-  });
+  })
 }
 
 function midLampRightRemoveOutLis12() {
+  midLampRight.insertBefore(midLampRight.querySelector('#终'), midLampRight.querySelector('#视频部'))
   midLampRight.querySelector('#视_连接线').style.stroke = '#6e6e6e'
   midLampRightPath.forEach((path: any) => {
     path.style.stroke = '#6e6e6e'
-  });
+  })
 }
 
 function midLampRightRemoveOverLis2() {
+  midLampRight.insertBefore(midLampRight.querySelector('#视频部'), midLampRight.querySelector('#终'))
   midLampRight.querySelector('#光').style.opacity = '0.52'
   midLampRight.querySelector('#终').style.fill = '#B95FFF'
   midLampRight.querySelector('#终_连接线').style.stroke = '#B95FFF'
 }
 
 function midLampRightRemoveOutLis2() {
+  midLampRight.insertBefore(midLampRight.querySelector('#视频部'), midLampRight.querySelector('#终'))
   midLampRight.querySelector('#光').style.opacity = '0'
   midLampRight.querySelector('#终').style.fill = '#6E6E6E'
   midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
 }
 
 function midLampRightRemoveOverLis22() {
+  midLampRight.insertBefore(midLampRight.querySelector('#视频部'), midLampRight.querySelector('#终'))
   midLampRight.querySelector('#终').style.fill = '#B95FFF'
   midLampRight.querySelector('#终_连接线').style.stroke = '#B95FFF'
 }
 
 function midLampRightRemoveOutLis22() {
+  midLampRight.insertBefore(midLampRight.querySelector('#视频部'), midLampRight.querySelector('#终'))
   midLampRight.querySelector('#终').style.fill = '#6E6E6E'
   midLampRight.querySelector('#终_连接线').style.stroke = '#6E6E6E'
 }
@@ -369,10 +397,11 @@ function midUp(el: any) {
   midCanvas2.style.opacity = "1"
   midCanvas3.style.opacity = "0"
   el.addEventListener('click', () => {
+    bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.92) 66%, transparent)'
     if (!midUpBool) {
       anime({
         targets: monitorMid,
-        translateY: '-45.5vh',
+        translateY: '-48vh',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
@@ -509,7 +538,7 @@ function leftLampUpControl() {
   let leftLampUpCircle = leftLampUp.querySelectorAll('circle')
   leftLampUpCircle.forEach((circle: any) => {
     circle.style.transition = "opacity 300ms ease-out"
-  });
+  })
   leftMaskUp1.addEventListener('mouseover', () => {
     leftLampUpCircle.forEach((circle: any) => {
       circle.style.opacity = '1'
@@ -765,16 +794,16 @@ function leftLampDownControl() {
   let leftLampDownCircle = leftLampDown.querySelectorAll('circle')
   leftLampDownCircle.forEach((circle: any) => {
     circle.style.transition = "opacity 300ms ease-out"
-  });
+  })
   leftMaskDown1.addEventListener('mouseover', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '1'
-    });
+    })
   })
   leftMaskDown1.addEventListener('mouseout', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
-    });
+    })
   })
   leftMaskDown1.addEventListener('click', () => {
     if (state2 == undefined) {
@@ -852,12 +881,12 @@ function leftLampDownControl() {
   leftMaskDown2.addEventListener('mouseover', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '1'
-    });
+    })
   })
   leftMaskDown2.addEventListener('mouseout', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
-    });
+    })
   })
   leftMaskDown2.addEventListener('click', () => {
     if (state2 == undefined) {
@@ -935,12 +964,12 @@ function leftLampDownControl() {
   leftMaskDown3.addEventListener('mouseover', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '1'
-    });
+    })
   })
   leftMaskDown3.addEventListener('mouseout', () => {
     leftLampDownCircle.forEach((circle: any) => {
       circle.style.opacity = '0'
-    });
+    })
   })
   leftMaskDown3.addEventListener('click', () => {
     if (state2 == undefined) {
@@ -1019,10 +1048,24 @@ function leftLampDownControl() {
 // 右边机器出来
 function rightMonitorshow(el: any) {
   el.addEventListener('click', () => {
+    anime({
+      targets: monitorMidTop[0],
+      transform: "translate(0 -50)",
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: [monitorMidBottom[0],monitorMidBottom[1],monitorMidBottom[2],monitorMidBottom[3]],
+      transform: "translate(0 40)",
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: rightCanvas1,
-        opacity: 0.83,
+        opacity: 0.95,
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
@@ -1045,7 +1088,7 @@ function rightMonitorshow(el: any) {
       })
       anime({
         targets: rightCanvas2,
-        opacity: 0.83,
+        opacity: 0.95,
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
@@ -1081,7 +1124,7 @@ function rightMonitorshow(el: any) {
     cogsShow(state1, state2)
     anime({
       targets: monitorMid,
-      translateY: '-53.2vh',
+      translateY: '-57vh',
       translateX: '-8.2vw',
       easing: 'easeOutCubic',
       duration: 1200,
@@ -1390,6 +1433,21 @@ function showLampCanvasThen(el: any) {
 }
 //  返回
 export function monitorReturn() {
+  bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent)'
+  anime({
+    targets: monitorMidTop[0],
+    transform: "translate(0 0)",
+    easing: 'easeOutCubic',
+    duration: 1200,
+    delay: 0
+  })
+  anime({
+    targets: [monitorMidBottom[0],monitorMidBottom[1],monitorMidBottom[2],monitorMidBottom[3]],
+    transform: "translate(0 0)",
+    easing: 'easeOutCubic',
+    duration: 1200,
+    delay: 0
+  })
   anime({
     targets: rightCanvas1,
     opacity: 0,

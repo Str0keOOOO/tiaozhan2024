@@ -1,11 +1,8 @@
 import anime from "animejs"
-import { scrollToTop } from "./scrollToTop"
-import { monitorReturn } from "./monitor"
 
 let bodyMask = document.querySelector('.body-mask') as any
 let list = document.querySelector('.list') as any
 let mail = document.querySelector('.mail') as any
-let enterLogoMask = document.querySelector('.enter-logo-mask') as any
 let tiaozhan = document.querySelector('.tiaozhan') as any
 let logo = document.querySelectorAll('.enter-logo') as any
 let jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
@@ -33,33 +30,9 @@ export async function enterAnime() {
         document.body.style.overflowY = "scroll";
         list.style.visibility = 'visible'
         mail.style.visibility = 'visible'
-        enterLogoMask.style.display = 'block'
-        enterLogoAnime()
       }, 3600);
       document.body.style.cursor = "default"
       isEnter = true
-    }
-  })
-  enterLogoMask.addEventListener('click', () => {
-    if (isEnter) {
-      bgAnimeBack()
-      scrollToTop()
-      titleBack()
-      sidebarBack()
-      colorBack()
-      buildingDown()
-      enterLogoAnimeBack()
-      monitorReturn()
-      document.body.style.overflowY = "hidden";
-      enterLogoMask.style.display = 'none'
-      setTimeout(() => {
-        list.style.visibility = 'hidden'
-        mail.style.visibility = 'hidden'
-        enterLogoMask.style.display = 'none'
-        document.body.style.cursor = "pointer"
-        bodyMask.style.display = 'block'
-      }, 1601);
-      isEnter = false
     }
   })
 }
@@ -107,7 +80,7 @@ function logoColor() {
     targets: logo[3],
     translateY: [
       { value: '-2rem', easing: 'easeOutCubic', duration: 1000, delay: 0 },
-      { value: '-55.165vh', easing: 'linear', duration: 1, delay: 0 }
+      { value: '-23.165vh', easing: 'linear', duration: 1, delay: 0 }
     ],
     opacity: [
       { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 0 },
@@ -141,7 +114,7 @@ function logoRotate() {
     targets: logo[1],
     translateY: '0.05rem',
     translateX: [
-      { value: '-15.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
+      { value: '-11.78rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
       { value: '4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 300 }
     ],
     opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
@@ -154,18 +127,11 @@ function logoRotate() {
     targets: logo[2],
     translateY: '-0.1rem',
     translateX: [
-      { value: '15.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
+      { value: '10.28rem', easing: 'easeOutCubic', duration: 800, delay: 1000 },
       { value: '-4.24rem', easing: 'easeOutCubic', duration: 1000, delay: 300 }
     ],
     opacity: { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 2100 },
     rotate: -30,
-    easing: 'easeOutCubic',
-    duration: 800,
-    delay: 1000
-  })
-  anime({
-    targets: logo[4],
-    translateY: '12.125rem',
     easing: 'easeOutCubic',
     duration: 800,
     delay: 1000
@@ -177,7 +143,7 @@ function buildingUp() {
   building.style.opacity = '1'
   anime({
     targets: building,
-    translateY: '-31.92vh',
+    translateY: '-12.30vh',
     easing: 'easeOutCubic',
     duration: 300,
     delay: 1800
@@ -191,14 +157,14 @@ function buildingUp() {
   })
   anime({
     targets: buildingGate,
-    top: '16.284vh',
+    top: '6.88125vh',
     easing: 'easeOutCubic',
     duration: 300,
     delay: 1800
   })
   anime({
     targets: buildingClassroom,
-    top: '0.437vh',
+    top: '0.619vh',
     easing: 'easeOutCubic',
     duration: 300,
     delay: 1800
@@ -269,207 +235,4 @@ function sidebar() {
     duration: 500,
     delay: 3100
   })
-}
-
-// 回退动画
-function bgAnimeBack() {
-  anime({
-    targets: logo[3],
-    translateY: 0,
-    scale: 1,
-    easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1
-  })
-  anime({
-    targets: [document.querySelector('.tiaozhan'), logo[0], logo[1], logo[2]],
-    opacity: 1,
-    easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1
-  })
-  anime({
-    targets: [logo[0], logo[1], logo[2]],
-    translateY: 0,
-    translateX: 0,
-    rotate: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 0,
-  })
-  anime({
-    targets: logo[4],
-    opacity: 0,
-    translateY: { value: 0, duration: 1, delay: 800 },
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-}
-
-function titleBack() {
-  anime({
-    targets: document.querySelector('.title-bg'),
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: document.querySelector('.title-1'),
-    scale: 10,
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: document.querySelector('.title-2'),
-    scale: 10,
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-}
-
-function sidebarBack() {
-  anime({
-    targets: document.querySelector('.list'),
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: document.querySelector('.mail'),
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: document.querySelector('.sidebar-left'),
-    right: '100vw',
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: document.querySelector('.sidebar-right'),
-    left: '100vw',
-    opacity: 0,
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-}
-
-function colorBack() {
-  anime({
-    targets: document.querySelector('.bg-1'),
-    backgroundColor: '#FFFFFF',
-    easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 801
-  })
-  anime({
-    targets: jishuLine,
-    stroke: '#FF3300',
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: meigongLine,
-    stroke: '#FF3300',
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: meigongCircle,
-    fill: '#FF3300',
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-  anime({
-    targets: shipingLine,
-    stroke: '#FF3300',
-    easing: 'easeInOutCubic',
-    duration: 801,
-    delay: 0
-  })
-}
-
-function buildingDown() {
-  anime({
-    targets: building,
-    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 0 },
-    translateY: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: buildingLibrary,
-    top: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: buildingGate,
-    top: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: buildingClassroom,
-    top: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: document.querySelector('.bottom-arrow'),
-    opacity: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-}
-
-// enterlogo的放大效果
-let enterLogo = document.querySelector('#enter-logo') as any
-function enterLogoAnime() {
-  enterLogo.style.transition = 'all 300ms ease-out'
-  enterLogo.style.transformOrigin = "50% 450%"
-  enterLogo.addEventListener('mouseover', enterLogoAnimeover)
-  enterLogo.addEventListener('mouseout', enterLogoAnimeout)
-}
-
-function enterLogoAnimeBack() {
-  enterLogo.style.transition = ''
-  enterLogo.style.transformOrigin = ''
-  enterLogo.removeEventListener('mouseover', enterLogoAnimeover)
-  enterLogo.removeEventListener('mouseout', enterLogoAnimeout)
-}
-
-function enterLogoAnimeover() {
-  enterLogo.style.scale = '1.15'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#FFAB95'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#FFAB95'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#FFAB95'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[7].style.fill = '#FFAB95'
-}
-function enterLogoAnimeout() {
-  enterLogo.style.scale = '1'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#ff7958'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#ff7958'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#ff7958'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[7].style.fill = '#ff7958'
 }

@@ -9,9 +9,6 @@ let monitorRight = document.querySelector('.monitor-right') as any
 let midLampMid = monitorMid.contentDocument.querySelector('#灯中中')
 let midLampLeft = monitorMid.contentDocument.querySelector('#灯中左')
 let midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
-let midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
-let midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
-let midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
 let midButtonInitial: string
 let midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
 let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
@@ -65,39 +62,9 @@ export async function monitor() {
   rightCanvas1.style.opacity = '0'
   rightCanvas2.style.opacity = '0'
   midLampControl()
-  cursorPointer()
-  midButtonHover()
   midUp(midMaskMid)
   midUp(midMaskLeft)
   midUp(midMaskRight)
-  midButtonReturn.addEventListener('click', monitorReturn)
-  midButtonLeft.addEventListener('click', () => {
-    midButtonInitial = 'left'
-    if (state1 == "licheng") {
-      midCanvasInt2--
-    } else if (state1 == "bumen") {
-      midCanvasInt3--
-    } else {
-      midCanvasInt1--
-    }
-    //FIXME  这里尺寸有问题和之前一起修
-    midCanvasShow()
-    rightCanvasShow()
-    cogsShow(state1, state2)
-  })
-  midButtonRight.addEventListener('click', () => {
-    midButtonInitial = 'right'
-    if (state1 == "licheng") {
-      midCanvasInt2++
-    } else if (state1 == "bumen") {
-      midCanvasInt3++
-    } else {
-      midCanvasInt1++
-    }
-    midCanvasShow()
-    rightCanvasShow()
-    cogsShow(state1, state2)
-  })
   leftLampControl()
   rightMonitorshow(leftMaskUp1)
   rightMonitorshow(leftMaskUp2)
@@ -105,66 +72,6 @@ export async function monitor() {
   rightMonitorshow(leftMaskDown1)
   rightMonitorshow(leftMaskDown2)
   rightMonitorshow(leftMaskDown3)
-}
-
-function cursorPointer() {
-  midButtonReturn.style.cursor = 'pointer'
-  midButtonLeft.style.cursor = 'pointer'
-  midButtonRight.style.cursor = 'pointer'
-}
-
-function midButtonHover() {
-  midButtonReturn.style.transition = "opacity 300ms ease-out"
-  midButtonReturn.querySelector('#返回键-2').style.transition = "opacity 300ms ease-out"
-  midButtonReturn.querySelector('#返回').style.transition = "opacity 300ms ease-out"
-  midButtonLeft.style.transition = "opacity 300ms ease-out"
-  midButtonLeft.querySelector('#navigate-leftt').style.transition = "opacity 300ms ease-out"
-  midButtonLeft.querySelector('#左按键-2').style.transition = "opacity 300ms ease-out"
-  midButtonRight.style.transition = "opacity 300ms ease-out"
-  midButtonRight.querySelector('#navigate-rightt').style.transition = "opacity 300ms ease-out"
-  midButtonRight.querySelector('#右按键-2').style.transition = "opacity 300ms ease-out"
-  midButtonReturn.addEventListener('mouseover', () => {
-    midButtonReturn.style.stroke = '#7B6E63'
-    midButtonReturn.querySelector('#返回键-2').style.stroke = '#7B6E63'
-    midButtonReturn.querySelector('#返回键-2').style.fill = '#C3A886'
-    midButtonReturn.querySelector('#返回').style.stroke = '#707070'
-    midButtonReturn.querySelector('#返回').style.fill = '#FFEBE6'
-  })
-  midButtonReturn.addEventListener('mouseout', () => {
-    midButtonReturn.style.stroke = '#A19082'
-    midButtonReturn.querySelector('#返回键-2').style.stroke = '#A19082'
-    midButtonReturn.querySelector('#返回键-2').style.fill = '#E3C49C'
-    midButtonReturn.querySelector('#返回').style.stroke = '#707070'
-    midButtonReturn.querySelector('#返回').style.fill = '#FF7958'
-  })
-  midButtonLeft.addEventListener('mouseover', () => {
-    midButtonLeft.style.stroke = '#717A82'
-    midButtonLeft.querySelector('#左按键-2').style.stroke = '#717A82'
-    midButtonLeft.querySelector('#左按键-2').style.fill = '#A5AAAE'
-    midButtonLeft.querySelector('#navigate-leftt').style.stroke = '#707070'
-    midButtonLeft.querySelector('#navigate-leftt').style.fill = '#FFEBE6'
-  })
-  midButtonLeft.addEventListener('mouseout', () => {
-    midButtonLeft.style.stroke = '#94A0AB'
-    midButtonLeft.querySelector('#左按键-2').style.stroke = '#94A0AB'
-    midButtonLeft.querySelector('#左按键-2').style.fill = '#CAD0D4'
-    midButtonLeft.querySelector('#navigate-leftt').style.stroke = '#707070'
-    midButtonLeft.querySelector('#navigate-leftt').style.fill = '#FF7958'
-  })
-  midButtonRight.addEventListener('mouseover', () => {
-    midButtonRight.style.stroke = '#717A82'
-    midButtonRight.querySelector('#右按键-2').style.stroke = '#717A82'
-    midButtonRight.querySelector('#右按键-2').style.fill = '#A5AAAE'
-    midButtonRight.querySelector('#navigate-rightt').style.stroke = '#707070'
-    midButtonRight.querySelector('#navigate-rightt').style.fill = '#FFEBE6'
-  })
-  midButtonRight.addEventListener('mouseout', () => {
-    midButtonRight.style.stroke = '#94A0AB'
-    midButtonRight.querySelector('#右按键-2').style.stroke = '#94A0AB'
-    midButtonRight.querySelector('#右按键-2').style.fill = '#CAD0D4'
-    midButtonRight.querySelector('#navigate-rightt').style.stroke = '#707070'
-    midButtonRight.querySelector('#navigate-rightt').style.fill = '#FF7958'
-  })
 }
 
 function midLampControl() {

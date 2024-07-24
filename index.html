@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>挑战网首页</title>
 </head>
+
 <body>
   <div class="absolute body-mask bg-transparent w-[100vw] h-[100vh] top-0 z-50 cursor-pointer"></div>
-  <div class="bg-1 bg-white w-[100vw] h-[100vh] flex flex-col justify-center items-center">
-    <div class="tiaozhan h-[17.15rem]">
+  <div class="bg-1 relative bg-white w-[100vw] h-[100vh] flex flex-col justify-center items-center">
+    <div class="tiaozhan h-[17.15rem] relative z-[21]">
       <object data="./src/image/jishu.svg" type="image/svg+xml"
         class="enter-logo relative w-[14.63rem] h-[8.4875rem]"></object>
       <div class="relative top-[-3.39015rem] flex w-[15.0425rem] h-[12.296rem] justify-between">
@@ -36,6 +37,7 @@
     <div class="building-mask w-[100%] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
   </div>
 
+
   <img src="./src/image/title-bg.png"
     class="title-bg fixed w-[117.937vw] h-[131.11vh] left-[1.71875vw] top-[-19vh] opacity-0 z-20 object-contain">
   <div class="fixed w-[87.8646vw] h-[59.537vh] top-[15.9vh] left-[6.09375vw] z-20">
@@ -46,6 +48,8 @@
       class="title-2 relative opacity-0 w-[100%] h-[100%] top-[-100%] object-contain"
       style="clip-path:xywh(0 50% 100% 50%);transform-origin:75% 50%;scale: 0.1;">
   </div>
+  <div class="title-anime fixed w-[122.87vw] h-[39.53125vh] z-20 opacity-0"></div>
+
 
   <img src="./src/image/list.svg" alt="list"
     class="list absolute w-[6.3125rem] h-[6.5625rem] top-[2.4259vh] left-[3.03125vw] opacity-0 hover:scale-[1.2] origin-top-left hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
@@ -56,7 +60,7 @@
 
   <div class="sidebar absolute w-[100vw] h-[102.10vh] top-0 left-0 overflow-hidden flex">
     <div
-      class="sidebar-left relative w-[66.67vw] h-[102.10vh] right-[66.67vw] bg-[#414141] z-[47] flex flex-col items-center rounded-[2.9375rem] text-[187.5%]">
+      class="sidebar-left relative w-[66.67vw] h-[102.10vh] right-[66.67vw] bg-[#414141] z-[47] flex flex-col items-center rounded-[1rem] text-[187.5%]">
       <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
       <div class="flex items-center flex-col">
         <div class="text-white mt-[9.2vh] leading-[1.233em]">挑战首页</div>
@@ -67,7 +71,7 @@
       </div>
     </div>
     <div
-      class="sidebar-right relative w-[66.67vw] h-[102.10vh] left-[33.33vw] bg-[#414141] z-[47] flex flex-col items-center rounded-[2.9375rem]">
+      class="sidebar-right relative w-[66.67vw] h-[102.10vh] left-[33.33vw] bg-[#414141] z-[47] flex flex-col items-center rounded-[1rem]">
       <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-64 h-72 mt-[12.67vh]">
       <div class="flex items-center flex-col text-white mt-[19.66vh] text-[278.22%] whitespace-normal w-[100%]">
         <div>联系邮箱:</div>

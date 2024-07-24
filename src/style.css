@@ -51,3 +51,11 @@ body {
   flex-basis: 66.67vw;
   /* 明确基础宽度 */
 }
+
+.title-anime{
+  transform-origin: center center;
+  transform: rotate(-21deg);
+  left: -30vw;
+  top: 36vh;
+  background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1) 70%, transparent);
+}

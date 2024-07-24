@@ -35,12 +35,10 @@
   background: linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent);
 }
 
-
 body {
   overflow-x: hidden;
   overflow-y: hidden;
   cursor: pointer;
-  padding-right: 17px;
 }
 
 .sidebar-left,

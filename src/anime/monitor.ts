@@ -38,6 +38,7 @@ let leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
 
 let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
 let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
+let rightCanvas = monitorRight.contentDocument.querySelector('#真_显示屏 #内容')
 let rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
 
 let bgMask = document.querySelector('.bg-mask') as any
@@ -308,14 +309,21 @@ function midUp(el: any) {
     if (!midUpBool) {
       anime({
         targets: monitorMid,
-        translateY: '-48vh',
+        translateY: '-15.15625vh',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
       })
       anime({
         targets: monitorLeft,
-        translateX: '19.48vw',
+        translateX: '42.8212962963vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: monitorRight,
+        translateX: '-63.4259259vw',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
@@ -971,6 +979,13 @@ function rightMonitorshow(el: any) {
     })
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
+        targets: monitorMid,
+        translateY: '-20.36458vh',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
         targets: rightCanvas1,
         opacity: 0.95,
         easing: 'easeOutCubic',
@@ -984,8 +999,22 @@ function rightMonitorshow(el: any) {
         duration: 1200,
         delay: 0
       })
+      anime({
+        targets: rightCanvas,
+        opacity: 0,
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
     }
     else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
+      anime({
+        targets: monitorMid,
+        translateY: '-19.42708vh',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
       anime({
         targets: rightCanvas1,
         opacity: 0,
@@ -995,6 +1024,13 @@ function rightMonitorshow(el: any) {
       })
       anime({
         targets: rightCanvas2,
+        opacity: 0.95,
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: rightCanvas,
         opacity: 0.95,
         easing: 'easeOutCubic',
         duration: 1200,
@@ -1029,18 +1065,17 @@ function rightMonitorshow(el: any) {
     }
     showLampCanvas()
     cogsShow(state1, state2)
-    anime({
-      targets: monitorMid,
-      translateY: '-57vh',
-      translateX: '-8.2vw',
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorLeft,
-        translateX: '14vw',
+        translateX: '45.1361vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: monitorRight,
+        translateX: '-63.6111111vw',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
@@ -1048,19 +1083,19 @@ function rightMonitorshow(el: any) {
     } else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: monitorLeft,
-        translateX: '14.61vw',
+        translateX: '45.1361vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: monitorRight,
+        translateX: '-63.4259259vw',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
       })
     }
-    anime({
-      targets: monitorRight,
-      translateX: '-34.01vw',
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
     anime({
       targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
       transform: "translate(10.067 11.867)",
@@ -1337,198 +1372,6 @@ function showLampCanvasThen(el: any) {
       }
     }
   }
-}
-//  返回
-export function monitorReturn() {
-  bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent)'
-  anime({
-    targets: monitorMidTop[0],
-    transform: "translate(0 0)",
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: [monitorMidBottom[0],monitorMidBottom[1],monitorMidBottom[2],monitorMidBottom[3]],
-    transform: "translate(0 0)",
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: rightCanvas1,
-    opacity: 0,
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: rightCanvas2,
-    opacity: 0,
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  state1 = ''
-  state2 = undefined
-  midCanvasInt1 = 120000000
-  midCanvasInt2 = 120000000
-  midCanvasInt3 = 120000000
-  if (midUpBool) {
-    anime({
-      targets: monitorMid,
-      translateY: 0,
-      translateX: 0,
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
-    anime({
-      targets: monitorLeft,
-      translateX: 0,
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
-    anime({
-      targets: monitorRight,
-      translateX: 0,
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
-    anime({
-      targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
-      transform: "translate(6.067 10.867)",
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
-    anime({
-      targets: rightFrameRight,
-      translateX: 0,
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
-    anime({
-      targets: document.querySelectorAll('.intro'),
-      opacity: 1,
-      easing: 'easeOutCubic',
-      duration: 1200,
-      delay: 0
-    })
-    midUpBool = false
-  }
-  anime({
-    targets: midCanvas2,
-    transform: "translate(0 7)",
-    easing: 'easeInOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  cogsShow(state1, state2)
-  changeEl(midCanvas2, 'easeOutCubic')
-  midMaskLeft.removeEventListener('click', showLampCanvasThen)
-  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
-  midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
-  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
-  midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis2)
-  midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
-  midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
-  midMaskMid.removeEventListener('click', showLampCanvasThen)
-  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
-  midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
-  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
-  midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis2)
-  midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
-  midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
-  midMaskRight.removeEventListener('click', showLampCanvasThen)
-  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
-  midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
-  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
-  midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis2)
-  midMaskRight.removeEventListener('mouseover', showLampCanvasOn)
-  midMaskRight.removeEventListener('mouseout', showLampCanvasOff)
-  midLampLeftRemoveOutLis1()
-  midLampLeftRemoveOutLis2()
-  midLampMidRemoveOutLis1()
-  midLampMidRemoveOutLis2()
-  midLampRightRemoveOutLis1()
-  midLampRightRemoveOutLis2()
-  midMaskLeft.addEventListener('mouseover', midLampLeftRemoveOverLis1)
-  midMaskLeft.addEventListener('mouseout', midLampLeftRemoveOutLis1)
-  midMaskMid.addEventListener('mouseover', midLampMidRemoveOverLis1)
-  midMaskMid.addEventListener('mouseout', midLampMidRemoveOutLis1)
-  midMaskRight.addEventListener('mouseover', midLampRightRemoveOverLis1)
-  midMaskRight.addEventListener('mouseout', midLampRightRemoveOutLis1)
-  // 侧边还原颜色
-  anime({
-    targets: leftLampDown.querySelector('#部_门-3'),
-    fill: '#c0ffd7',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: monitorLeft.contentDocument.querySelector('#部_门'),
-    fill: '#91F8B6',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
-    fill: '#c0ffd7',
-    stroke: '#c0ffd7',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
-    fill: '#c0ffd7',
-    stroke: '#c0ffd7',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: leftLampUp.querySelector('#历_程-3'),
-    fill: '#c0ffd7',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
-    fill: '#91F8B6',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
-    fill: '#c0ffd7',
-    stroke: '#c0ffd7',
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
-    stopColor: "#c0ffd7",
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
-  anime({
-    targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
-    stopColor: "#c0ffd7",
-    easing: 'easeOutCubic',
-    duration: 1200,
-    delay: 0
-  })
 }
 
 function rightCanvasShow() {

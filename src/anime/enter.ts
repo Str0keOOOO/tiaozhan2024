@@ -171,8 +171,7 @@ function logoRotate() {
     delay: 1000
   })
 }
-// FIXME 对齐到底部
-// FIXME 包括monitor同样的问题
+
 function buildingUp() {
   building.style.opacity = '1'
   anime({

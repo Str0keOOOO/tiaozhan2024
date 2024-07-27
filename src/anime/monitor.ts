@@ -219,21 +219,21 @@ function midUp(el: any) {
     if (!midUpBool) {
       anime({
         targets: monitorMid,
-        translateY: '-26vw',
+        translateY: '-15vw',
         easing: 'linear',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorLeft,
-        translateX: '42vw',
+        translateX: '18vw',
         easing: 'linear',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorRight,
-        translateX: '-63vw',
+        translateX: '-31vw',
         easing: 'linear',
         duration: 600,
         delay: 0
@@ -905,7 +905,8 @@ function rightMonitorshow(el: any) {
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorMid,
-        translateY: '-35vw',
+        translateY: '-20vw',
+        translateX:'-5vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
@@ -935,7 +936,8 @@ function rightMonitorshow(el: any) {
     else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: monitorMid,
-        translateY: '-34vw',
+        translateY: '-20vw',
+        translateX:'-5vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
@@ -993,14 +995,14 @@ function rightMonitorshow(el: any) {
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorLeft,
-        translateX: '45vw',
+        translateX: '20vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorRight,
-        translateX: '-63vw',
+        translateX: '-30.5vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
@@ -1008,14 +1010,14 @@ function rightMonitorshow(el: any) {
     } else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: monitorLeft,
-        translateX: '45vw',
+        translateX: '20vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorRight,
-        translateX: '-62.5vw',
+        translateX: '-30.5vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0

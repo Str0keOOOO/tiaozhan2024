@@ -77,7 +77,7 @@ function logoColor() {
     targets: logo[3],
     translateY: [
       { value: '-2rem', easing: 'easeInOutCubic', duration: 300, delay: 0 },
-      { value: '-23.165vh', easing: 'linear', duration: 1, delay: 0 }
+      { value: '-25vh', easing: 'linear', duration: 1, delay: 0 }
     ],
     opacity: [
       { value: 0, easing: 'easeInOutCubic', duration: 300, delay: 0 },
@@ -85,7 +85,7 @@ function logoColor() {
     ],
     scale: [
       { value: 0.1, easing: 'easeInOutCubic', duration: 300, delay: 0 },
-      { value: 0.5, easing: 'linear', duration: 300, delay: 1900 }
+      { value: 0.8, easing: 'linear', duration: 300, delay: 1900 }
     ],
   })
   anime({
@@ -208,7 +208,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    translateX: '-2vw',
+    translateX: '-3vw',
     easing: 'linear',
     duration: 300,
     delay: 2200

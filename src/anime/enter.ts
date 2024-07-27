@@ -208,7 +208,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    translateX: '-2vw',
+    translateX: '-3.5vw',
     easing: 'linear',
     duration: 300,
     delay: 2200

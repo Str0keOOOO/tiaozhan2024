@@ -57,7 +57,7 @@ export async function sidebar() {
     })
     anime({
       targets: sidebarRight,
-      translateX: '-2vw',
+      translateX: '-3.5vw',
       easing: 'easeInOutCubic',
       duration: 300,
       delay: 0

@@ -9,7 +9,7 @@ let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
 
 export function cogsShow(state1: string, state2: any) {
   cogsShowLeft(state1)
-  cogsShowMid(state1)
+  cogsShowMid(state1, state2)
   cogsShowRight(state1, state2)
 }
 
@@ -86,7 +86,7 @@ function cogsShowLeft(state1: string) {
   }
 }
 
-function cogsShowMid(state1: string) {
+function cogsShowMid(state1: string, state2: any) {
   let cogs1 = monitorMid.contentDocument.querySelector('#设置_填充')
   let cogs2 = monitorMid.contentDocument.querySelector('#设置_填充-2')
   let cogs3 = monitorMid.contentDocument.querySelector('#齿轮')
@@ -95,7 +95,8 @@ function cogsShowMid(state1: string) {
   let cogs6 = monitorMid.contentDocument.querySelector('#设置_填充-4')
   let spring1 = monitorMid.contentDocument.querySelector('#弹簧')
   let spring2 = monitorMid.contentDocument.querySelector('#弹簧-2')
-  let side = monitorMid.contentDocument.querySelector('#侧边装饰-4')
+  let side1 = monitorMid.contentDocument.querySelector('#侧边装饰-4')
+  let side2 = monitorMid.contentDocument.querySelector('#侧边装饰-2')
   if (state1 == 'licheng' || state1 == 'bumen') {
     anime({
       targets: cogs1,
@@ -156,21 +157,100 @@ function cogsShowMid(state1: string) {
       delay: 0
     })
     if (state1 == 'bumen') {
-      anime({
-        targets: side,
-        transform: "translate(0 231)",
-        easing: 'easeInOutCubic',
-        duration: 1200,
-        delay: 0
-      })
+      if (state2 == midMaskLeft) {
+        anime({
+          targets: side1,
+          transform: "translate(0 305)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+        anime({
+          targets: side2,
+          transform: "translate(0 0)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+      } else if (state2 == midMaskMid) {
+        anime({
+          targets: side1,
+          transform: "translate(0 305)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+        anime({
+          targets: side2,
+          transform: "translate(0 185)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+      } else if (state2 == midMaskRight) {
+        anime({
+          targets: side1,
+          transform: "translate(0 305)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+        anime({
+          targets: side2,
+          transform: "translate(0 305)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+      }
     } else {
-      anime({
-        targets: side,
-        transform: "translate(0 140)",
-        easing: 'easeInOutCubic',
-        duration: 1200,
-        delay: 0
-      })
+      if (state2 == midMaskLeft) {
+        anime({
+          targets: side1,
+          transform: "translate(0 140)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+        anime({
+          targets: side2,
+          transform: "translate(0 0)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+      } else if (state2 == midMaskMid) {
+        anime({
+          targets: side1,
+          transform: "translate(0 214)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+        anime({
+          targets: side2,
+          transform: "translate(0 129)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+      } else if (state2 == midMaskRight) {
+        anime({
+          targets: side1,
+          transform: "translate(0 121)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+        anime({
+          targets: side2,
+          transform: "translate(0 77)",
+          easing: 'easeInOutCubic',
+          duration: 1200,
+          delay: 0
+        })
+      }
+
     }
   } else {
     anime({
@@ -232,8 +312,15 @@ function cogsShowMid(state1: string) {
       delay: 0
     })
     anime({
-      targets: side,
+      targets: side1,
       transform: "translate(0 140)",
+      easing: 'easeInOutCubic',
+      duration: 1200,
+      delay: 0
+    })
+    anime({
+      targets: side2,
+      transform: "translate(0 0)",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0

@@ -4068,7 +4068,7 @@
 
 
     <g id="侧边装饰" transform="translate(0 -8.125)" clip-path="url(#clip-path-2)">
-      <g id="侧边装饰-2" data-name="侧边装饰">
+      <g id="侧边装饰-2" data-name="侧边装饰" transform="translate(0 0)">
         <rect id="底-2" data-name="底" width="70" height="464" transform="translate(1083.907 1311)" fill="#24201c"/>
         <g id="齿轮侧面" transform="translate(9.15)">
           <g id="齿轮侧面-2" data-name="齿轮侧面" transform="translate(1083.907 1311)">

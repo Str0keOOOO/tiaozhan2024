@@ -21,22 +21,21 @@
           class="enter-logo relative w-[7.099rem] h-[12.296rem]"></object>
       </div>
     </div>
-    <object data="./src/image/logo.svg" type="image/svg+xml"
-      class="enter-logo relative mt-[1.325rem] w-[18.9375rem] h-[9.634rem] z-30"></object>
+    <img src="./src/image/logo.png" alt="logo" class="enter-logo relative mt-[1.325rem] w-80 object-contain z-30">
     <object style="opacity: 0;" data="./src/image/star.svg" type="image/svg+xml"
-      class="enter-logo relative top-[-9.609rem] h-[2.75rem] z-[35]" id="enter-logo"></object>
+      class="enter-logo relative top-[-7.609rem] h-[2.75rem] z-[35] mt-4" id="enter-logo"></object>
     <div
-      class="enter-logo-mask absolute w-[10.3125rem] h-[5.19875rem] top-[5.1667vh] opacity-0 cursor-pointer hidden z-40">
+      class="enter-logo-mask absolute w-[12rem] h-[3.88375rem] top-[1rem] opacity-0 cursor-pointer hidden z-40">
     </div>
   </div>
 
-  <div class="building fixed w-[100vw] h-[31.92vh] top-[101vh] flex z-30">
+  <div class="building fixed w-[100vw] h-auto bottom-[-100rem] flex justify-between items-end z-30 pl-[3.1vw] pr-[3.1vw]">
     <img src="./src/image/building-1.svg" alt="library"
-      class="building-library relative w-[25.925vw] h-[31.92vh] top-0 ml-[3.1vw]">
+      class="building-library relative w-[23.925vw] h-auto bottom-0">
     <img src="./src/image/building-2.svg" alt="gate"
-      class="building-gate relative w-[27.80vw] h-[15.634vh] top-0 ml-[7.08vw]">
+      class="building-gate relative w-[23.80vw] h-auto bottom-0">
     <img src="./src/image/building-3.svg" alt="classroom"
-      class="building-classroom relative w-[22.708vw] h-[31.48vh] top-0 ml-[7.14vw]">
+      class="building-classroom relative w-[23.708vw] h-auto bottom-0">
     <div class="building-mask w-[100%] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
   </div>
 
@@ -58,27 +57,29 @@
 
   <div class="sidebar-mask absolute w-[100vw] h-[100vh] top-0 bg-black opacity-0 hidden cursor-pointer z-[36]">
   </div>
-  <div
-    class="sidebar-left absolute w-[31.09vw] h-[120.28vh] top-[-6vh] right-[100vw] bg-[#414141] z-40 flex flex-col items-center rounded-[2.9375rem] text-[187.5%]">
-    <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
-    <div class="flex items-center flex-col">
-      <div class="text-white mt-[9.2vh] leading-[1.233em]">挑战首页</div>
-      <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://tuanwei.xjtu.edu.cn/" target="_blank">交大青年之声</a></div>
-      <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://shijian.tiaozhan.com/" target="_blank">社会实践平台</a></div>
-      <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://tuanwei.xjtu.edu.cn/apply/" target="_blank">公共资源申请</a>
+  <div class="sidebar absolute w-[100vw] h-[120.28vh] top-[-6vh] left-0 overflow-hidden flex">
+    <div
+      class="sidebar-left relative w-[31.09vw] h-[120.28vh] right-[31.09vw] bg-[#414141] z-40 flex flex-col items-center rounded-br-[2.9375rem] text-[187.5%]">
+      <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
+      <div class="flex items-center flex-col">
+        <div class="text-white mt-[9.2vh] leading-[1.233em]">挑战首页</div>
+        <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://tuanwei.xjtu.edu.cn/" target="_blank">交大青年之声</a></div>
+        <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://shijian.tiaozhan.com/" target="_blank">社会实践平台</a></div>
+        <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://tuanwei.xjtu.edu.cn/apply/" target="_blank">公共资源申请</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="sidebar-right relative w-[31.09vw] h-[120.28vh] left-[68.91vw] bg-[#414141] z-40 flex flex-col items-center rounded-bl-[2.9375rem]">
+      <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
+      <div class="flex items-center flex-col text-white mt-[19.66vh] text-[187.5%] whitespace-normal w-[100%]">
+        <div>联系邮箱:</div>
+        <a href="mailto:tiaozhan@tiaozhan.com" tabindex="-1" class="p-4">tiaozhan@tiaozhan.com</a>
       </div>
     </div>
   </div>
-  <div
-    class="sidebar-right absolute w-[31.09vw] h-[120.28vh] top-[-6vh] left-[100vw] bg-[#414141] z-40 flex flex-col items-center rounded-[2.9375rem]">
-    <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
-    <div class="flex items-center flex-col text-white mt-[19.66vh] text-[187.5%] whitespace-normal w-[100%]">
-      <div>联系邮箱:</div>
-      <a href="mailto:tiaozhan@tiaozhan.com" tabindex="-1" class="p-4">tiaozhan@tiaozhan.com</a>
-    </div>
-  </div>
 
-  <div class="demo">
+  <div class="bottom-arrow-background">
     <img src="./src/image/bottom-arrow.svg" alt="下拉"
       class="bottom-arrow relative w-[1.915rem] h-[1.05rem] left-[calc(50%-0.9575rem-10px)] opacity-0 z-40">
   </div>
@@ -89,17 +90,17 @@
         挑战网于2001年成立，长期致力于互联网新媒体的产品研发，在校团委的指导下，已掌握大量的专业知识并形成了完整的部门
         体系。同时，挑战网不断为交大师生提供更加便捷优质的服务，积极参与各类比赛，并将影响力辐射至校园之外的广阔天地。
       </div>
-      <div class="intro text-[#FF7958] w-[5em] h-[3em] translate-y-[2.41vh]">
+      <div class="intro text-[#FF7958] w-[5em] h-[3em] translate-y-[2vh]">
         了解更多<br>点击辉光管
       </div>
       <img src="./src/image/bottom-arrow.svg" alt="下拉"
         class="bottom-arrow relative w-[1.915rem] h-[1.05rem] translate-y-[36vh]">
       <object data="./src/image/monitor-mid.svg" type="image/svg+xml"
-        class="monitor-mid relative w-[38vw] h-[90.63vh]"></object>
+        class="monitor-mid absolute w-[34vw] left-[33vw] h-auto bottom-[-27vw]"></object>
       <object data="./src/image/monitor-left.svg" type="image/svg+xml"
-        class="monitor-left absolute w-[29.1vw] h-[96.93vh] top-[2.54vh] "></object>
+        class="monitor-left absolute w-[25vw] h-auto bottom-0 left-[-17.5vw]"></object>
       <object data="./src/image/monitor-right.svg" type="image/svg+xml"
-        class="monitor-right absolute w-[39.01vw] h-[96.36vh] top-[3.8vh] "></object>
+        class="monitor-right absolute w-[36vw] h-auto bottom-0 right-[-31vw]"></object>
     </div>
   </div>
   <script type="module" src="./src/main.ts"></script>

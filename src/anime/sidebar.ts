@@ -13,7 +13,7 @@ export async function sidebar() {
     mask.style.display = 'block'
     anime({
       targets: sidebarLeft,
-      right: '70vw',
+      translateX:'30vw',
       easing: 'easeInOutCubic',
       duration: 500,
       delay: 0
@@ -32,7 +32,7 @@ export async function sidebar() {
     mask.style.display = 'block'
     anime({
       targets: sidebarRight,
-      left: '70vw',
+      translateX:'-30vw',
       easing: 'easeInOutCubic',
       duration: 500,
       delay: 0
@@ -50,14 +50,14 @@ export async function sidebar() {
     mask.style.display = 'none'
     anime({
       targets: sidebarLeft,
-      right: '98vw',
+      translateX:'2vw',
       easing: 'easeInOutCubic',
       duration: 300,
       delay: 0
     })
     anime({
       targets: sidebarRight,
-      left: '98vw',
+      translateX:'-2vw',
       easing: 'easeInOutCubic',
       duration: 300,
       delay: 0

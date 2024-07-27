@@ -398,39 +398,22 @@ function midUp(el: any) {
   el.addEventListener('click', () => {
     bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.92) 66%, transparent)'
     if (!midUpBool) {
-      if (window.innerWidth >= 1500) {  
-        anime({
-          targets: monitorMid,
-          translateY: '-48vh',
-          easing: 'easeOutCubic',
-          duration: 1200,
-          delay: 0
-        })
-        anime({
-          targets: monitorLeft,
-          translateX: '17vw',
-          easing: 'easeOutCubic',
-          duration: 1200,
-          delay: 0
-        })
-      } else {
-        anime({
-          targets: monitorMid,
-          translateY: '-48vh',
-          easing: 'easeOutCubic',
-          duration: 1200,
-          delay: 0
-        })
-        anime({
-          targets: monitorLeft,
-          translateX: '19.48vw',
-          easing: 'easeOutCubic',
-          duration: 1200,
-          delay: 0
-        })
-      }  
       anime({
-        targets: document.querySelectorAll('.intro'),
+        targets: monitorMid,
+        translateY: '-23vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: monitorLeft,
+        translateX: '17.5vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: [document.querySelectorAll('.intro'), document.querySelectorAll('.bottom-arrow')[1]],
         opacity: 0,
         easing: 'easeOutCubic',
         duration: 1200,
@@ -1072,7 +1055,7 @@ function rightMonitorshow(el: any) {
       delay: 0
     })
     anime({
-      targets: [monitorMidBottom[0],monitorMidBottom[1],monitorMidBottom[2],monitorMidBottom[3]],
+      targets: [monitorMidBottom[0], monitorMidBottom[1], monitorMidBottom[2], monitorMidBottom[3]],
       transform: "translate(0 40)",
       easing: 'easeOutCubic',
       duration: 1200,
@@ -1138,29 +1121,18 @@ function rightMonitorshow(el: any) {
     }
     showLampCanvas()
     cogsShow(state1, state2)
-    if (window.innerWidth >= 1500) {  
-      anime({
-        targets: monitorMid,
-        translateY: '-56.7vh',
-        translateX: '-8.2vw',
-        easing: 'easeOutCubic',
-        duration: 1200,
-        delay: 0
-      })
-    } else {  
-      anime({
-        targets: monitorMid,
-        translateY: '-57vh',
-        translateX: '-8.2vw',
-        easing: 'easeOutCubic',
-        duration: 1200,
-        delay: 0
-      })
-    }  
+    anime({
+      targets: monitorMid,
+      translateY: '-27vw',
+      translateX: '-8vw',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorLeft,
-        translateX: '14vw',
+        translateX: '13.5vw',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
@@ -1168,29 +1140,19 @@ function rightMonitorshow(el: any) {
     } else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: monitorLeft,
-        translateX: '14.61vw',
+        translateX: '13vw',
         easing: 'easeOutCubic',
         duration: 1200,
         delay: 0
       })
     }
-    if (window.innerWidth >= 1500) {  
-      anime({
-        targets: monitorRight,
-        translateX: '-30.01vw',
-        easing: 'easeOutCubic',
-        duration: 1200,
-        delay: 0
-      })
-    } else {
-      anime({
-        targets: monitorRight,
-        translateX: '-34.01vw',
-        easing: 'easeOutCubic',
-        duration: 1200,
-        delay: 0
-      })  
-    }  
+    anime({
+      targets: monitorRight,
+      translateX: '-31vw',
+      easing: 'easeOutCubic',
+      duration: 1200,
+      delay: 0
+    })
     anime({
       targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
       transform: "translate(10.067 11.867)",
@@ -1479,7 +1441,7 @@ export function monitorReturn() {
     delay: 0
   })
   anime({
-    targets: [monitorMidBottom[0],monitorMidBottom[1],monitorMidBottom[2],monitorMidBottom[3]],
+    targets: [monitorMidBottom[0], monitorMidBottom[1], monitorMidBottom[2], monitorMidBottom[3]],
     transform: "translate(0 0)",
     easing: 'easeOutCubic',
     duration: 1200,
@@ -1542,7 +1504,7 @@ export function monitorReturn() {
       delay: 0
     })
     anime({
-      targets: document.querySelectorAll('.intro'),
+      targets: [document.querySelectorAll('.intro'), document.querySelectorAll('.bottom-arrow')[1]],
       opacity: 1,
       easing: 'easeOutCubic',
       duration: 1200,

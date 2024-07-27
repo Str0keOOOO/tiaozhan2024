@@ -13,9 +13,6 @@ let meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelect
 let meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
 let shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
 let building = document.querySelector('.building') as any
-let buildingLibrary = document.querySelector('.building-library')
-let buildingGate = document.querySelector('.building-gate')
-let buildingClassroom = document.querySelector('.building-classroom')
 
 let isEnter: boolean = false
 export async function enterAnime() {
@@ -107,7 +104,7 @@ function logoColor() {
     targets: logo[3],
     translateY: [
       { value: '-2rem', easing: 'easeOutCubic', duration: 1000, delay: 0 },
-      { value: '-55.165vh', easing: 'linear', duration: 1, delay: 0 }
+      { value: '-59.165vh', easing: 'linear', duration: 1, delay: 0 }
     ],
     opacity: [
       { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 0 },
@@ -115,7 +112,7 @@ function logoColor() {
     ],
     scale: [
       { value: 0.1, easing: 'easeOutCubic', duration: 1000, delay: 0 },
-      { value: 0.5, easing: 'linear', duration: 500, delay: 2100 }
+      { value: 0.6, easing: 'linear', duration: 500, delay: 2100 }
     ],
   })
   anime({
@@ -165,7 +162,7 @@ function logoRotate() {
   })
   anime({
     targets: logo[4],
-    translateY: '12.125rem',
+    translateY: '9.125rem',
     easing: 'easeOutCubic',
     duration: 800,
     delay: 1000
@@ -176,28 +173,7 @@ function buildingUp() {
   building.style.opacity = '1'
   anime({
     targets: building,
-    translateY: '-31.92vh',
-    easing: 'easeOutCubic',
-    duration: 300,
-    delay: 1800
-  })
-  anime({
-    targets: buildingLibrary,
-    top: '0vh',
-    easing: 'easeOutCubic',
-    duration: 300,
-    delay: 1800
-  })
-  anime({
-    targets: buildingGate,
-    top: '16.284vh',
-    easing: 'easeOutCubic',
-    duration: 300,
-    delay: 1800
-  })
-  anime({
-    targets: buildingClassroom,
-    top: '0.437vh',
+    bottom:0,
     easing: 'easeOutCubic',
     duration: 300,
     delay: 1800
@@ -248,7 +224,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-left'),
     opacity: 1,
-    right: '98vw',
+    translateX:'2vw',
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -256,7 +232,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    left: '98vw',
+    translateX:'-2vw',
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -349,7 +325,7 @@ function sidebarBack() {
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
-    right: '100vw',
+    translateX:0,
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,
@@ -357,7 +333,7 @@ function sidebarBack() {
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
-    left: '100vw',
+    translateX:0,
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,
@@ -407,28 +383,7 @@ function buildingDown() {
   anime({
     targets: building,
     opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 0 },
-    translateY: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: buildingLibrary,
-    top: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: buildingGate,
-    top: 0,
-    easing: 'linear',
-    duration: 1,
-    delay: 800
-  })
-  anime({
-    targets: buildingClassroom,
-    top: 0,
+    bottom:'-100rem',
     easing: 'linear',
     duration: 1,
     delay: 800

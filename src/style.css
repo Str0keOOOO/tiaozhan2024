@@ -46,7 +46,7 @@ body {
   margin-right: calc(100% - 100vw)
 }
 
-.demo {
+.bottom-arrow-background {
   position: absolute;
   top: 96.9vh;
   width: 100vw;
@@ -54,50 +54,4 @@ body {
   margin-left: 10px;
   text-align: center;
   overflow: hidden;
-}
-
-.monitor-mid {
-  top: 40vh;
-}
-
-.monitor-left {
-  left: -20.41vw
-}
-
-.monitor-right {
-  left: 94.7vw
-}
-
-@media (min-width:1500px) {
-  .monitor-mid {
-    top: 33vh;
-  }
-
-  .monitor-left {
-    left: -19vw
-  }
-
-  .monitor-right {
-    left: 93.3vw
-  }
-}
-
-@media (max-width:1000px) {
-  .monitor-mid {
-    top: 47vh;
-  }
-}
-
-@media (max-width:1300px) {
-  .building-library {
-    translate: 0 3vh;
-  }
-
-  .building-gate {
-    translate: 0 3vh;
-  }
-
-  .building-classroom {
-    translate: 0 3vh;
-  }
 }

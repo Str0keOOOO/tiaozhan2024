@@ -265,18 +265,20 @@ function cogsShowRight(state1: string, state2: any) {
   let cogs1 = monitorRight.contentDocument.querySelector('#齿轮')
   let cogs2 = monitorRight.contentDocument.querySelector('#齿轮-2')
   let sideCogs = [monitorRight.contentDocument.querySelector('#齿轮_侧面'), monitorRight.contentDocument.querySelector('#齿轮_侧面-2')]
+  let frame= monitorRight.contentDocument.querySelector('#右框架 #左框架')
+  let motor= monitorRight.contentDocument.querySelector('#发动机')  
   if (state1 == "licheng") {
     if (state2 == midMaskLeft) {
       anime({
         targets: cogs1,
-        transform: "translate(1711.876 1558.383) rotate(-46)",
+        transform: "translate(1691.876 1558.383) rotate(-46)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: cogs2,
-        transform: "translate(1711.876 1269.46) rotate(-38)",
+        transform: "translate(1691.876 1269.46) rotate(-38)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
@@ -291,14 +293,14 @@ function cogsShowRight(state1: string, state2: any) {
     } else if (state2 == midMaskMid) {
       anime({
         targets: cogs1,
-        transform: "translate(1711.876 1558.383) rotate(-115)",
+        transform: "translate(1691.876 1558.383) rotate(-115)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: cogs2,
-        transform: "translate(1711.876 1269.46) rotate(-131)",
+        transform: "translate(1691.876 1269.46) rotate(-131)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
@@ -313,14 +315,14 @@ function cogsShowRight(state1: string, state2: any) {
     } else if (state2 == midMaskRight) {
       anime({
         targets: cogs1,
-        transform: "translate(1711.876 1558.383) rotate(-233)",
+        transform: "translate(1691.876 1558.383) rotate(-233)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: cogs2,
-        transform: "translate(1711.876 1269.46) rotate(-218)",
+        transform: "translate(1691.876 1269.46) rotate(-218)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
@@ -333,18 +335,32 @@ function cogsShowRight(state1: string, state2: any) {
         delay: 0
       })
     }
+    anime({
+      targets: frame,
+      transform: "translate(-2800.572 -5272)",
+      easing: 'easeInOutCubic',
+      duration: 600,
+      delay: 0
+    })
+    anime({
+      targets: motor,
+      transform: "translate(-2817.248 -5117)",
+      easing: 'easeInOutCubic',
+      duration: 600,
+      delay: 0
+    })
   } else if (state1 == "bumen") {
     if (state2 == midMaskLeft) {
       anime({
         targets: cogs1,
-        transform: "translate(1711.876 1558.383) rotate(-46)",
+        transform: "translate(1711.876 1558.383) rotate(-89)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: cogs2,
-        transform: "translate(1711.876 1269.46) rotate(-38)",
+        transform: "translate(1711.876 1269.46) rotate(-93)",
         easing: 'easeInOutCubic',
         duration: 600,
         delay: 0
@@ -401,6 +417,20 @@ function cogsShowRight(state1: string, state2: any) {
         delay: 0
       })
     }
+    anime({
+      targets: frame,
+      transform: "translate(-2780.572 -5272)",
+      easing: 'easeInOutCubic',
+      duration: 600,
+      delay: 0
+    })
+    anime({
+      targets: motor,
+      transform: "translate(-2797.248 -5117)",
+      easing: 'easeInOutCubic',
+      duration: 600,
+      delay: 0
+    })
   } else {
     anime({
       targets: cogs1,
@@ -419,6 +449,20 @@ function cogsShowRight(state1: string, state2: any) {
     anime({
       targets: sideCogs,
       transform: "translate(0 0)",
+      easing: 'easeInOutCubic',
+      duration: 600,
+      delay: 0
+    })
+    anime({
+      targets: frame,
+      transform: "translate(-2780.572 -5272)",
+      easing: 'easeInOutCubic',
+      duration: 600,
+      delay: 0
+    })
+    anime({
+      targets: motor,
+      transform: "translate(-2797.248 -5117)",
       easing: 'easeInOutCubic',
       duration: 600,
       delay: 0

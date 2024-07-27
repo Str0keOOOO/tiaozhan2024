@@ -10,9 +10,6 @@ let meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelect
 let meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
 let shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
 let building = document.querySelector('.building') as any
-let buildingLibrary = document.querySelector('.building-library')
-let buildingGate = document.querySelector('.building-gate')
-let buildingClassroom = document.querySelector('.building-classroom')
 
 let isEnter: boolean = false
 export async function enterAnime() {
@@ -103,7 +100,7 @@ function logoColor() {
 function logoRotate() {
   anime({
     targets: logo[0],
-    translateY: '7.31rem',
+    translateY: '3.4rem',
     opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400 },
     rotate: 90,
     easing: 'easeInOutCubic',
@@ -112,12 +109,11 @@ function logoRotate() {
   })
   anime({
     targets: logo[1],
-    translateY: '0.05rem',
     translateX: [
-      { value: '-11.78rem', easing: 'easeInOutCubic', duration: 800, delay: 300 },
-      { value: '4.24rem', easing: 'easeInOutCubic', duration: 800, delay: 300 }
+      { value: '-4.2rem', easing: 'easeInOutCubic', duration: 800, delay: 300 },
+      { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 300 }
     ],
-    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400},
+    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400 },
     rotate: 30,
     easing: 'easeInOutCubic',
     duration: 800,
@@ -125,46 +121,23 @@ function logoRotate() {
   })
   anime({
     targets: logo[2],
-    translateY: '-0.1rem',
     translateX: [
-      { value: '10.28rem', easing: 'easeInOutCubic', duration: 800, delay: 300 },
-      { value: '-4.24rem', easing: 'easeInOutCubic', duration: 800, delay: 300 }
+      { value: '4.2rem', easing: 'easeInOutCubic', duration: 800, delay: 300 },
+      { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 300 }
     ],
-    opacity: { value: 0, easing: 'easeInOutCubic',duration: 800, delay: 1400 },
+    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400 },
     rotate: -30,
     easing: 'easeInOutCubic',
     duration: 800,
     delay: 300
   })
 }
-// FIXME 对齐到底部
-// FIXME 包括monitor同样的问题
+
 function buildingUp() {
   building.style.opacity = '1'
   anime({
     targets: building,
-    translateY: '-12.30vh',
-    easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
-  })
-  anime({
-    targets: buildingLibrary,
-    top: '0vh',
-    easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
-  })
-  anime({
-    targets: buildingGate,
-    top: '6.88125vh',
-    easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
-  })
-  anime({
-    targets: buildingClassroom,
-    top: '0.619vh',
+    bottom: 0,
     easing: 'easeInOutCubic',
     duration: 800,
     delay: 1400
@@ -177,8 +150,8 @@ function title() {
     opacity: [
       { value: 1, easing: 'linear', duration: 1, delay: 300 }
     ],
-    left:"120vw",
-    top:"16vh",
+    left: "120vw",
+    top: "16vh",
     transform: "rotate(-40deg)",
     easing: 'easeInOutCubic',
     duration: 800,

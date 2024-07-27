@@ -11,34 +11,32 @@
 <body>
   <div class="absolute body-mask bg-transparent w-[100vw] h-[100vh] top-0 z-50 cursor-pointer"></div>
   <div class="bg-1 relative bg-white w-[100vw] h-[100vh] flex flex-col justify-center items-center">
-    <div class="tiaozhan h-[17.15rem] relative z-[21]">
+    <div class="tiaozhan h-[7rem] relative z-[21]">
       <object data="./src/image/jishu.svg" type="image/svg+xml"
-        class="enter-logo relative w-[14.63rem] h-[8.4875rem]"></object>
-      <div class="relative top-[-3.39015rem] flex w-[15.0425rem] h-[12.296rem] justify-between">
+        class="enter-logo relative w-[7.5rem] h-[4rem]"></object>
+      <div class="relative top-[-1.7rem] flex w-[7.5rem] h-[6rem] justify-between">
         <object data="./src/image/meigong.svg" type="image/svg+xml"
-          class="enter-logo relative w-[7.099rem] h-[12.296rem]"></object>
+          class="enter-logo relative w-[3.5rem] h-[6rem]"></object>
         <object data="./src/image/shipin.svg" type="image/svg+xml"
-          class="enter-logo relative w-[7.099rem] h-[12.296rem]"></object>
+          class="enter-logo relative w-[3.5rem] h-[6rem]"></object>
       </div>
     </div>
-    <object data="./src/image/logo.svg" type="image/svg+xml"
-      class="enter-logo relative mt-[1.325rem] w-[18.9375rem] h-[9.634rem] z-30"></object>
+    <img src="./src/image/logo.png" alt="logo" class="enter-logo relative mt-8 w-40 object-contain z-30">
     <object style="opacity: 0;" data="./src/image/star.svg" type="image/svg+xml"
-      class="enter-logo relative top-[-8.109rem] h-[2.75rem] z-[35]" id="enter-logo"></object>
+      class="enter-logo relative bottom-12 h-6 z-[35]" id="enter-logo"></object>
   </div>
 
-  <div class="building fixed w-[103.5vw] h-[13.1vh] top-[101vh] flex z-30">
-    <img src="./src/image/building-1.svg" alt="library"
-      class="building-library relative w-[25.925vw] h-[12.59vh] top-0 ml-[3.1vw]">
-    <img src="./src/image/building-2.svg" alt="gate"
-      class="building-gate relative w-[27.80vw] h-[6.17vh] top-0 ml-[7.08vw]">
+  <div
+    class="building fixed w-[100vw] h-auto bottom-[-100rem] flex justify-between items-end z-30">
+    <img src="./src/image/building-1.svg" alt="library" class="building-library relative w-[23.925vw] h-auto bottom-0 ml-[3.1vw]">
+    <img src="./src/image/building-2.svg" alt="gate" class="building-gate relative w-[23.80vw] h-auto bottom-0">
     <img src="./src/image/building-3.svg" alt="classroom"
-      class="building-classroom relative w-[22.708vw] h-[12.43vh] top-0 ml-[7.14vw]">
-    <div class="building-mask w-[100%] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
+      class="building-classroom relative w-[23.708vw] h-auto bottom-0 mr-[3.1vw]">
+    <div class="building-mask w-[100vw] h-[100%] fixed bg-gradient-to-t from-black to-transparent opacity-50"></div>
   </div>
 
   <img src="./src/image/title-bg.png"
-    class="title-bg fixed w-[117.937vw] h-[131.11vh] left-[1.71875vw] top-[-19vh] opacity-0 z-20 object-contain">
+    class="title-bg fixed w-[98.28125vw] h-[131.11vh] top-[-18.5vh] opacity-0 z-20 object-contain">
   <div class="fixed w-[87.8646vw] h-[59.537vh] top-[15.9vh] left-[6.09375vw] z-20">
     <img src="./src/image/title.png" alt="TIAO"
       class="title-1 opacity-0 w-[100%] h-[100%] object-contain relative top-[0.1%]"
@@ -50,16 +48,16 @@
   <div class="title-anime fixed w-[122.87vw] h-[39.53125vh] z-20 opacity-0"></div>
 
   <img src="./src/image/list.svg" alt="list"
-    class="list absolute w-[6.3125rem] h-[6.5625rem] top-[2.4259vh] left-[3.03125vw] opacity-0 hover:scale-[1.2] origin-top-left hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
+    class="list absolute w-10 h-auto top-[2vh] left-[3.03125vw] opacity-0 hover:scale-[1.2] origin-top-left hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
   <img src="./src/image/mail.svg" alt="mail"
-    class="mail absolute w-[7.25rem] h-[7.3125rem] top-[2.4259vh] right-[3.33333vw] opacity-0 hover:scale-[1.2] origin-top-right hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
+    class="mail absolute w-10 h-auto top-[2vh] left-[calc(96.66667vw-2.5rem)] opacity-0 hover:scale-[1.2] origin-top-right hover:cursor-pointer duration-300 transition-transform ease-linear z-30 invisible">
+
   <div class="sidebar-mask absolute w-[100vw] h-[100vh] top-0 bg-black opacity-0 hidden cursor-pointer z-[46]">
   </div>
-
   <div class="sidebar absolute w-[100vw] h-[102.10vh] top-0 left-0 overflow-hidden flex">
     <div
-      class="sidebar-left relative w-[66.67vw] h-[102.10vh] right-[66.67vw] bg-[#414141] z-[47] flex flex-col items-center rounded-br-[2.9375rem] text-[187.5%]">
-      <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-40 h-48 mt-[14.65vh]">
+      class="sidebar-left relative w-[66.67vw] h-[102.10vh] right-[66.67vw] bg-[#414141] z-[47] flex flex-col items-center rounded-br-[2.9375rem] text-[100%]">
+      <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-20 h-24 mt-[10vh]">
       <div class="flex items-center flex-col">
         <div class="text-white mt-[9.2vh] leading-[1.233em]">挑战首页</div>
         <div class="text-[#ACACAC] mt-[7.13vh]"><a href="https://tuanwei.xjtu.edu.cn/" target="_blank">交大青年之声</a></div>
@@ -70,31 +68,31 @@
     </div>
     <div
       class="sidebar-right relative w-[66.67vw] h-[102.10vh] left-[33.33vw] bg-[#414141] z-[47] flex flex-col items-center rounded-bl-[2.9375rem]">
-      <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-64 h-72 mt-[12.67vh]">
-      <div class="flex items-center flex-col text-white mt-[19.66vh] text-[278.22%] whitespace-normal w-[100%]">
+      <img src="./src/image/sidebar-logo.svg" alt="TIAOZHAN" class="w-28 h-36 mt-[12.67vh]">
+      <div class="flex items-center flex-col text-white mt-[19.66vh] text-[100%] whitespace-normal w-[100%]">
         <div>联系邮箱:</div>
         <a href="mailto:tiaozhan@tiaozhan.com" tabindex="-1" class="p-4">tiaozhan@tiaozhan.com</a>
       </div>
     </div>
   </div>
 
-  <div class="bg-2 bg-black w-[100vw] h-[100vh]">
+  <div class="bg-2 bg-white w-[100vw] h-[100vh]">
     <div class="bg-mask absolute w-[100vw] h-[100vh] top-[100vh] flex flex-col items-center z-50 overflow-hidden">
       <div class="intro">不了解挑战网？<br><br>
         挑战网于2001年成立，<br>长期致力于互联网新媒体的产品研发，<br>在校团委的指导下，<br>已掌握大量的专业知识并形成了完整的部门
         体系。<br>同时，挑战网不断为交大师生提供更加便捷优质的服务，<br>积极参与各类比赛，<br>并将影响力辐射至校园之外的广阔天地。
       </div>
-      <div class="intro text-[#FF7958] w-[5em] h-[3em] translate-y-[2.41vh]">
+      <div class="intro text-[#FF7958] w-[5em] h-[3em] mt-8">
         了解更多<br>点击辉光管
       </div>
       <img src="./src/image/bottom-arrow.svg" alt="下拉"
-        class="bottom-arrow relative w-[1.915rem] h-[1.05rem] translate-y-[36vh]">
+        class="bottom-arrow relative w-2">
       <object data="./src/image/monitor-mid.svg" type="image/svg+xml"
-        class="monitor-mid relative w-[84.896vw] h-[61.446875vh] top-[49vh] z-[65]"></object>
+        class="monitor-mid absolute w-[84vw] left-[8vw] h-auto bottom-[-65vw] z-[53]"></object>
       <object data="./src/image/monitor-left.svg" type="image/svg+xml"
-        class="monitor-left absolute w-[55.2vw] h-[58.179vh] top-[2.54vh] left-[-55.2vw] z-[63]"></object>
+        class="monitor-left absolute w-[55vw] h-auto top-0 left-[-55vw] z-[51]"></object>
       <object data="./src/image/monitor-right.svg" type="image/svg+xml"
-        class="monitor-right absolute w-[77.255vw] h-[59.6896vh] top-[0.5vh] left-[100vw] z-[64]"></object>
+        class="monitor-right absolute w-[77vw] h-auto top-0 right-[-77vw] z-[52]"></object>
     </div>
   </div>
   <script type="module" src="./src/main.ts"></script>

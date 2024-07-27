@@ -35,8 +35,6 @@ let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 
 let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
 let rightCanvas = monitorRight.contentDocument.querySelector('#真_显示屏 #内容')
 
-let bgMask = document.querySelector('.bg-mask') as any
-
 // 记录状态
 let dict: { [key1: string]: any[] } = {
   licheng: [
@@ -53,7 +51,7 @@ let dict: { [key1: string]: any[] } = {
 let state1: string
 let state2: any
 
-export async function monitor() {
+export async function monitor() {  
   rightCanvas1.style.opacity = '0'
   rightCanvas2.style.opacity = '0'
   midLampControl()
@@ -218,25 +216,24 @@ function midLampRightRemoveOutLis2() {
 
 function midUp(el: any) {
   el.addEventListener('click', () => {
-    bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.92) 66%, transparent)'
     if (!midUpBool) {
       anime({
         targets: monitorMid,
-        translateY: '-16.15625vh',
+        translateY: '-26vw',
         easing: 'linear',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorLeft,
-        translateX: '42.8212962963vw',
+        translateX: '42vw',
         easing: 'linear',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorRight,
-        translateX: '-63.4259259vw',
+        translateX: '-63vw',
         easing: 'linear',
         duration: 600,
         delay: 0
@@ -908,7 +905,7 @@ function rightMonitorshow(el: any) {
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorMid,
-        translateY: '-20.36458vh',
+        translateY: '-35vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
@@ -938,7 +935,7 @@ function rightMonitorshow(el: any) {
     else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: monitorMid,
-        translateY: '-19.42708vh',
+        translateY: '-34vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
@@ -996,14 +993,14 @@ function rightMonitorshow(el: any) {
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorLeft,
-        translateX: '45.1361vw',
+        translateX: '45vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorRight,
-        translateX: '-63.6111111vw',
+        translateX: '-63vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
@@ -1011,14 +1008,14 @@ function rightMonitorshow(el: any) {
     } else if (el == leftMaskDown1 || el == leftMaskDown2 || el == leftMaskDown3) {
       anime({
         targets: monitorLeft,
-        translateX: '45.1361vw',
+        translateX: '45vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0
       })
       anime({
         targets: monitorRight,
-        translateX: '-63.4259259vw',
+        translateX: '-62.5vw',
         easing: 'easeOutCubic',
         duration: 600,
         delay: 0

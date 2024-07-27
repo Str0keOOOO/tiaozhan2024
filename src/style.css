@@ -7,13 +7,12 @@
 
 
 .intro {
-  position: relative;
   color: white;
   font-size: 2.9629vw;
   font-weight: bold;
   width: 74.0741vw;
-  height: 20.3125vh;
-  top: 33.11vh;
+  height: auto;
+  margin-top: 33vh;
   text-align: center;
   line-height: 3.60vw;
 }
@@ -32,7 +31,7 @@
 }
 
 .bg-mask {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent);
+  background: rgba(0, 0, 0, 0.83)
 }
 
 body {
@@ -52,7 +51,7 @@ body {
   /* 明确基础宽度 */
 }
 
-.title-anime{
+.title-anime {
   transform-origin: center center;
   transform: rotate(-21deg);
   left: -30vw;

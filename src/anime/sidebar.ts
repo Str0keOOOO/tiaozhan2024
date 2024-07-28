@@ -15,14 +15,14 @@ export async function sidebar() {
       targets: sidebarLeft,
       translateX: '66.67vw',
       easing: 'easeInOutCubic',
-      duration: 300,
+      duration: 500,
       delay: 0
     })
     anime({
       targets: mask,
       opacity: 0.75,
       easing: 'easeInOutCubic',
-      duration: 300,
+      duration: 500,
       delay: 0
     })
   })
@@ -34,14 +34,14 @@ export async function sidebar() {
       targets: sidebarRight,
       translateX: '-66.67vw',
       easing: 'easeInOutCubic',
-      duration: 300,
+      duration: 500,
       delay: 0
     })
     anime({
       targets: mask,
       opacity: 0.75,
       easing: 'easeInOutCubic',
-      duration: 300,
+      duration: 500,
       delay: 0
     })
   })

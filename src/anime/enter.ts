@@ -27,7 +27,7 @@ export async function enterAnime() {
         document.body.style.overflowY = "scroll";
         list.style.visibility = 'visible'
         mail.style.visibility = 'visible'
-      }, 2500);
+      }, 3600);
       document.body.style.cursor = "default"
       isEnter = true
     }
@@ -39,7 +39,7 @@ function bgAnime() {
     targets: document.querySelector('.bg-1'),
     backgroundColor: '#000000',
     easing: 'easeInOutCubic',
-    duration: 300,
+    duration: 1000,
     delay: 0
   })
 }
@@ -49,50 +49,50 @@ function logoColor() {
     targets: jishuLine,
     stroke: '#0AFFE6',
     easing: 'easeInOutCubic',
-    duration: 300,
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: meigongLine,
     stroke: '#74DDFF',
     easing: 'easeInOutCubic',
-    duration: 300,
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: meigongCircle,
     fill: '#74DDFF',
     easing: 'easeInOutCubic',
-    duration: 300,
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: shipingLine,
     stroke: '#B95FFF',
     easing: 'easeInOutCubic',
-    duration: 300,
+    duration: 1000,
     delay: 0
   })
   anime({
     targets: logo[3],
     translateY: [
-      { value: '-2rem', easing: 'easeInOutCubic', duration: 300, delay: 0 },
+      { value: '-2rem', easing: 'easeInOutCubic', duration: 1000, delay: 0 },
       { value: '-25vh', easing: 'linear', duration: 1, delay: 0 }
     ],
     opacity: [
-      { value: 0, easing: 'easeInOutCubic', duration: 300, delay: 0 },
-      { value: 1, easing: 'linear', duration: 300, delay: 1900 }
+      { value: 0, easing: 'easeInOutCubic', duration: 1000, delay: 0 },
+      { value: 1, easing: 'linear', duration: 500, delay: 2100 }
     ],
     scale: [
-      { value: 0.1, easing: 'easeInOutCubic', duration: 300, delay: 0 },
-      { value: 0.8, easing: 'linear', duration: 300, delay: 1900 }
+      { value: 0.1, easing: 'easeInOutCubic', duration: 1000, delay: 0 },
+      { value: 0.8, easing: 'linear', duration: 500, delay: 2100 }
     ],
   })
   anime({
     targets: logo[4],
     opacity: 1,
     easing: 'easeInOutCubic',
-    duration: 300,
+    duration: 1000,
     delay: 0
   })
 }
@@ -101,35 +101,35 @@ function logoRotate() {
   anime({
     targets: logo[0],
     translateY: '3.4rem',
-    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400 },
+    opacity: { value: 0, easing: 'easeInOutCubic', duration: 1000, delay: 2100 },
     rotate: 90,
     easing: 'easeInOutCubic',
     duration: 800,
-    delay: 300
+    delay: 1000
   })
   anime({
     targets: logo[1],
     translateX: [
-      { value: '-4.2rem', easing: 'easeInOutCubic', duration: 800, delay: 300 },
-      { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 300 }
+      { value: '-4.2rem', easing: 'easeInOutCubic', duration: 800, delay: 1000 },
+      { value: 0, easing: 'easeInOutCubic', duration: 1000, delay: 300 }
     ],
-    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400 },
+    opacity: { value: 0, easing: 'easeInOutCubic', duration: 1000, delay: 2100 },
     rotate: 30,
     easing: 'easeInOutCubic',
     duration: 800,
-    delay: 300
+    delay: 1000
   })
   anime({
     targets: logo[2],
     translateX: [
-      { value: '4.2rem', easing: 'easeInOutCubic', duration: 800, delay: 300 },
-      { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 300 }
+      { value: '4.2rem', easing: 'easeInOutCubic', duration: 800, delay: 1000 },
+      { value: 0, easing: 'easeInOutCubic', duration: 1000, delay: 300 }
     ],
-    opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 1400 },
+    opacity: { value: 0, easing: 'easeInOutCubic', duration: 1000, delay: 2100 },
     rotate: -30,
     easing: 'easeInOutCubic',
     duration: 800,
-    delay: 300
+    delay: 1000
   })
 }
 
@@ -139,8 +139,8 @@ function buildingUp() {
     targets: building,
     bottom: 0,
     easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
+    duration: 300,
+    delay: 1800
   })
 }
 
@@ -148,37 +148,37 @@ function title() {
   anime({
     targets: document.querySelector('.title-anime'),
     opacity: [
-      { value: 1, easing: 'linear', duration: 1, delay: 300 }
+      { value: 1, easing: 'linear', duration: 1, delay: 1000 }
     ],
     left: "120vw",
     top: "16vh",
     transform: "rotate(-40deg)",
     easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
+    duration: 1000,
+    delay: 2100
   })
   anime({
     targets: document.querySelector('.title-bg'),
     opacity: 1,
     easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
+    duration: 1000,
+    delay: 2100
   })
   anime({
     targets: document.querySelector('.title-1'),
     scale: 10,
     opacity: 1,
     easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
+    duration: 1000,
+    delay: 2100
   })
   anime({
     targets: document.querySelector('.title-2'),
     scale: 10,
     opacity: 1,
     easing: 'easeInOutCubic',
-    duration: 800,
-    delay: 1400
+    duration: 1000,
+    delay: 2100
   })
 }
 
@@ -187,37 +187,37 @@ function sidebar() {
     targets: document.querySelector('.list'),
     opacity: 1,
     easing: 'linear',
-    duration: 300,
-    delay: 2200
+    duration: 500,
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.mail'),
     opacity: 1,
     easing: 'linear',
-    duration: 300,
-    delay: 2200
+    duration: 500,
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
     opacity: 1,
     translateX: '2vw',
     easing: 'linear',
-    duration: 300,
-    delay: 2200
+    duration: 500,
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
     translateX: '-3vw',
     easing: 'linear',
-    duration: 300,
-    delay: 2200
+    duration: 500,
+    delay: 3100
   })
   anime({
     targets: document.querySelector('.bottom-arrow'),
     opacity: 1,
     easing: 'linear',
-    duration: 300,
-    delay: 2200
+    duration: 500,
+    delay: 3100
   })
 }

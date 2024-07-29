@@ -2,46 +2,36 @@ import anime from "animejs"
 import { changeEl } from "./changeEl"
 import { cogsShow } from "./cogsshow"
 
-let monitorMid = document.querySelector('.monitor-mid') as any
-let monitorLeft = document.querySelector('.monitor-left') as any
-let monitorRight = document.querySelector('.monitor-right') as any
-
-let midLampMid = monitorMid.contentDocument.querySelector('#灯中中')
-let midLampLeft = monitorMid.contentDocument.querySelector('#灯中左')
-let midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
-let midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
-let midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
-let midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
-let midButtonInitial: string
-let midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
-let midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
-let midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
-let monitorMidTop = monitorMid.contentDocument.querySelectorAll('.机器上')
-let monitorMidBottom = monitorMid.contentDocument.querySelectorAll('.机器下')
-
-let midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
-let midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
-let midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
-
-let midUpBool: boolean = false
-let midCanvasInt1: number = 120000000
-let midCanvasInt2: number = 120000000
-let midCanvasInt3: number = 120000000
-let leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
-let leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
-
-let leftMaskUp1 = monitorLeft.contentDocument.querySelector('#矩形_60')
-let leftMaskDown1 = monitorLeft.contentDocument.querySelector('#矩形_61')
-let leftMaskUp2 = leftLampUp.querySelector('#椭圆_19')
-let leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
-let leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
-let leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
-
-let rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
-let rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
-let rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
+let monitorMid: any
+let monitorLeft: any
+let monitorRight: any
+let midLampMid: any
+let midLampLeft: any
+let midLampRight: any
+let midButtonReturn: any
+let midButtonLeft: any
+let midButtonRight: any
+let midMaskMid: any
+let midMaskLeft: any
+let midMaskRight: any
+let midLampMidLine: any
+let midLampRightPath: any
+let monitorMidTop: any
+let monitorMidBottom: any
+let midCanvas1: any
+let midCanvas2: any
+let midCanvas3: any
+let leftLampUp: any
+let leftLampDown: any
+let leftMaskUp1: any
+let leftMaskDown1: any
+let leftMaskUp2: any
+let leftMaskDown2: any
+let leftMaskUp3: any
+let leftMaskDown3: any
+let rightCanvas2: any
+let rightCanvas1: any
+let rightFrameRight: any
 
 let bgMask = document.querySelector('.bg-mask') as any
 
@@ -58,12 +48,59 @@ let dict: { [key1: string]: any[] } = {
     midMaskRight,
   ]
 }
+let midUpBool: boolean = false
+let midButtonInitial: string
+let midCanvasInt1: number = 120000000
+let midCanvasInt2: number = 120000000
+let midCanvasInt3: number = 120000000
 let state1: string
 let state2: any
 
-export async function monitor() {
+export function monitor() {
+  monitorMid = document.querySelector('.monitor-mid') as any
+  monitorLeft = document.querySelector('.monitor-left') as any
+  monitorRight = document.querySelector('.monitor-right') as any
+  midLampMid = monitorMid.contentDocument.querySelector('#灯中中')
+  midLampLeft = monitorMid.contentDocument.querySelector('#灯中左')
+  midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
+  midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
+  midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
+  midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
+  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+  midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
+  midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
+  monitorMidTop = monitorMid.contentDocument.querySelectorAll('.机器上')
+  monitorMidBottom = monitorMid.contentDocument.querySelectorAll('.机器下')
+  midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
+  midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
+  midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
+  leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
+  leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
+  leftMaskUp1 = monitorLeft.contentDocument.querySelector('#矩形_60')
+  leftMaskDown1 = monitorLeft.contentDocument.querySelector('#矩形_61')
+  leftMaskUp2 = leftLampUp.querySelector('#椭圆_19')
+  leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
+  leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
+  leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
+  rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
+  rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
+  rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
   rightCanvas1.style.opacity = '0'
   rightCanvas2.style.opacity = '0'
+  dict = {
+    licheng: [
+      midMaskLeft,
+      midMaskMid,
+      midMaskRight,
+    ],
+    bumen: [
+      midMaskLeft,
+      midMaskMid,
+      midMaskRight,
+    ]
+  }
   midLampControl()
   cursorPointer()
   midButtonHover()
@@ -1432,6 +1469,50 @@ function showLampCanvasThen(el: any) {
 }
 //  返回
 export function monitorReturn() {
+  dict = {
+    licheng: [
+      midMaskLeft,
+      midMaskMid,
+      midMaskRight,
+    ],
+    bumen: [
+      midMaskLeft,
+      midMaskMid,
+      midMaskRight,
+    ]
+  }
+  monitorMid = document.querySelector('.monitor-mid') as any
+  monitorLeft = document.querySelector('.monitor-left') as any
+  monitorRight = document.querySelector('.monitor-right') as any
+  midLampMid = monitorMid.contentDocument.querySelector('#灯中中')
+  midLampLeft = monitorMid.contentDocument.querySelector('#灯中左')
+  midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
+  midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
+  midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
+  midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
+  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+  midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
+  midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
+  monitorMidTop = monitorMid.contentDocument.querySelectorAll('.机器上')
+  monitorMidBottom = monitorMid.contentDocument.querySelectorAll('.机器下')
+  midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
+  midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
+  midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
+  leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
+  leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
+  leftMaskUp1 = monitorLeft.contentDocument.querySelector('#矩形_60')
+  leftMaskDown1 = monitorLeft.contentDocument.querySelector('#矩形_61')
+  leftMaskUp2 = leftLampUp.querySelector('#椭圆_19')
+  leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
+  leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
+  leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
+  rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
+  rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
+  rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
+  rightCanvas1.style.opacity = '0'
+  rightCanvas2.style.opacity = '0'
   bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent)'
   anime({
     targets: monitorMidTop[0],

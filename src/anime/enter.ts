@@ -2,20 +2,36 @@ import anime from "animejs"
 import { scrollToTop } from "./scrollToTop"
 import { monitorReturn } from "./monitor"
 
-let bodyMask = document.querySelector('.body-mask') as any
-let list = document.querySelector('.list') as any
-let mail = document.querySelector('.mail') as any
-let enterLogoMask = document.querySelector('.enter-logo-mask') as any
-let tiaozhan = document.querySelector('.tiaozhan') as any
-let logo = document.querySelectorAll('.enter-logo') as any
-let jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
-let meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
-let meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
-let shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
-let building = document.querySelector('.building') as any
-
+let bodyMask: any
+let list: any
+let mail: any
+let enterLogoMask: any
+let tiaozhan: any
+let logo: any
+let jishuLine: any
+let meigongLine: any
+let meigongCircle: any
+let shipingLine: any
+let building: any
+let enterLogo: any
 let isEnter: boolean = false
-export async function enterAnime() {
+
+export function enterAnime() {
+  bodyMask = document.querySelector('.body-mask') as any
+  list = document.querySelector('.list') as any
+  mail = document.querySelector('.mail') as any
+  enterLogoMask = document.querySelector('.enter-logo-mask') as any
+  tiaozhan = document.querySelector('.tiaozhan') as any
+  logo = document.querySelectorAll('.enter-logo') as any
+  enterLogo = document.querySelector('#enter-logo') as any
+  console.log(logo[0]);
+  console.log(logo[0].contentDocument);
+  console.log(logo[0].contentDocument.querySelectorAll('#line'));
+  jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
+  meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
+  meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
+  shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
+  building = document.querySelector('.building') as any
   bodyMask.addEventListener("click", () => {
     if (!isEnter) {
       bgAnime()
@@ -173,7 +189,7 @@ function buildingUp() {
   building.style.opacity = '1'
   anime({
     targets: building,
-    bottom:0,
+    bottom: 0,
     easing: 'easeOutCubic',
     duration: 300,
     delay: 1800
@@ -224,7 +240,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-left'),
     opacity: 1,
-    translateX:'2vw',
+    translateX: '2vw',
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -232,7 +248,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    translateX:'-2vw',
+    translateX: '-2vw',
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -325,7 +341,7 @@ function sidebarBack() {
   })
   anime({
     targets: document.querySelector('.sidebar-left'),
-    translateX:0,
+    translateX: 0,
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,
@@ -333,7 +349,7 @@ function sidebarBack() {
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
-    translateX:0,
+    translateX: 0,
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,
@@ -383,7 +399,7 @@ function buildingDown() {
   anime({
     targets: building,
     opacity: { value: 0, easing: 'easeInOutCubic', duration: 800, delay: 0 },
-    bottom:'-100rem',
+    bottom: '-100rem',
     easing: 'linear',
     duration: 1,
     delay: 800
@@ -398,7 +414,6 @@ function buildingDown() {
 }
 
 // enterlogo的放大效果
-let enterLogo = document.querySelector('#enter-logo') as any
 function enterLogoAnime() {
   enterLogo.style.transition = 'all 300ms ease-out'
   enterLogo.style.transformOrigin = "50% 450%"

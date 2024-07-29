@@ -1,13 +1,19 @@
 import anime from "animejs"
 
-let monitorMid = document.querySelector('.monitor-mid') as any
-let monitorLeft = document.querySelector('.monitor-left') as any
-let monitorRight = document.querySelector('.monitor-right') as any
-let midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+let monitorMid: any
+let monitorLeft: any
+let monitorRight: any
+let midMaskMid: any
+let midMaskLeft: any
+let midMaskRight: any
 
 export function cogsShow(state1: string, state2: any) {
+  monitorMid = document.querySelector('.monitor-mid') as any
+  monitorLeft = document.querySelector('.monitor-left') as any
+  monitorRight = document.querySelector('.monitor-right') as any
+  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
   cogsShowLeft(state1)
   cogsShowMid(state1, state2)
   cogsShowRight(state1, state2)

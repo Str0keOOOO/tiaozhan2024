@@ -24,9 +24,6 @@ export function enterAnime() {
   tiaozhan = document.querySelector('.tiaozhan') as any
   logo = document.querySelectorAll('.enter-logo') as any
   enterLogo = document.querySelector('#enter-logo') as any
-  console.log(logo[0]);
-  console.log(logo[0].contentDocument);
-  console.log(logo[0].contentDocument.querySelectorAll('#line'));
   jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
   meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
   meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))

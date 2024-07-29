@@ -36,18 +36,7 @@ let rightFrameRight: any
 let bgMask = document.querySelector('.bg-mask') as any
 
 // 记录状态
-let dict: { [key1: string]: any[] } = {
-  licheng: [
-    midMaskLeft,
-    midMaskMid,
-    midMaskRight,
-  ],
-  bumen: [
-    midMaskLeft,
-    midMaskMid,
-    midMaskRight,
-  ]
-}
+let dict: { [key1: string]: any[] }
 let midUpBool: boolean = false
 let midButtonInitial: string
 let midCanvasInt1: number = 120000000
@@ -87,8 +76,6 @@ export function monitor() {
   rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
   rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
   rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
-  rightCanvas1.style.opacity = '0'
-  rightCanvas2.style.opacity = '0'
   dict = {
     licheng: [
       midMaskLeft,
@@ -101,6 +88,8 @@ export function monitor() {
       midMaskRight,
     ]
   }
+  rightCanvas1.style.opacity = '0'
+  rightCanvas2.style.opacity = '0'
   midLampControl()
   cursorPointer()
   midButtonHover()

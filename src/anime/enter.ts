@@ -1,18 +1,28 @@
 import anime from "animejs"
 
-let bodyMask = document.querySelector('.body-mask') as any
-let list = document.querySelector('.list') as any
-let mail = document.querySelector('.mail') as any
-let tiaozhan = document.querySelector('.tiaozhan') as any
-let logo = document.querySelectorAll('.enter-logo') as any
-let jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
-let meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
-let meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
-let shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
-let building = document.querySelector('.building') as any
-
+let bodyMask: any
+let list: any
+let mail: any
+let tiaozhan: any
+let logo: any
+let jishuLine: any
+let meigongLine: any
+let meigongCircle: any
+let shipingLine: any
+let building: any
 let isEnter: boolean = false
+
 export async function enterAnime() {
+  bodyMask = document.querySelector('.body-mask') as any
+  list = document.querySelector('.list') as any
+  mail = document.querySelector('.mail') as any
+  tiaozhan = document.querySelector('.tiaozhan') as any
+  logo = document.querySelectorAll('.enter-logo') as any
+  jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
+  meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
+  meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
+  shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
+  building = document.querySelector('.building') as any
   bodyMask.addEventListener("click", () => {
     if (!isEnter) {
       bgAnime()

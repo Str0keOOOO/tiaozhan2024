@@ -1,13 +1,19 @@
 import anime from "animejs"
 
-let monitorMid = document.querySelector('.monitor-mid') as any
-let monitorLeft = document.querySelector('.monitor-left') as any
-let monitorRight = document.querySelector('.monitor-right') as any
-let midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-let midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-let midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+let monitorMid: any
+let monitorLeft: any
+let monitorRight: any
+let midMaskMid: any
+let midMaskLeft: any
+let midMaskRight: any
 
 export function cogsShow(state1: string, state2: any) {
+  monitorMid = document.querySelector('.monitor-mid') as any
+  monitorLeft = document.querySelector('.monitor-left') as any
+  monitorRight = document.querySelector('.monitor-right') as any
+  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
   cogsShowLeft(state1)
   cogsShowMid(state1,state2)
   cogsShowRight(state1, state2)
@@ -185,7 +191,7 @@ function cogsShowMid(state1: string,state2: any) {
     })
     anime({
       targets: side1,
-      transform: "translate(0 -34)",
+      transform: "translate(0 -24)",
       easing: 'easeInOutCubic',
       duration: 600,
       delay: 0
@@ -471,6 +477,12 @@ function cogsShowRight(state1: string, state2: any) {
 }
 
 export function CogsShowmidUp() {
+  monitorMid = document.querySelector('.monitor-mid') as any
+  monitorLeft = document.querySelector('.monitor-left') as any
+  monitorRight = document.querySelector('.monitor-right') as any
+  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
   let cogs3 = monitorMid.contentDocument.querySelector('#齿轮')
   let cogs4 = monitorMid.contentDocument.querySelector('#齿轮-2')
   anime({

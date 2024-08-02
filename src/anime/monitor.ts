@@ -241,7 +241,7 @@ function midUp(el: any) {
         targets: monitorMid,
         translateY: '-15vw',
         easing: 'easeOutCubic',
-        duration: 1200,
+        duration: 800,
         delay: 0
       })
       anime({
@@ -262,14 +262,14 @@ function midUp(el: any) {
         targets: document.querySelectorAll('.intro'),
         opacity: 0,
         easing: 'easeOutCubic',
-        duration: 1200,
+        duration: 800,
         delay: 0
       })
       anime({
         targets: document.querySelectorAll('.bottom-arrow'),
         opacity: 0,
         easing: 'easeOutCubic',
-        duration: 1200,
+        duration: 800,
         delay: 0
       })
       CogsShowmidUp()
@@ -1320,7 +1320,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas1,
           transform: "translate(0 0)",
-          easing: 'easeOutCubic',
+          easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1329,7 +1329,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas1,
           transform: "translate(0 1120)",
-          easing: 'easeOutCubic',
+          easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1338,7 +1338,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas1,
           transform: "translate(0 2240)",
-          easing: 'easeOutCubic',
+          easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1350,7 +1350,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas2,
           transform: "translate(0 -20)",
-          easing: 'easeOutCubic',
+          easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1359,7 +1359,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas2,
           transform: "translate(0 1018)",
-          easing: 'easeOutCubic',
+          easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1368,7 +1368,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas2,
           transform: "translate(0 2167)",
-          easing: 'easeOutCubic',
+          easing: 'easeInOutCubic',
           duration: 1200,
           delay: 0
         })

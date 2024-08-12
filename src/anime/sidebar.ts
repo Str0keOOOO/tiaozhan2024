@@ -1,8 +1,8 @@
 import anime from "animejs";
 import { scrollToTop } from "./scrollToTop";
 
-let sidebarLeft = document.querySelector('.sidebar-left')
-let sidebarRight = document.querySelector('.sidebar-right')
+let sidebarLeft = document.querySelector('.sidebar-left') as any
+let sidebarRight = document.querySelector('.sidebar-right') as any
 let list = document.querySelector('.list') as any
 let mail = document.querySelector('.mail') as any
 let mask = document.querySelector('.sidebar-mask') as any
@@ -10,6 +10,7 @@ export async function sidebar() {
   list.addEventListener('click', () => {
     scrollToTop()
     document.body.style.overflowY = "hidden";
+    sidebarLeft.style.overflow = "auto"
     mask.style.display = 'block'
     anime({
       targets: sidebarLeft,
@@ -29,6 +30,7 @@ export async function sidebar() {
   mail.addEventListener('click', () => {
     scrollToTop()
     document.body.style.overflowY = "hidden";
+    sidebarRight.style.overflow = "auto"
     mask.style.display = 'block'
     anime({
       targets: sidebarRight,
@@ -47,6 +49,8 @@ export async function sidebar() {
   })
   mask.addEventListener('click', () => {
     document.body.style.overflowY = "scroll";
+    sidebarLeft.style.overflow = "hidden"
+    sidebarRight.style.overflow = "hidden"
     mask.style.display = 'none'
     anime({
       targets: sidebarLeft,

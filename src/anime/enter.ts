@@ -1,6 +1,7 @@
 import anime from "animejs"
 import { scrollToTop } from "./scrollToTop"
 import { monitorReturn } from "./monitor"
+import { getScrollbarWidth } from "./scrollBar"
 
 let bodyMask: any
 let list: any
@@ -40,12 +41,12 @@ export function enterAnime() {
       tiaozhan.style.overflow = 'visible'
       bodyMask.style.display = 'none'
       setTimeout(() => {
-        document.body.style.overflowY = "scroll";
+        document.body.style.overflowY = "scroll"
         list.style.visibility = 'visible'
         mail.style.visibility = 'visible'
         enterLogoMask.style.display = 'block'
         enterLogoAnime()
-      }, 3600);
+      }, 3600)
       document.body.style.cursor = "default"
       isEnter = true
     }
@@ -60,7 +61,7 @@ export function enterAnime() {
       buildingDown()
       enterLogoAnimeBack()
       monitorReturn()
-      document.body.style.overflowY = "hidden";
+      document.body.style.overflowY = "hidden"
       enterLogoMask.style.display = 'none'
       setTimeout(() => {
         list.style.visibility = 'hidden'
@@ -68,7 +69,7 @@ export function enterAnime() {
         enterLogoMask.style.display = 'none'
         document.body.style.cursor = "pointer"
         bodyMask.style.display = 'block'
-      }, 1601);
+      }, 1601)
       isEnter = false
     }
   })
@@ -245,7 +246,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    translateX: '-2vw',
+    translateX: `calc(-${getScrollbarWidth()}px - 2vw)`,
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -346,7 +347,7 @@ function sidebarBack() {
   })
   anime({
     targets: document.querySelector('.sidebar-right'),
-    translateX: 0,
+    translateX: 'calc(0px - 0vw)',
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,

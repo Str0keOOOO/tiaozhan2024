@@ -1,4 +1,4 @@
-import anime from "animejs";
+import anime from "animejs"
 
 export function changeEl(el: any, curve: string) {
   let monitorMid = document.querySelector('.monitor-mid') as any

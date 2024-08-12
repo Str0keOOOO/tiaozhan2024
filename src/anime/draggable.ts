@@ -10,10 +10,10 @@ export function draggable() {
   text = [text1, text2, text3]
   text.forEach((el) => {
     el.forEach(function (textElement: any) {
-      textElement.style.userSelect = 'none';
-      textElement.style.MozUserSelect = 'none'; // Firefox  
-      textElement.style.MsUserSelect = 'none';  // IE 10+  
-      textElement.style.WebkitUserSelect = 'none'; // Safari, Chrome  
-    });
+      textElement.style.userSelect = 'none'
+      textElement.style.MozUserSelect = 'none' // Firefox  
+      textElement.style.MsUserSelect = 'none'  // IE 10+  
+      textElement.style.WebkitUserSelect = 'none' // Safari, Chrome  
+    })
   })
 }

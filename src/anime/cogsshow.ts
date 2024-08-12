@@ -28,21 +28,21 @@ function cogsShowLeft(state1: string) {
       targets: cogs1,
       transform: 'translate(243.542 1873.247) rotate(-21)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs2,
       transform: 'translate(273.079 1234.412) rotate(73)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs3,
       transform: 'translate(249.079 1349.412) rotate(-68)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
   } else if (state1 == 'bumen') {
@@ -50,21 +50,21 @@ function cogsShowLeft(state1: string) {
       targets: cogs1,
       transform: 'translate(243.542 1873.247) rotate(56)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs2,
       transform: 'translate(273.079 1234.412) rotate(63)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs3,
       transform: 'translate(249.079 1349.412) rotate(-16)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
   } else {
@@ -72,21 +72,21 @@ function cogsShowLeft(state1: string) {
       targets: cogs1,
       transform: 'translate(243.542 1873.247) rotate(10)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs2,
       transform: 'translate(273.079 1234.412) rotate(24)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs3,
       transform: 'translate(249.079 1349.412) rotate(24)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
   }
@@ -104,59 +104,59 @@ function cogsShowMid(state1: string,state2: any) {
       targets: cogs1,
       transform: 'translate(640.647 1841.04) rotate(45)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs3,
       transform: 'translate(1065.519 1796.04) rotate(-270)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs4,
       transform: 'translate(496.461 1796.041) rotate(-90)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs5,
       transform: 'translate(905.087 1841.04) rotate(135)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: side1,
       transform: "translate(0 312)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     if (state2 == midMaskLeft) {
       anime({
         targets: side2,
         transform: "translate(0 0)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskMid) {
       anime({
         targets: side2,
         transform: "translate(0 152)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskRight) {
       anime({
         targets: side2,
         transform: "translate(0 -22)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     }
@@ -165,59 +165,59 @@ function cogsShowMid(state1: string,state2: any) {
       targets: cogs1,
       transform: 'translate(640.647 1841.04) rotate(18)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs3,
       transform: 'translate(1065.519 1796.04) rotate(-300)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs4,
       transform: 'translate(496.461 1796.041) rotate(-60)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs5,
       transform: 'translate(905.087 1841.04) rotate(156)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: side1,
       transform: "translate(0 -24)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     if (state2 == midMaskLeft) {
       anime({
         targets: side2,
         transform: "translate(0 0)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskMid) {
       anime({
         targets: side2,
         transform: "translate(0 151)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskRight) {
       anime({
         targets: side2,
         transform: "translate(0 292)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     }
@@ -226,42 +226,42 @@ function cogsShowMid(state1: string,state2: any) {
       targets: cogs1,
       transform: 'translate(640.647 1841.04) rotate(18)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs3,
       transform: 'translate(1065.519 1796.04) rotate(-31)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs4,
       transform: 'translate(496.461 1796.041) rotate(18)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs5,
       transform: 'translate(905.087 1841.04) rotate(156)',
       easing: 'easeOutCubic',
-      duration: 600,
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: side1,
       transform: "translate(0 140)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: side2,
       transform: "translate(0 0)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
   }
@@ -278,81 +278,81 @@ function cogsShowRight(state1: string, state2: any) {
       anime({
         targets: cogs1,
         transform: "translate(1691.876 1558.383) rotate(-46)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: cogs2,
         transform: "translate(1691.876 1269.46) rotate(-38)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: sideCogs,
         transform: "translate(0 -119)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskMid) {
       anime({
         targets: cogs1,
         transform: "translate(1691.876 1558.383) rotate(-115)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: cogs2,
         transform: "translate(1691.876 1269.46) rotate(-131)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: sideCogs,
         transform: "translate(0 -318)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskRight) {
       anime({
         targets: cogs1,
         transform: "translate(1691.876 1558.383) rotate(-233)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: cogs2,
         transform: "translate(1691.876 1269.46) rotate(-218)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: sideCogs,
         transform: "translate(0 -455)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     }
     anime({
       targets: frame,
       transform: "translate(-2800.572 -5272)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: motor,
       transform: "translate(-2817.248 -5117)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
   } else if (state1 == "bumen") {
@@ -360,117 +360,117 @@ function cogsShowRight(state1: string, state2: any) {
       anime({
         targets: cogs1,
         transform: "translate(1711.876 1558.383) rotate(-89)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: cogs2,
         transform: "translate(1711.876 1269.46) rotate(-93)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: sideCogs,
         transform: "translate(0 -102)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskMid) {
       anime({
         targets: cogs1,
         transform: "translate(1711.876 1558.383) rotate(-135)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: cogs2,
         transform: "translate(1711.876 1269.46) rotate(-134)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: sideCogs,
         transform: "translate(0 -231)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     } else if (state2 == midMaskRight) {
       anime({
         targets: cogs1,
         transform: "translate(1711.876 1558.383) rotate(-210)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: cogs2,
         transform: "translate(1711.876 1269.46) rotate(-165)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: sideCogs,
         transform: "translate(0 -460)",
-        easing: 'easeInOutCubic',
-        duration: 600,
+        easing: 'easeOutCubic',
+        duration: 1200,
         delay: 0
       })
     }
     anime({
       targets: frame,
       transform: "translate(-2780.572 -5272)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: motor,
       transform: "translate(-2797.248 -5117)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
   } else {
     anime({
       targets: cogs1,
       transform: "translate(1711.876 1558.383) rotate(-46)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: cogs2,
       transform: "translate(1711.876 1269.46) rotate(-38)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: sideCogs,
       transform: "translate(0 0)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: frame,
       transform: "translate(-2780.572 -5272)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
     anime({
       targets: motor,
       transform: "translate(-2797.248 -5117)",
-      easing: 'easeInOutCubic',
-      duration: 600,
+      easing: 'easeOutCubic',
+      duration: 1200,
       delay: 0
     })
   }
@@ -489,14 +489,14 @@ export function CogsShowmidUp() {
     targets: cogs3,
     transform: 'translate(1065.519 1796.04) rotate(-300)',
     easing: 'linear',
-    duration: 600,
+    duration: 1200,
     delay: 0
   })
   anime({
     targets: cogs4,
     transform: 'translate(496.461 1796.041) rotate(-60)',
     easing: 'easeOutCubic',
-    duration: 600,
+    duration: 1200,
     delay: 0
   })
   let cogs1 = monitorLeft.contentDocument.querySelector('#齿轮')
@@ -506,21 +506,21 @@ export function CogsShowmidUp() {
     targets: cogs1,
     transform: 'translate(243.542 1873.247) rotate(90)',
     easing: 'easeOutCubic',
-    duration: 600,
+    duration: 1200,
     delay: 0
   })
   anime({
     targets: cogs2,
     transform: 'translate(273.079 1234.412) rotate(-45)',
     easing: 'easeOutCubic',
-    duration: 600,
+    duration: 1200,
     delay: 0
   })
   anime({
     targets: cogs0,
     transform: 'translate(249.079 1349.412) rotate(90)',
     easing: 'easeOutCubic',
-    duration: 600,
+    duration: 1200,
     delay: 0
   })
 }

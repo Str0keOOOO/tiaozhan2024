@@ -241,7 +241,7 @@ function midUp(el: any) {
         targets: monitorMid,
         translateY: '-15vw',
         easing: 'easeOutCubic',
-        duration: 800,
+        duration: 1200,
         delay: 0
       })
       anime({
@@ -262,14 +262,14 @@ function midUp(el: any) {
         targets: document.querySelectorAll('.intro'),
         opacity: 0,
         easing: 'easeOutCubic',
-        duration: 800,
+        duration: 1200,
         delay: 0
       })
       anime({
         targets: document.querySelectorAll('.bottom-arrow'),
         opacity: 0,
         easing: 'easeOutCubic',
-        duration: 800,
+        duration: 1200,
         delay: 0
       })
       CogsShowmidUp()
@@ -318,7 +318,7 @@ function midCanvasShow() {
     anime({
       targets: midCanvas2,
       transform: "translate(0 -180)",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -328,7 +328,7 @@ function midCanvasShow() {
         anime({
           targets: midCanvas3,
           transform: "translate(0 3)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -338,7 +338,7 @@ function midCanvasShow() {
         anime({
           targets: midCanvas3,
           transform: "translate(0 168)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -348,7 +348,7 @@ function midCanvasShow() {
         anime({
           targets: midCanvas3,
           transform: "translate(0 332)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -358,7 +358,7 @@ function midCanvasShow() {
     anime({
       targets: midCanvas3,
       transform: "translate(0 -180)",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -368,7 +368,7 @@ function midCanvasShow() {
         anime({
           targets: midCanvas2,
           transform: "translate(0 7)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -378,7 +378,7 @@ function midCanvasShow() {
         anime({
           targets: midCanvas2,
           transform: "translate(0 138)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -388,7 +388,7 @@ function midCanvasShow() {
         anime({
           targets: midCanvas2,
           transform: "translate(0 312)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -398,14 +398,14 @@ function midCanvasShow() {
     anime({
       targets: midCanvas2,
       transform: "translate(0 -180)",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: midCanvas3,
       transform: "translate(0 -180)",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -445,14 +445,14 @@ function leftLampUpControl() {
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -460,21 +460,21 @@ function leftLampUpControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
       fill: '#FF3E0F',
       stroke: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#部_门'),
       fill: '#91F8B6',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -482,21 +482,21 @@ function leftLampUpControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#ff9747",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
       stopColor: "#c0ffd7",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -526,14 +526,14 @@ function leftLampUpControl() {
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -541,21 +541,21 @@ function leftLampUpControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
       fill: '#FF3E0F',
       stroke: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#部_门'),
       fill: '#91F8B6',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -563,21 +563,21 @@ function leftLampUpControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#FF3E0F",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
       stopColor: "#c0ffd7",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -607,14 +607,14 @@ function leftLampUpControl() {
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -622,21 +622,21 @@ function leftLampUpControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
       fill: '#FF3E0F',
       stroke: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#部_门'),
       fill: '#91F8B6',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -644,21 +644,21 @@ function leftLampUpControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#FF3E0F",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
       stopColor: "#c0ffd7",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -692,14 +692,14 @@ function leftLampDownControl() {
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#部_门'),
       fill: '#F44D33',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -707,21 +707,21 @@ function leftLampDownControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
       fill: '#FF3E0F',
       stroke: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
       fill: '#91F8B6',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -729,21 +729,21 @@ function leftLampDownControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
       stopColor: "#FF3E0F",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -773,14 +773,14 @@ function leftLampDownControl() {
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#部_门'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -788,21 +788,21 @@ function leftLampDownControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
       fill: '#FF3E0F',
       stroke: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
       fill: '#91F8B6',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -810,21 +810,21 @@ function leftLampDownControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
       stopColor: "#FF3E0F",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -854,14 +854,14 @@ function leftLampDownControl() {
     anime({
       targets: leftLampDown.querySelector('#部_门-3'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#部_门'),
       fill: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -869,21 +869,21 @@ function leftLampDownControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
       fill: '#FF3E0F',
       stroke: '#FF3E0F',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: leftLampUp.querySelector('#历_程-3'),
       fill: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
       fill: '#91F8B6',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -891,21 +891,21 @@ function leftLampDownControl() {
       targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
       stopColor: "#FF3E0F",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
       targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7",
-      easing: 'easeInOutCubic',
+      easing: 'easeOutCubic',
       duration: 1200,
       delay: 0
     })
@@ -1320,7 +1320,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas1,
           transform: "translate(0 0)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1329,7 +1329,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas1,
           transform: "translate(0 1120)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1338,7 +1338,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas1,
           transform: "translate(0 2240)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1350,7 +1350,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas2,
           transform: "translate(0 -20)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1359,7 +1359,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas2,
           transform: "translate(0 1018)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })
@@ -1368,7 +1368,7 @@ function rightCanvasShow() {
         anime({
           targets: rightCanvas2,
           transform: "translate(0 2167)",
-          easing: 'easeInOutCubic',
+          easing: 'easeOutCubic',
           duration: 1200,
           delay: 0
         })

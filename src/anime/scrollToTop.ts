@@ -6,12 +6,12 @@ export function scrollToTop() {
   var scrolldelay = setTimeout('scrollToTop()', 50) as any
   // 清除滚动事件，避免无法向下移动
   if (topHeight === 0) {
-    clearTimeout(scrolldelay);
-    scrolldelay = null;
+    clearTimeout(scrolldelay)
+    scrolldelay = null
   }
 }
 
 export function toTop() {
-  window.scrollTo(0, 0);
+  window.scrollTo(0, 0)
   return null
 }

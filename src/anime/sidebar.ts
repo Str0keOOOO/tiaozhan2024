@@ -1,5 +1,6 @@
-import anime from "animejs";
-import { scrollToTop } from "./scrollToTop";
+import anime from "animejs"
+import { scrollToTop } from "./scrollToTop"
+import { getScrollbarWidth } from "./scrollBar"
 
 let sidebarLeft = document.querySelector('.sidebar-left') as any
 let sidebarRight = document.querySelector('.sidebar-right') as any
@@ -9,7 +10,7 @@ let mask = document.querySelector('.sidebar-mask') as any
 export function sidebar() {
   list.addEventListener('click', () => {
     scrollToTop()
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = "hidden"
     sidebarLeft.style.overflow = "auto"
     mask.style.display = 'block'
     anime({
@@ -29,12 +30,12 @@ export function sidebar() {
   })
   mail.addEventListener('click', () => {
     scrollToTop()
-    document.body.style.overflowY = "hidden";
+    document.body.style.overflowY = "hidden"
     sidebarRight.style.overflow = "auto"
     mask.style.display = 'block'
     anime({
       targets: sidebarRight,
-      translateX: '-66.67vw',
+      translateX: 'calc(0px - 66.67vw)',
       easing: 'easeInOutCubic',
       duration: 500,
       delay: 0
@@ -48,7 +49,7 @@ export function sidebar() {
     })
   })
   mask.addEventListener('click', () => {
-    document.body.style.overflowY = "scroll";
+    document.body.style.overflowY = "scroll"
     sidebarLeft.style.overflow = "hidden"
     sidebarRight.style.overflow = "hidden"
     mask.style.display = 'none'
@@ -61,7 +62,7 @@ export function sidebar() {
     })
     anime({
       targets: sidebarRight,
-      translateX: '-3.5vw',
+      translateX: `calc(-${getScrollbarWidth()}px - 2vw)`,
       easing: 'easeInOutCubic',
       duration: 300,
       delay: 0

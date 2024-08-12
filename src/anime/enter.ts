@@ -1,4 +1,5 @@
 import anime from "animejs"
+import { getScrollbarWidth } from "./scrollBar"
 
 let bodyMask: any
 let list: any
@@ -34,10 +35,10 @@ export function enterAnime() {
       tiaozhan.style.overflow = 'visible'
       bodyMask.style.display = 'none'
       setTimeout(() => {
-        document.body.style.overflowY = "scroll";
+        document.body.style.overflowY = "scroll"
         list.style.visibility = 'visible'
         mail.style.visibility = 'visible'
-      }, 3600);
+      }, 3600)
       document.body.style.cursor = "default"
       isEnter = true
     }
@@ -218,7 +219,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    translateX: '-3.5vw',
+    translateX: `calc(-${getScrollbarWidth()}px - 2vw)`,
     easing: 'linear',
     duration: 500,
     delay: 3100

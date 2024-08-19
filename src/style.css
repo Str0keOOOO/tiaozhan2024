@@ -19,7 +19,7 @@ body {
   font-weight: bold;
   width: 59.84375vw;
   height: 22.31481481vh;
-  top: 31.4vh;
+  top: 28vh;
   text-align: center;
   line-height: 2.60vw;
 }
@@ -37,7 +37,16 @@ body {
   max-width: 100%;
 }
 
+:root {
+  --max-height: max(50vw, 100vh);
+}
+
+.bg-2 {
+  height: var(--max-height);
+}
+
 .bg-mask {
+  height: var(--max-height);
   background: linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent);
 }
 
@@ -48,10 +57,14 @@ body {
 
 .bottom-arrow-background {
   position: absolute;
-  top: 96.9vh;
+  top: 84vh;
   width: 100vw;
   height: 12rem;
   margin-left: 10px;
   text-align: center;
   overflow: hidden;
+}
+
+.police {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }

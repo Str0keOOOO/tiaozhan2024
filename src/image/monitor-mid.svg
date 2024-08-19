@@ -271,7 +271,7 @@
           <path id="路径_3" data-name="路径 3" d="M18.694,63.4,0,64.209V32.056L54.822,0V42.5L40.574,50.888" transform="translate(21.132 37.453)" fill="none" stroke="#6e6e6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
           <path id="路径_4" data-name="路径 4" d="M0,15.264,16.369,0V27.9L0,28.626" transform="translate(75.954 37.453)" fill="none" stroke="#6e6e6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
         </g>
-        <text id="终" transform="translate(33.961 163.667)" fill="#6e6e6e" font-size="92" font-family="YouYuan"><tspan x="0" y="0">终</tspan></text>
+        <text id="终" transform="translate(33.961 163.667)" fill="#6e6e6e" font-size="92" font-family="YouYuan" font-weight="1000"><tspan x="0" y="0">今</tspan></text>
         <g id="网格" transform="translate(15.454 25.796)">
           <g id="组_23" data-name="组 23">
             <g id="组_21" data-name="组 21">
@@ -1527,7 +1527,7 @@
             <rect x="2.5" y="2.5" width="134.35" height="16" rx="0.5" fill="none"/>
           </g>
         </g>
-        <text id="承" transform="translate(54.708 163.667)" fill="#6e6e6e" font-size="92" font-family="YouYuan"><tspan x="0" y="0">承</tspan></text>
+        <text id="承" transform="translate(54.708 163.667)" fill="#6e6e6e" font-size="92" font-family="YouYuan" font-weight="1000"><tspan x="0" y="0">承</tspan></text>
         <g id="技术部" transform="translate(152.895 40.219) rotate(90)">
           <line id="直线_2" data-name="直线 2" y1="22.928" x2="39.956" transform="translate(66.591 71.158)" fill="none" stroke="#6e6e6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
           <line id="直线_3" data-name="直线 3" y1="9.095" x2="15.987" transform="translate(55.407 78.872)" fill="none" stroke="#6e6e6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
@@ -2806,7 +2806,7 @@
           <line id="直线_1" data-name="直线 1" x1="15.548" y1="26.098" transform="translate(0 1.203)" fill="none" stroke="#6e6e6e" stroke-linecap="round" stroke-linejoin="round" stroke-width="7"/>
           <circle id="椭圆_1" data-name="椭圆 1" cx="6.096" cy="6.096" r="6.096" transform="translate(11.485 24.863)" fill="#6e6e6e"/>
         </g>
-        <text id="起" transform="translate(33.758 163.667)" fill="#6e6e6e" font-size="92" font-family="YouYuan"><tspan x="0" y="0">起</tspan></text>
+        <text id="起" transform="translate(33.758 163.667)" fill="#6e6e6e" font-size="92" font-family="YouYuan" font-weight="1000"><tspan x="0" y="0">起</tspan></text>
         <g id="网格-3" data-name="网格" transform="translate(17.407 25.796)">
           <g id="组_23-25" data-name="组 23">
             <g id="组_21-25" data-name="组 21">

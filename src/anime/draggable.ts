@@ -1,3 +1,4 @@
+// @ts-ignore
 let monitorMid, monitorLeft, monitorRight, text1, text2, text3, text
 
 export function draggable() {

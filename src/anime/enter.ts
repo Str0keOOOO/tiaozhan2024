@@ -11,7 +11,6 @@ let meigongLine: any
 let meigongCircle: any
 let shipingLine: any
 let building: any
-let isEnter: boolean = false
 
 export async function enterAnime() {
   bodyMask = document.querySelector('.body-mask') as any
@@ -24,25 +23,22 @@ export async function enterAnime() {
   meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
   shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
   building = document.querySelector('.building') as any
-  bodyMask.addEventListener("click", () => {
-    if (!isEnter) {
-      bgAnime()
-      logoColor()
-      logoRotate()
-      buildingUp()
-      title()
-      sidebar()
-      tiaozhan.style.overflow = 'visible'
-      bodyMask.style.display = 'none'
-      setTimeout(() => {
-        document.body.style.overflowY = "scroll"
-        list.style.visibility = 'visible'
-        mail.style.visibility = 'visible'
-      }, 3600)
-      document.body.style.cursor = "default"
-      isEnter = true
-    }
-  })
+  setTimeout(() => {
+    bgAnime()
+    logoColor()
+    logoRotate()
+    buildingUp()
+    title()
+    sidebar()
+    tiaozhan.style.overflow = 'visible'
+    bodyMask.style.display = 'none'
+    setTimeout(() => {
+      document.body.style.overflowY = "scroll"
+      list.style.visibility = 'visible'
+      mail.style.visibility = 'visible'
+    }, 3600)
+    document.body.style.cursor = "default"
+  }, 500)
 }
 // 前进动画
 function bgAnime() {
@@ -191,6 +187,13 @@ function title() {
     duration: 1000,
     delay: 2100
   })
+  anime({
+    targets: document.querySelector('.police'),
+    opacity: 1,
+    easing: 'easeInOutCubic',
+    duration: 1000,
+    delay: 2100
+  })
 }
 
 function sidebar() {
@@ -211,7 +214,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-left'),
     opacity: 1,
-    translateX: '2vw',
+    translateX: '0vw',
     easing: 'linear',
     duration: 500,
     delay: 3100
@@ -219,7 +222,7 @@ function sidebar() {
   anime({
     targets: document.querySelector('.sidebar-right'),
     opacity: 1,
-    translateX: `calc(-${getScrollbarWidth()}px - 2vw)`,
+    translateX: `calc(-${getScrollbarWidth()}px - 0vw)`,
     easing: 'linear',
     duration: 500,
     delay: 3100

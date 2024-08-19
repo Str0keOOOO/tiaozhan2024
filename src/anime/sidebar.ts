@@ -55,14 +55,14 @@ export function sidebar() {
     mask.style.display = 'none'
     anime({
       targets: sidebarLeft,
-      translateX: '2vw',
+      translateX: '0vw',
       easing: 'easeInOutCubic',
       duration: 300,
       delay: 0
     })
     anime({
       targets: sidebarRight,
-      translateX: `calc(-${getScrollbarWidth()}px - 2vw)`,
+      translateX: `calc(-${getScrollbarWidth()}px - 0vw)`,
       easing: 'easeInOutCubic',
       duration: 300,
       delay: 0

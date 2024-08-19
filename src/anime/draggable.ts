@@ -7,7 +7,7 @@ export function draggable() {
   text1 = monitorMid.contentDocument.querySelectorAll('text')
   text2 = monitorLeft.contentDocument.querySelectorAll('text')
   text3 = monitorRight.contentDocument.querySelectorAll('text')
-  text = [text1, text2, text3]
+  text = [text1, text2]
   text.forEach((el) => {
     el.forEach(function (textElement: any) {
       textElement.style.userSelect = 'none';

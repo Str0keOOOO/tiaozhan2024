@@ -173,7 +173,7 @@ function title() {
   })
   anime({
     targets: document.querySelector('.title-1'),
-    scale: 10,
+    scale: 1,
     opacity: 1,
     easing: 'easeInOutCubic',
     duration: 1000,
@@ -181,7 +181,7 @@ function title() {
   })
   anime({
     targets: document.querySelector('.title-2'),
-    scale: 10,
+    scale: 1,
     opacity: 1,
     easing: 'easeInOutCubic',
     duration: 1000,

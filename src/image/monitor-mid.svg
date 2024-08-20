@@ -4,6 +4,9 @@
       #光 {  
         cursor: pointer;  
       }  
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
     </style>  
     <clipPath id="clip-path">
       <rect id="显示屏" width="376.093" height="129" rx="30" transform="translate(645.907 1616)" fill="#24201c"/>

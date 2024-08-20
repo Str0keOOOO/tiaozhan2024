@@ -14,10 +14,39 @@ document.oncontextmenu = function () { return false }
 document.ondragstart = function () { return false }
 
 urlSet()
+
+let midBoolean = false;
+let leftBoolean = false;
+let rightBoolean = false;
+(document.querySelector('.monitor-mid') as any).onload = () => {
+  midBoolean = true
+}
+(document.querySelector('.monitor-left') as any).onload = () => {
+  leftBoolean = true
+}
+(document.querySelector('.monitor-right') as any).onload = () => {
+  rightBoolean = true
+}
+
 window.onload = function () {
   enterAnime()
   sidebar()
-  monitor()
   draggable()
-  scrollRun()
+  scrollRun();
+  (document.querySelector('.monitor-mid') as any).onload = () => {
+    midBoolean = true
+  }
+  (document.querySelector('.monitor-left') as any).onload = () => {
+    leftBoolean = true
+  }
+  (document.querySelector('.monitor-right') as any).onload = () => {
+    rightBoolean = true
+  }
+  const intervalId = setInterval(() => {
+    if (midBoolean && leftBoolean && rightBoolean) {
+      clearInterval(intervalId)
+      monitor()
+      return
+    }
+  }, 50)
 }

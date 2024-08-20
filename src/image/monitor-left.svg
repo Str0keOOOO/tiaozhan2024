@@ -13,6 +13,9 @@
       #椭圆_20 {  
         cursor: pointer;  
       }  
+      * {
+        -webkit-tap-highlight-color: transparent;
+      }
     </style>  
     <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#b3a090"/>

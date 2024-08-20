@@ -224,7 +224,7 @@ function title() {
   })
   anime({
     targets: document.querySelector('.title-1'),
-    scale: 10,
+    scale: 1,
     opacity: 1,
     easing: 'easeOutCubic',
     duration: 1000,
@@ -232,7 +232,7 @@ function title() {
   })
   anime({
     targets: document.querySelector('.title-2'),
-    scale: 10,
+    scale: 1,
     opacity: 1,
     easing: 'easeOutCubic',
     duration: 1000,
@@ -333,7 +333,7 @@ function titleBack() {
   })
   anime({
     targets: document.querySelector('.title-1'),
-    scale: 10,
+    scale: 1,
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,
@@ -341,7 +341,7 @@ function titleBack() {
   })
   anime({
     targets: document.querySelector('.title-2'),
-    scale: 10,
+    scale: 1,
     opacity: 0,
     easing: 'easeInOutCubic',
     duration: 801,

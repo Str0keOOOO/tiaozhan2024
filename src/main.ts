@@ -3,7 +3,7 @@ import './css/tailwind.css'
 import { enterAnime } from './anime/enter'
 import { sidebar } from './anime/sidebar'
 import { monitor } from './anime/monitor'
-import { toTop, scrollRun } from './anime/scrollToTop'
+import { toTop } from './anime/scrollToTop'
 import { draggable } from './anime/draggable'
 import { urlSet } from './anime/url'
 
@@ -31,8 +31,7 @@ let rightBoolean = false;
 window.onload = function () {
   enterAnime()
   sidebar()
-  draggable()
-  scrollRun();
+  draggable();
   (document.querySelector('.monitor-mid') as any).onload = () => {
     midBoolean = true
   }

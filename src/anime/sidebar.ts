@@ -7,6 +7,7 @@ let sidebarRight = document.querySelector('.sidebar-right') as any
 let list = document.querySelector('.list') as any
 let mail = document.querySelector('.mail') as any
 let mask = document.querySelector('.sidebar-mask') as any
+
 export function sidebar() {
   list.addEventListener('click', () => {
     scrollToTop()

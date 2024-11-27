@@ -1,6 +1,7 @@
 import anime from "animejs"
 import { changeEl } from "./changeEl"
 import { cogsShow } from "./cogsshow"
+import { handleClick } from "./isTouchDevice"
 
 let monitorMid: any
 let monitorLeft: any
@@ -421,7 +422,35 @@ function midUp(el: any) {
   midCanvas1.style.opacity = "0"
   midCanvas2.style.opacity = "1"
   midCanvas3.style.opacity = "0"
-  el.addEventListener('click', () => {
+  handleClick(el, () => {
+    bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.92) 66%, transparent)'
+    if (!midUpBool) {
+      anime({
+        targets: monitorMid,
+        translateY: '-23vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: monitorLeft,
+        translateX: '17.5vw',
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      anime({
+        targets: [document.querySelectorAll('.intro'), document.querySelectorAll('.bottom-arrow')[1]],
+        opacity: 0,
+        easing: 'easeOutCubic',
+        duration: 1200,
+        delay: 0
+      })
+      changeEl(midCanvas1, 'easeOutCubic')
+      midUpBool = true
+    }
+  })
+  el.addEventListener('touchend', () => {
     bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.92) 66%, transparent)'
     if (!midUpBool) {
       anime({
@@ -574,7 +603,7 @@ function leftLampUpControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp1.addEventListener('click', () => {
+  handleClick(leftMaskUp1, () => {
     if (state2 == undefined) {
       changeEl(midCanvas2, 'easeOutCubic')
     } else {
@@ -628,14 +657,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -657,7 +686,7 @@ function leftLampUpControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp2.addEventListener('click', () => {
+  handleClick(leftMaskUp2, () => {
     if (state2 == undefined) {
       changeEl(midCanvas2, 'easeOutCubic')
     } else {
@@ -711,14 +740,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -740,7 +769,7 @@ function leftLampUpControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp3.addEventListener('click', () => {
+  handleClick(leftMaskUp3, () => {
     if (state2 == undefined) {
       changeEl(midCanvas2, 'easeOutCubic')
     } else {
@@ -794,14 +823,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -830,7 +859,7 @@ function leftLampDownControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskDown1.addEventListener('click', () => {
+  handleClick(leftMaskDown1, () => {
     if (state2 == undefined) {
       changeEl(midCanvas3, 'easeOutCubic')
     } else {
@@ -881,14 +910,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -913,7 +942,7 @@ function leftLampDownControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskDown2.addEventListener('click', () => {
+  handleClick(leftMaskDown2, () => {
     if (state2 == undefined) {
       changeEl(midCanvas3, 'easeOutCubic')
     } else {
@@ -964,14 +993,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -996,7 +1025,7 @@ function leftLampDownControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskDown3.addEventListener('click', () => {
+  handleClick(leftMaskDown3, () => {
     if (state2 == undefined) {
       changeEl(midCanvas3, 'easeOutCubic')
     } else {
@@ -1047,14 +1076,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -1072,7 +1101,7 @@ function leftLampDownControl() {
 }
 // 右边机器出来
 function rightMonitorshow(el: any) {
-  el.addEventListener('click', () => {
+  handleClick(el, () => {
     anime({
       targets: monitorMidTop[0],
       transform: "translate(0 -50)",
@@ -1592,6 +1621,7 @@ export function monitorReturn() {
   cogsShow(state1, state2)
   changeEl(midCanvas2, 'easeOutCubic')
   midMaskLeft.removeEventListener('click', showLampCanvasThen)
+  midMaskLeft.removeEventListener('touchend', showLampCanvasThen)
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis1)
   midMaskLeft.removeEventListener('mouseover', midLampLeftRemoveOverLis2)
   midMaskLeft.removeEventListener('mouseout', midLampLeftRemoveOutLis1)
@@ -1599,6 +1629,7 @@ export function monitorReturn() {
   midMaskLeft.removeEventListener('mouseover', showLampCanvasOn)
   midMaskLeft.removeEventListener('mouseout', showLampCanvasOff)
   midMaskMid.removeEventListener('click', showLampCanvasThen)
+  midMaskMid.removeEventListener('touchend', showLampCanvasThen)
   midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis1)
   midMaskMid.removeEventListener('mouseover', midLampMidRemoveOverLis2)
   midMaskMid.removeEventListener('mouseout', midLampMidRemoveOutLis1)
@@ -1606,6 +1637,7 @@ export function monitorReturn() {
   midMaskMid.removeEventListener('mouseover', showLampCanvasOn)
   midMaskMid.removeEventListener('mouseout', showLampCanvasOff)
   midMaskRight.removeEventListener('click', showLampCanvasThen)
+  midMaskRight.removeEventListener('touchend', showLampCanvasThen)
   midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis1)
   midMaskRight.removeEventListener('mouseover', midLampRightRemoveOverLis2)
   midMaskRight.removeEventListener('mouseout', midLampRightRemoveOutLis1)
@@ -1678,14 +1710,14 @@ export function monitorReturn() {
     delay: 0
   })
   anime({
-    targets: monitorLeft.querySelector('#radial-gradient stop'),
+    targets: monitorLeft.querySelector('#radial-gradient-left stop'),
     stopColor: "#c0ffd7",
     easing: 'easeOutCubic',
     duration: 1200,
     delay: 0
   })
   anime({
-    targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+    targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
     stopColor: "#c0ffd7",
     easing: 'easeOutCubic',
     duration: 1200,

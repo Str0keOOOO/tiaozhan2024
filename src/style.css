@@ -26,7 +26,6 @@ body {
   position: relative;
   color: white;
   font-size: 1.5625vw;
-  font-weight: bold;
   width: 59.84375vw;
   height: 22.31481481vh;
   top: 28vh;
@@ -37,6 +36,11 @@ body {
 @font-face {
   font-family: 'Alimama ShuHeiTi';
   src: url(./css/AlimamaShuHeiTi-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'YouYuan';
+  src: url(./css/YouYuan.ttf);
 }
 
 .sidebar-right a {

@@ -6,11 +6,6 @@ import { monitor } from './anime/monitor'
 import { toTop } from './anime/scrollToTop'
 import { draggable } from './anime/draggable'
 import { urlSet } from './anime/url'
-import fastclick from 'fastclick'
-
-document.onload = () => {
-  fastclick.FastClick.attach(document.body)
-}
 
 window.onbeforeunload = toTop
 document.onselectstart = function (el) { return (el.target as any).nodeType === Node.TEXT_NODE }

@@ -1,5 +1,6 @@
 import anime from "animejs"
 import { cogsShow, CogsShowmidUp } from "./cogsshow"
+import { handleClick } from "./isTouchDevice"
 
 let monitorMid: any
 let monitorLeft: any
@@ -235,7 +236,7 @@ function midLampRightRemoveOutLis2() {
 }
 
 function midUp(el: any) {
-  el.addEventListener('click', () => {
+  handleClick(el, () => {
     if (!midUpBool) {
       anime({
         targets: monitorMid,
@@ -435,7 +436,7 @@ function leftLampUpControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp1.addEventListener('click', () => {
+  handleClick(leftMaskUp1, () => {
     if (state2 == undefined) {
     } else {
     }
@@ -516,7 +517,7 @@ function leftLampUpControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp2.addEventListener('click', () => {
+  handleClick(leftMaskUp2, () => {
     if (state2 == undefined) {
     } else {
     }
@@ -597,7 +598,7 @@ function leftLampUpControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskUp3.addEventListener('click', () => {
+  handleClick(leftMaskUp3, () => {
     if (state2 == undefined) {
     } else {
     }
@@ -685,7 +686,7 @@ function leftLampDownControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskDown1.addEventListener('click', () => {
+  handleClick(leftMaskDown1, () => {
     if (state2 == undefined) {
     } else {
     }
@@ -766,7 +767,7 @@ function leftLampDownControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskDown2.addEventListener('click', () => {
+  handleClick(leftMaskDown2, () => {
     if (state2 == undefined) {
     } else {
     }
@@ -847,7 +848,7 @@ function leftLampDownControl() {
       circle.style.opacity = '0'
     })
   })
-  leftMaskDown3.addEventListener('click', () => {
+  handleClick(leftMaskDown3, () => {
     if (state2 == undefined) {
     } else {
     }
@@ -921,7 +922,7 @@ function leftLampDownControl() {
 }
 // 右边机器出来
 function rightMonitorshow(el: any) {
-  el.addEventListener('click', () => {
+  handleClick(el, () => {
     if (el == leftMaskUp1 || el == leftMaskUp2 || el == leftMaskUp3) {
       anime({
         targets: monitorMid,
@@ -1062,6 +1063,7 @@ function showLampCanvas() {
   // 变化状态
   Object.values(dict[state1]).forEach((el) => {
     el.addEventListener('click', showLampCanvasThen)
+    el.addEventListener('touchend', showLampCanvasThen)
   })
 }
 

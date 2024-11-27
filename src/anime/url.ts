@@ -52,4 +52,5 @@ export async function urlSet() {
     obj.parentNode?.removeChild(obj)
   }
 
+  document.body.classList.remove("set-opacity")
 }

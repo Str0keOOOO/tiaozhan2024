@@ -5,9 +5,9 @@ export function draggable() {
   monitorMid = document.querySelector('.monitor-mid') as any
   monitorLeft = document.querySelector('.monitor-left') as any
   monitorRight = document.querySelector('.monitor-right') as any
-  text1 = monitorMid.contentDocument.querySelectorAll('text')
-  text2 = monitorLeft.contentDocument.querySelectorAll('text')
-  text3 = monitorRight.contentDocument.querySelectorAll('text')
+  text1 = monitorMid.querySelectorAll('text')
+  text2 = monitorLeft.querySelectorAll('text')
+  text3 = monitorRight.querySelectorAll('text')
   text = [text1, text2]
   text.forEach((el) => {
     el.forEach(function (textElement: any) {

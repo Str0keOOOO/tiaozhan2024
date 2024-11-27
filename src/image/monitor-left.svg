@@ -8,7 +8,7 @@
         cursor: pointer;  
       }  
       #椭圆_19 {  
-        cursor: pointer;  
+        cursor: pointer;
       }  
       #椭圆_20 {  
         cursor: pointer;  
@@ -17,7 +17,7 @@
         -webkit-tap-highlight-color: transparent;
       }
     </style>  
-    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+    <linearGradient id="linear-gradient-left" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#b3a090"/>
       <stop offset="1" stop-color="#a9a19a"/>
     </linearGradient>
@@ -65,7 +65,7 @@
         <rect x="7.5" y="7.5" width="156" height="38" fill="none"/>
       </g>
     </g>
-    <path id="左显示器体" d="M2912.4,6339.6c-40.8,15.066-65.733,45.333-65.733,45.333v980.4h249.394s20.3,13.151,42.424-31.091S3159.6,7272,3159.6,7272V6339.6Z" transform="translate(-2773 -5205)" stroke="#92887f" stroke-width="14" fill="url(#linear-gradient)"/>
+    <path id="左显示器体" d="M2912.4,6339.6c-40.8,15.066-65.733,45.333-65.733,45.333v980.4h249.394s20.3,13.151,42.424-31.091S3159.6,7272,3159.6,7272V6339.6Z" transform="translate(-2773 -5205)" stroke="#92887f" stroke-width="14" fill="url(#linear-gradient-left)"/>
     <g id="显示器上纹路">
       <rect id="矩形_54" data-name="矩形 54" width="73" height="170" rx="27" transform="translate(268 1934)" fill="#d4cec4"/>
       <rect id="矩形_55" data-name="矩形 55" width="54" height="121" rx="27" transform="translate(116 1743)" fill="#d4cec4"/>
@@ -2704,27 +2704,27 @@
     </g>
     <g id="光下" transform="translate(173 1717)">
       <defs>
-        <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+        <radialGradient id="radial-gradient-left" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
           <stop offset="0" stop-color="#c0ffd7" stop-opacity="0.341"/>
           <stop offset="1" stop-color="#c0ffd7" stop-opacity="0"/>
         </radialGradient>
       </defs>
       <text id="部_门-3" data-name="部
 门" transform="translate(10 89)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">部</tspan><tspan x="0" y="117">门</tspan></text>
-      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient)" opacity="0"/>
-      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient)" opacity="0"/>
+      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient-left)" opacity="0"/>
+      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient-left)" opacity="0"/>
     </g>
     <g id="光上" transform="translate(173 1257)">
       <defs>
-        <radialGradient id="radial-gradient_1" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+        <radialGradient id="radial-gradient_1-left" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
           <stop offset="0" stop-color="#c0ffd7" stop-opacity="0.341"/>
           <stop offset="1" stop-color="#c0ffd7" stop-opacity="0"/>
         </radialGradient>
       </defs>
       <text id="历_程-3" data-name="历
     程" transform="translate(11 90)" fill="#c0ffd7" font-size="90" font-family="YouYuan"><tspan x="0" y="0">历</tspan><tspan x="0" y="117">程</tspan></text>
-      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient_1)" opacity="0"/>
-      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient_1)" opacity="0"/>
+      <circle id="椭圆_19" data-name="椭圆 19" cx="55.5" cy="55.5" r="55.5" fill="url(#radial-gradient_1-left)" opacity="0"/>
+      <circle id="椭圆_20" data-name="椭圆 20" cx="55.5" cy="55.5" r="55.5" transform="translate(0 122)" fill="url(#radial-gradient_1-left)" opacity="0"/>
     </g>
   </g>
 </svg>

@@ -1,8 +1,19 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Alimama ShuHeiTi';
   scrollbar-width: thin;
+}
+
+.sidebar-left {
+  font-family: 'Alimama ShuHeiTi';
+}
+
+.sidebar-right {
+  font-family: 'Alimama ShuHeiTi';
+}
+
+.mid-text {
+  font-family: 'Alimama ShuHeiTi';
 }
 
 body {

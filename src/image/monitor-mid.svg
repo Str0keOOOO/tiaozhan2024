@@ -8,18 +8,18 @@
         -webkit-tap-highlight-color: transparent;
       }
     </style>  
-    <clipPath id="clip-path">
+    <clipPath id="clip-path-mid">
       <rect id="显示屏" width="376.093" height="129" rx="30" transform="translate(645.907 1616)" fill="#24201c"/>
     </clipPath>
-    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+    <radialGradient id="radial-gradient-mid" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#b95fff"/>
       <stop offset="1" stop-color="#b95fff" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="radial-gradient-2" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+    <radialGradient id="radial-gradient-2-mid" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#0affe6"/>
       <stop offset="1" stop-color="#0affe6" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="radial-gradient-3" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
+    <radialGradient id="radial-gradient-3-mid" cx="0.5" cy="0.5" r="0.5" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#74ddff"/>
       <stop offset="1" stop-color="#74ddff" stop-opacity="0"/>
     </radialGradient>
@@ -108,7 +108,7 @@
       </g>
     </g>
 
-    <g class="真_显示屏" id="真_显示屏-1" data-name="真 显示屏" transform="translate(0 -8.125)" clip-path="url(#clip-path)" opacity="1">
+    <g class="真_显示屏" id="真_显示屏-1" data-name="真 显示屏" transform="translate(0 -8.125)" clip-path="url(#clip-path-mid)" opacity="1">
       <g id="内容" transform="translate(0 5)">
         <rect id="底" width="307" height="493" transform="translate(675.907 1266)" fill="#44413e"/>
         <g id="钢笔" transform="translate(724.808 1573.942)">
@@ -126,7 +126,7 @@
       </g>
     </g>
 
-    <g class="真_显示屏" id="真_显示屏-2" data-name="真 显示屏" transform="translate(0 -8.125)" clip-path="url(#clip-path)" opacity="1">
+    <g class="真_显示屏" id="真_显示屏-2" data-name="真 显示屏" transform="translate(0 -8.125)" clip-path="url(#clip-path-mid)" opacity="1">
       <g id="内容" transform="translate(0 5)">
         <rect id="底" width="307" height="493" transform="translate(675.907 1266)" fill="#44413e"/>
         <g id="表示_起" data-name="表示  起">
@@ -167,7 +167,7 @@
       </g>
     </g>
 
-    <g class="真_显示屏" id="真_显示屏-3" data-name="真 显示屏" transform="translate(0 -8.125)" clip-path="url(#clip-path)" opacity="1">
+    <g class="真_显示屏" id="真_显示屏-3" data-name="真 显示屏" transform="translate(0 -8.125)" clip-path="url(#clip-path-mid)" opacity="1">
       <g id="内容" transform="translate(0 5)">
         <rect id="底" width="307" height="493" transform="translate(675.907 1266)" fill="#44413e"/>
         <text id="美工部" transform="translate(731.648 1697.125)" fill="#74ddff" font-size="65" font-family="YouYuan"><tspan x="0" y="0">美工部</tspan></text>
@@ -1501,7 +1501,7 @@
             </g>
           </g>
         </g>
-        <ellipse id="光" cx="97" cy="104.5" rx="97" ry="104.5" transform="translate(-16.948 31.786)" opacity="0" fill="url(#radial-gradient)"/>
+        <ellipse id="光" cx="97" cy="104.5" rx="97" ry="104.5" transform="translate(-16.948 31.786)" opacity="0" fill="url(#radial-gradient-mid)"/>
       </g>
       <g id="灯中中" transform="translate(735.648 1260.214)">
         <path id="底座-3" data-name="底座" d="M190.107,1503.9l-12.863,14.667v18.867l-13.578,20h139.35l-13.828-20v-18.867L276.576,1503.9Z" transform="translate(-136.459 -1233.667)" fill="#d7cdba" opacity="0.71"/>
@@ -2775,7 +2775,7 @@
             </g>
           </g>
         </g>
-        <ellipse id="光" data-name="光" cx="97" cy="104.5" rx="97" ry="104.5" transform="translate(0 31.786)" opacity="0" fill="url(#radial-gradient-2)"/>
+        <ellipse id="光" data-name="光" cx="97" cy="104.5" rx="97" ry="104.5" transform="translate(0 31.786)" opacity="0" fill="url(#radial-gradient-2-mid)"/>
       </g>
       <g id="灯中左" transform="translate(559.593 1260.214)">
         <path id="底座-4" data-name="底座" d="M190.107,1503.9l-12.863,14.667v18.867l-13.578,20h139.35l-13.828-20v-18.867L276.576,1503.9Z" transform="translate(-152.26 -1233.667)" fill="#d7cdba" opacity="0.71"/>
@@ -4036,7 +4036,7 @@
             </g>
           </g>
         </g>
-        <ellipse id="光" data-name="光" cx="87.5" cy="104.5" rx="87.5" ry="104.5" transform="translate(-7.945 31.786)" opacity="0" fill="url(#radial-gradient-3)"/>
+        <ellipse id="光" data-name="光" cx="87.5" cy="104.5" rx="87.5" ry="104.5" transform="translate(-7.945 31.786)" opacity="0" fill="url(#radial-gradient-3-mid)"/>
       </g>
       <g id="上框架" transform="translate(0 0.975)">
         <path id="上框架-2" data-name="上框架" d="M3501.7,6913.5h-84l-25.05-46.85h-60.3l-15.56-16.411v-34.593h47.656l6.054,9.422v8.785h139.6v-8.785l4.552-9.422h37.915l7.282,9.422v8.785h142.333v-8.785l5.735-9.422h36.413l8.193,9.422v8.785h142.194v-8.785l5.143-9.422h60.676v34.593l-17.885,16.411h-67l-33.576,46.85h-89.552l-24.672-46.85h-204Z" transform="translate(-2798.093 -5272)" fill="#cbae88" stroke="#907863" stroke-width="6"/>

@@ -49,33 +49,33 @@ export function monitor() {
   monitorMid = document.querySelector('.monitor-mid') as any
   monitorLeft = document.querySelector('.monitor-left') as any
   monitorRight = document.querySelector('.monitor-right') as any
-  midLampMid = monitorMid.contentDocument.querySelector('#灯中中')
-  midLampLeft = monitorMid.contentDocument.querySelector('#灯中左')
-  midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
-  midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
-  midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
-  midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
-  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+  midLampMid = monitorMid.querySelector('#灯中中')
+  midLampLeft = monitorMid.querySelector('#灯中左')
+  midLampRight = monitorMid.querySelector('#灯中右')
+  midButtonReturn = monitorMid.querySelector('#返回键')
+  midButtonLeft = monitorMid.querySelector('#左按键')
+  midButtonRight = monitorMid.querySelector('#右按键')
+  midMaskMid = monitorMid.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.querySelectorAll('#光')[0] as any
   midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
   midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
-  monitorMidTop = monitorMid.contentDocument.querySelectorAll('.机器上')
-  monitorMidBottom = monitorMid.contentDocument.querySelectorAll('.机器下')
-  midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
-  midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
-  midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
-  leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
-  leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
-  leftMaskUp1 = monitorLeft.contentDocument.querySelector('#矩形_60')
-  leftMaskDown1 = monitorLeft.contentDocument.querySelector('#矩形_61')
+  monitorMidTop = monitorMid.querySelectorAll('.机器上')
+  monitorMidBottom = monitorMid.querySelectorAll('.机器下')
+  midCanvas1 = monitorMid.querySelector('#真_显示屏-1 #内容')
+  midCanvas2 = monitorMid.querySelector('#真_显示屏-2 #内容')
+  midCanvas3 = monitorMid.querySelector('#真_显示屏-3 #内容')
+  leftLampUp = monitorLeft.querySelector('#光上')
+  leftLampDown = monitorLeft.querySelector('#光下')
+  leftMaskUp1 = monitorLeft.querySelector('#矩形_60')
+  leftMaskDown1 = monitorLeft.querySelector('#矩形_61')
   leftMaskUp2 = leftLampUp.querySelector('#椭圆_19')
   leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
   leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
   leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
-  rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
-  rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
-  rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
+  rightCanvas2 = monitorRight.querySelector('#真_显示屏-1 #内容')
+  rightCanvas1 = monitorRight.querySelector('#真_显示屏-2 #内容')
+  rightFrameRight = monitorRight.querySelector('#右框架')
   dict = {
     licheng: [
       midMaskLeft,
@@ -591,14 +591,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      targets: monitorLeft.querySelector('#历_程-2'),
       fill: '#F44D33',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
       fill: '#F99360',
       stroke: '#F99360',
       easing: 'easeInOutCubic',
@@ -613,14 +613,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      targets: monitorLeft.querySelector('#部_门'),
       fill: '#91F8B6',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'easeInOutCubic',
@@ -628,14 +628,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -674,14 +674,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      targets: monitorLeft.querySelector('#历_程-2'),
       fill: '#F44D33',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
       fill: '#F99360',
       stroke: '#F99360',
       easing: 'easeInOutCubic',
@@ -696,14 +696,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      targets: monitorLeft.querySelector('#部_门'),
       fill: '#91F8B6',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'easeInOutCubic',
@@ -711,14 +711,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -757,14 +757,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      targets: monitorLeft.querySelector('#历_程-2'),
       fill: '#F44D33',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
       fill: '#F99360',
       stroke: '#F99360',
       easing: 'easeInOutCubic',
@@ -779,14 +779,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      targets: monitorLeft.querySelector('#部_门'),
       fill: '#91F8B6',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'easeInOutCubic',
@@ -794,14 +794,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -844,14 +844,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      targets: monitorLeft.querySelector('#部_门'),
       fill: '#F44D33',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
       fill: '#F99360',
       stroke: '#F99360',
       easing: 'easeInOutCubic',
@@ -866,14 +866,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      targets: monitorLeft.querySelector('#历_程-2'),
       fill: '#91F8B6',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'easeInOutCubic',
@@ -881,14 +881,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -927,14 +927,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      targets: monitorLeft.querySelector('#部_门'),
       fill: '#F44D33',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
       fill: '#F99360',
       stroke: '#F99360',
       easing: 'easeInOutCubic',
@@ -949,14 +949,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      targets: monitorLeft.querySelector('#历_程-2'),
       fill: '#91F8B6',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'easeInOutCubic',
@@ -964,14 +964,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -1010,14 +1010,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#部_门'),
+      targets: monitorLeft.querySelector('#部_门'),
       fill: '#F44D33',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
       fill: '#F99360',
       stroke: '#F99360',
       easing: 'easeInOutCubic',
@@ -1032,14 +1032,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+      targets: monitorLeft.querySelector('#历_程-2'),
       fill: '#91F8B6',
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+      targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
       fill: '#c0ffd7',
       stroke: '#c0ffd7',
       easing: 'easeInOutCubic',
@@ -1047,14 +1047,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -1180,7 +1180,7 @@ function rightMonitorshow(el: any) {
       delay: 0
     })
     anime({
-      targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
+      targets: [monitorRight.querySelector('#真_显示屏-1'), monitorRight.querySelector('#真_显示屏-2')],
       transform: "translate(10.067 11.867)",
       easing: 'easeOutCubic',
       duration: 1200,
@@ -1473,33 +1473,33 @@ export function monitorReturn() {
   monitorMid = document.querySelector('.monitor-mid') as any
   monitorLeft = document.querySelector('.monitor-left') as any
   monitorRight = document.querySelector('.monitor-right') as any
-  midLampMid = monitorMid.contentDocument.querySelector('#灯中中')
-  midLampLeft = monitorMid.contentDocument.querySelector('#灯中左')
-  midLampRight = monitorMid.contentDocument.querySelector('#灯中右')
-  midButtonReturn = monitorMid.contentDocument.querySelector('#返回键')
-  midButtonLeft = monitorMid.contentDocument.querySelector('#左按键')
-  midButtonRight = monitorMid.contentDocument.querySelector('#右按键')
-  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+  midLampMid = monitorMid.querySelector('#灯中中')
+  midLampLeft = monitorMid.querySelector('#灯中左')
+  midLampRight = monitorMid.querySelector('#灯中右')
+  midButtonReturn = monitorMid.querySelector('#返回键')
+  midButtonLeft = monitorMid.querySelector('#左按键')
+  midButtonRight = monitorMid.querySelector('#右按键')
+  midMaskMid = monitorMid.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.querySelectorAll('#光')[0] as any
   midLampMidLine = midLampMid.querySelectorAll('#技术部 line')
   midLampRightPath = midLampRight.querySelectorAll('#视频部 path')
-  monitorMidTop = monitorMid.contentDocument.querySelectorAll('.机器上')
-  monitorMidBottom = monitorMid.contentDocument.querySelectorAll('.机器下')
-  midCanvas1 = monitorMid.contentDocument.querySelector('#真_显示屏-1 #内容')
-  midCanvas2 = monitorMid.contentDocument.querySelector('#真_显示屏-2 #内容')
-  midCanvas3 = monitorMid.contentDocument.querySelector('#真_显示屏-3 #内容')
-  leftLampUp = monitorLeft.contentDocument.querySelector('#光上')
-  leftLampDown = monitorLeft.contentDocument.querySelector('#光下')
-  leftMaskUp1 = monitorLeft.contentDocument.querySelector('#矩形_60')
-  leftMaskDown1 = monitorLeft.contentDocument.querySelector('#矩形_61')
+  monitorMidTop = monitorMid.querySelectorAll('.机器上')
+  monitorMidBottom = monitorMid.querySelectorAll('.机器下')
+  midCanvas1 = monitorMid.querySelector('#真_显示屏-1 #内容')
+  midCanvas2 = monitorMid.querySelector('#真_显示屏-2 #内容')
+  midCanvas3 = monitorMid.querySelector('#真_显示屏-3 #内容')
+  leftLampUp = monitorLeft.querySelector('#光上')
+  leftLampDown = monitorLeft.querySelector('#光下')
+  leftMaskUp1 = monitorLeft.querySelector('#矩形_60')
+  leftMaskDown1 = monitorLeft.querySelector('#矩形_61')
   leftMaskUp2 = leftLampUp.querySelector('#椭圆_19')
   leftMaskDown2 = leftLampDown.querySelector('#椭圆_19')
   leftMaskUp3 = leftLampUp.querySelector('#椭圆_20')
   leftMaskDown3 = leftLampDown.querySelector('#椭圆_20')
-  rightCanvas2 = monitorRight.contentDocument.querySelector('#真_显示屏-1 #内容')
-  rightCanvas1 = monitorRight.contentDocument.querySelector('#真_显示屏-2 #内容')
-  rightFrameRight = monitorRight.contentDocument.querySelector('#右框架')
+  rightCanvas2 = monitorRight.querySelector('#真_显示屏-1 #内容')
+  rightCanvas1 = monitorRight.querySelector('#真_显示屏-2 #内容')
+  rightFrameRight = monitorRight.querySelector('#右框架')
   rightCanvas1.style.opacity = '0'
   rightCanvas2.style.opacity = '0'
   bgMask.style.background = 'linear-gradient(to top, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.64) 66%, transparent)'
@@ -1560,7 +1560,7 @@ export function monitorReturn() {
       delay: 0
     })
     anime({
-      targets: [monitorRight.contentDocument.querySelector('#真_显示屏-1'), monitorRight.contentDocument.querySelector('#真_显示屏-2')],
+      targets: [monitorRight.querySelector('#真_显示屏-1'), monitorRight.querySelector('#真_显示屏-2')],
       transform: "translate(6.067 10.867)",
       easing: 'easeOutCubic',
       duration: 1200,
@@ -1633,14 +1633,14 @@ export function monitorReturn() {
     delay: 0
   })
   anime({
-    targets: monitorLeft.contentDocument.querySelector('#部_门'),
+    targets: monitorLeft.querySelector('#部_门'),
     fill: '#91F8B6',
     easing: 'easeOutCubic',
     duration: 1200,
     delay: 0
   })
   anime({
-    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+    targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
     fill: '#c0ffd7',
     stroke: '#c0ffd7',
     easing: 'easeOutCubic',
@@ -1648,7 +1648,7 @@ export function monitorReturn() {
     delay: 0
   })
   anime({
-    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_20 path')), monitorLeft.contentDocument.querySelector('#路径_38')],
+    targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_20 path')), monitorLeft.querySelector('#路径_38')],
     fill: '#c0ffd7',
     stroke: '#c0ffd7',
     easing: 'easeOutCubic',
@@ -1663,14 +1663,14 @@ export function monitorReturn() {
     delay: 0
   })
   anime({
-    targets: monitorLeft.contentDocument.querySelector('#历_程-2'),
+    targets: monitorLeft.querySelector('#历_程-2'),
     fill: '#91F8B6',
     easing: 'easeOutCubic',
     duration: 1200,
     delay: 0
   })
   anime({
-    targets: [Array.prototype.slice.call(monitorLeft.contentDocument.querySelectorAll('#组_25 path')), monitorLeft.contentDocument.querySelector('#路径_37')],
+    targets: [Array.prototype.slice.call(monitorLeft.querySelectorAll('#组_25 path')), monitorLeft.querySelector('#路径_37')],
     fill: '#c0ffd7',
     stroke: '#c0ffd7',
     easing: 'easeOutCubic',
@@ -1678,14 +1678,14 @@ export function monitorReturn() {
     delay: 0
   })
   anime({
-    targets: monitorLeft.contentDocument.querySelector('#radial-gradient stop'),
+    targets: monitorLeft.querySelector('#radial-gradient stop'),
     stopColor: "#c0ffd7",
     easing: 'easeOutCubic',
     duration: 1200,
     delay: 0
   })
   anime({
-    targets: monitorLeft.contentDocument.querySelector('#radial-gradient_1 stop'),
+    targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
     stopColor: "#c0ffd7",
     easing: 'easeOutCubic',
     duration: 1200,

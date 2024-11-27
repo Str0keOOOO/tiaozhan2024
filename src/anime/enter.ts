@@ -25,10 +25,11 @@ export function enterAnime() {
   tiaozhan = document.querySelector('.tiaozhan') as any
   logo = document.querySelectorAll('.enter-logo') as any
   enterLogo = document.querySelector('#enter-logo') as any
-  jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
-  meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
-  meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
-  shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
+  jishuLine = Array.prototype.slice.call(logo[0].querySelectorAll('#line'))
+  meigongLine = Array.prototype.slice.call(logo[1].querySelectorAll('#line'))
+  meigongCircle = Array.prototype.slice.call(logo[1].querySelectorAll('#circle'))
+  shipingLine = Array.prototype.slice.call(logo[2].querySelectorAll('#line'))
+
   building = document.querySelector('.building') as any
   // 入场动画
   isEnter = true
@@ -462,15 +463,8 @@ function enterLogoAnimeBack() {
 
 function enterLogoAnimeover() {
   enterLogo.style.scale = '1.15'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#FFAB95'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#FFAB95'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#FFAB95'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[7].style.fill = '#FFAB95'
 }
+
 function enterLogoAnimeout() {
   enterLogo.style.scale = '1'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[1].style.fill = '#ff7958'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[3].style.fill = '#ff7958'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[5].style.fill = '#ff7958'
-  Array.prototype.slice.call(enterLogo.contentDocument.childNodes[0].childNodes)[7].style.fill = '#ff7958'
 }

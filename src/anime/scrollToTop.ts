@@ -104,7 +104,6 @@ export function enterlogoMask() {
     }
     resizeTimeout = setTimeout(() => {
       enterLogoMask.style.top = `${enterLogo.offsetTop}px`
-      console.log(enterLogo.offsetTop)
     }, 500)
   })
 }

@@ -17,8 +17,6 @@ document.onselectstart = function (el) { return (el.target as any).nodeType === 
 document.oncontextmenu = function () { return false }
 document.ondragstart = function () { return false }
 
-urlSet()
-
 let midBoolean = false;
 let leftBoolean = false;
 let rightBoolean = false;
@@ -32,7 +30,8 @@ let rightBoolean = false;
   rightBoolean = true
 }
 
-window.onload = function () {
+window.onload = async function () {
+  await urlSet()
   enterAnime()
   sidebar()
   draggable()

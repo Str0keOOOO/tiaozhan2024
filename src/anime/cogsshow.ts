@@ -11,18 +11,18 @@ export function cogsShow(state1: string, state2: any) {
   monitorMid = document.querySelector('.monitor-mid') as any
   monitorLeft = document.querySelector('.monitor-left') as any
   monitorRight = document.querySelector('.monitor-right') as any
-  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+  midMaskMid = monitorMid.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.querySelectorAll('#光')[0] as any
   cogsShowLeft(state1)
   cogsShowMid(state1, state2)
   cogsShowRight(state1, state2)
 }
 
 function cogsShowLeft(state1: string) {
-  let cogs1 = monitorLeft.contentDocument.querySelector('#齿轮')
-  let cogs2 = monitorLeft.contentDocument.querySelector('#设置_填充')
-  let cogs3 = monitorLeft.contentDocument.querySelector('#设置_填充-2')
+  let cogs1 = monitorLeft.querySelector('#齿轮')
+  let cogs2 = monitorLeft.querySelector('#设置_填充')
+  let cogs3 = monitorLeft.querySelector('#设置_填充-2')
   if (state1 == 'licheng') {
     anime({
       targets: cogs1,
@@ -93,16 +93,16 @@ function cogsShowLeft(state1: string) {
 }
 
 function cogsShowMid(state1: string, state2: any) {
-  let cogs1 = monitorMid.contentDocument.querySelector('#设置_填充')
-  let cogs2 = monitorMid.contentDocument.querySelector('#设置_填充-2')
-  let cogs3 = monitorMid.contentDocument.querySelector('#齿轮')
-  let cogs4 = monitorMid.contentDocument.querySelector('#齿轮-2')
-  let cogs5 = monitorMid.contentDocument.querySelector('#设置_填充-3')
-  let cogs6 = monitorMid.contentDocument.querySelector('#设置_填充-4')
-  let spring1 = monitorMid.contentDocument.querySelector('#弹簧')
-  let spring2 = monitorMid.contentDocument.querySelector('#弹簧-2')
-  let side1 = monitorMid.contentDocument.querySelector('#侧边装饰-4')
-  let side2 = monitorMid.contentDocument.querySelector('#侧边装饰-2')
+  let cogs1 = monitorMid.querySelector('#设置_填充')
+  let cogs2 = monitorMid.querySelector('#设置_填充-2')
+  let cogs3 = monitorMid.querySelector('#齿轮')
+  let cogs4 = monitorMid.querySelector('#齿轮-2')
+  let cogs5 = monitorMid.querySelector('#设置_填充-3')
+  let cogs6 = monitorMid.querySelector('#设置_填充-4')
+  let spring1 = monitorMid.querySelector('#弹簧')
+  let spring2 = monitorMid.querySelector('#弹簧-2')
+  let side1 = monitorMid.querySelector('#侧边装饰-4')
+  let side2 = monitorMid.querySelector('#侧边装饰-2')
   if (state1 == 'licheng' || state1 == 'bumen') {
     anime({
       targets: cogs1,
@@ -335,9 +335,9 @@ function cogsShowMid(state1: string, state2: any) {
 }
 
 function cogsShowRight(state1: string, state2: any) {
-  let cogs1 = monitorRight.contentDocument.querySelector('#齿轮')
-  let cogs2 = monitorRight.contentDocument.querySelector('#齿轮-2')
-  let sideCogs = [monitorRight.contentDocument.querySelector('#齿轮_侧面'), monitorRight.contentDocument.querySelector('#齿轮_侧面-2')]
+  let cogs1 = monitorRight.querySelector('#齿轮')
+  let cogs2 = monitorRight.querySelector('#齿轮-2')
+  let sideCogs = [monitorRight.querySelector('#齿轮_侧面'), monitorRight.querySelector('#齿轮_侧面-2')]
   if (state1 == "licheng") {
     if (state2 == midMaskLeft) {
       anime({

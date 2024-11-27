@@ -11,18 +11,18 @@ export function cogsShow(state1: string, state2: any) {
   monitorMid = document.querySelector('.monitor-mid') as any
   monitorLeft = document.querySelector('.monitor-left') as any
   monitorRight = document.querySelector('.monitor-right') as any
-  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
+  midMaskMid = monitorMid.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.querySelectorAll('#光')[0] as any
   cogsShowLeft(state1)
   cogsShowMid(state1, state2)
   cogsShowRight(state1, state2)
 }
 
 function cogsShowLeft(state1: string) {
-  let cogs1 = monitorLeft.contentDocument.querySelector('#齿轮')
-  let cogs2 = monitorLeft.contentDocument.querySelector('#设置_填充')
-  let cogs3 = monitorLeft.contentDocument.querySelector('#设置_填充-2')
+  let cogs1 = monitorLeft.querySelector('#齿轮')
+  let cogs2 = monitorLeft.querySelector('#设置_填充')
+  let cogs3 = monitorLeft.querySelector('#设置_填充-2')
   if (state1 == 'licheng') {
     anime({
       targets: cogs1,
@@ -93,12 +93,12 @@ function cogsShowLeft(state1: string) {
 }
 
 function cogsShowMid(state1: string, state2: any) {
-  let cogs1 = monitorMid.contentDocument.querySelector('#设置_填充')
-  let cogs3 = monitorMid.contentDocument.querySelector('#齿轮')
-  let cogs4 = monitorMid.contentDocument.querySelector('#齿轮-2')
-  let cogs5 = monitorMid.contentDocument.querySelector('#设置_填充-3')
-  let side1 = monitorMid.contentDocument.querySelector('#侧边装饰-4')
-  let side2 = monitorMid.contentDocument.querySelector('#侧边装饰-2')
+  let cogs1 = monitorMid.querySelector('#设置_填充')
+  let cogs3 = monitorMid.querySelector('#齿轮')
+  let cogs4 = monitorMid.querySelector('#齿轮-2')
+  let cogs5 = monitorMid.querySelector('#设置_填充-3')
+  let side1 = monitorMid.querySelector('#侧边装饰-4')
+  let side2 = monitorMid.querySelector('#侧边装饰-2')
   if (state1 == 'licheng') {
     anime({
       targets: cogs1,
@@ -268,11 +268,11 @@ function cogsShowMid(state1: string, state2: any) {
 }
 
 function cogsShowRight(state1: string, state2: any) {
-  let cogs1 = monitorRight.contentDocument.querySelector('#齿轮')
-  let cogs2 = monitorRight.contentDocument.querySelector('#齿轮-2')
-  let sideCogs = [monitorRight.contentDocument.querySelector('#齿轮_侧面'), monitorRight.contentDocument.querySelector('#齿轮_侧面-2')]
-  let frame = monitorRight.contentDocument.querySelector('#右框架 #左框架')
-  let motor = monitorRight.contentDocument.querySelector('#发动机')
+  let cogs1 = monitorRight.querySelector('#齿轮')
+  let cogs2 = monitorRight.querySelector('#齿轮-2')
+  let sideCogs = [monitorRight.querySelector('#齿轮_侧面'), monitorRight.querySelector('#齿轮_侧面-2')]
+  let frame = monitorRight.querySelector('#右框架 #左框架')
+  let motor = monitorRight.querySelector('#发动机')
   if (state1 == "licheng") {
     if (state2 == midMaskLeft) {
       anime({
@@ -480,11 +480,11 @@ export function CogsShowmidUp() {
   monitorMid = document.querySelector('.monitor-mid') as any
   monitorLeft = document.querySelector('.monitor-left') as any
   monitorRight = document.querySelector('.monitor-right') as any
-  midMaskMid = monitorMid.contentDocument.querySelectorAll('#光')[1] as any
-  midMaskLeft = monitorMid.contentDocument.querySelectorAll('#光')[2] as any
-  midMaskRight = monitorMid.contentDocument.querySelectorAll('#光')[0] as any
-  let cogs3 = monitorMid.contentDocument.querySelector('#齿轮')
-  let cogs4 = monitorMid.contentDocument.querySelector('#齿轮-2')
+  midMaskMid = monitorMid.querySelectorAll('#光')[1] as any
+  midMaskLeft = monitorMid.querySelectorAll('#光')[2] as any
+  midMaskRight = monitorMid.querySelectorAll('#光')[0] as any
+  let cogs3 = monitorMid.querySelector('#齿轮')
+  let cogs4 = monitorMid.querySelector('#齿轮-2')
   anime({
     targets: cogs3,
     transform: 'translate(1065.519 1796.04) rotate(-300)',
@@ -499,9 +499,9 @@ export function CogsShowmidUp() {
     duration: 1200,
     delay: 0
   })
-  let cogs1 = monitorLeft.contentDocument.querySelector('#齿轮')
-  let cogs2 = monitorLeft.contentDocument.querySelector('#设置_填充')
-  let cogs0 = monitorLeft.contentDocument.querySelector('#设置_填充-2')
+  let cogs1 = monitorLeft.querySelector('#齿轮')
+  let cogs2 = monitorLeft.querySelector('#设置_填充')
+  let cogs0 = monitorLeft.querySelector('#设置_填充-2')
   anime({
     targets: cogs1,
     transform: 'translate(243.542 1873.247) rotate(90)',

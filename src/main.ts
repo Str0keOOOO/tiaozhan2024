@@ -3,10 +3,14 @@ import './css/tailwind.css'
 import { enterAnime } from './anime/enter'
 import { sidebar } from './anime/sidebar'
 import { monitor } from './anime/monitor'
-import { toTop, scrollRun } from './anime/scrollToTop'
+import { toTop } from './anime/scrollToTop'
 import { draggable } from './anime/draggable'
 import { urlSet } from './anime/url'
+import fastclick from 'fastclick'
 
+document.onload = () => {
+  fastclick.FastClick.attach(document.body)
+}
 
 window.onbeforeunload = toTop
 document.onselectstart = function (el) { return (el.target as any).nodeType === Node.TEXT_NODE }
@@ -31,8 +35,7 @@ window.onload = async function () {
   await urlSet()
   enterAnime()
   sidebar()
-  draggable()
-  scrollRun();
+  draggable();
   (document.querySelector('.monitor-mid') as any).onload = () => {
     midBoolean = true
   }

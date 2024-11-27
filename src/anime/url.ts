@@ -37,12 +37,20 @@ export async function urlSet() {
   enterLogo[4].parentNode?.insertBefore(enterLogoStar, enterLogo[4])
   enterLogo[4].parentNode?.removeChild(enterLogo[4])
   enterLogoStar.id = temp_id
-
-  for(const obj of [enterLogo[0], enterLogo[1], enterLogo[2], monitorMid, monitorLeft, monitorRight]) {
-    const svgEle = await loadSvg(obj.data) as SVGElement
+  let svgList:Promise<SVGElement | null>[] = []
+  const objList = [enterLogo[0], enterLogo[1], enterLogo[2], monitorMid, monitorLeft, monitorRight]
+  for(const obj of objList) {
+    svgList.push(loadSvg(obj.data))
+    
+  }
+  for(const index in objList){
+    let obj = objList[index]
+    let svgElePromise = svgList[index]
+    const svgEle = <SVGElement>await svgElePromise
     svgEle.classList.add(...obj.classList)
     obj.parentNode?.insertBefore(svgEle, obj)
     obj.parentNode?.removeChild(obj)
   }
 
+  document.body.classList.remove("set-opacity")
 }

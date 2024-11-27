@@ -7,7 +7,6 @@
 body {
   overflow-x: hidden;
   overflow-y: hidden;
-  cursor: pointer;
   padding-right: 17px;
 }
 
@@ -62,12 +61,6 @@ body {
 .bg-mask {
   height: var(--max-height);
   background: rgba(0, 0, 0, 0.83)
-}
-
-body {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  cursor: pointer;
 }
 
 .title-anime {

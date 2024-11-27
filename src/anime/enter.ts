@@ -18,10 +18,10 @@ export async function enterAnime() {
   mail = document.querySelector('.mail') as any
   tiaozhan = document.querySelector('.tiaozhan') as any
   logo = document.querySelectorAll('.enter-logo') as any
-  jishuLine = Array.prototype.slice.call(logo[0].contentDocument.querySelectorAll('#line'))
-  meigongLine = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#line'))
-  meigongCircle = Array.prototype.slice.call(logo[1].contentDocument.querySelectorAll('#circle'))
-  shipingLine = Array.prototype.slice.call(logo[2].contentDocument.querySelectorAll('#line'))
+  jishuLine = Array.prototype.slice.call(logo[0].querySelectorAll('#line'))
+  meigongLine = Array.prototype.slice.call(logo[1].querySelectorAll('#line'))
+  meigongCircle = Array.prototype.slice.call(logo[1].querySelectorAll('#circle'))
+  shipingLine = Array.prototype.slice.call(logo[2].querySelectorAll('#line'))
   building = document.querySelector('.building') as any
   setTimeout(() => {
     bgAnime()

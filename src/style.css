@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Alimama ShuHeiTi';
   scrollbar-width: thin;
 }
 
@@ -15,7 +14,6 @@ body {
 .intro {
   color: white;
   font-size: 1rem;
-  font-weight: bold;
   width: 74vw;
   height: auto;
   margin-top: 24vw;
@@ -23,9 +21,26 @@ body {
   line-height: 1.5rem;
 }
 
+.sidebar-left {
+  font-family: 'Alimama ShuHeiTi';
+}
+
+.sidebar-right {
+  font-family: 'Alimama ShuHeiTi';
+}
+
+.mid-text {
+  font-family: 'Alimama ShuHeiTi';
+}
+
 @font-face {
   font-family: 'Alimama ShuHeiTi';
   src: url(./css/AlimamaShuHeiTi-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'YouYuan';
+  src: url(./css/YouYuan.ttf);
 }
 
 .sidebar-right a {

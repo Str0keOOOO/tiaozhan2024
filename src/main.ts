@@ -28,6 +28,7 @@ let rightBoolean = false;
 
 window.onload = async function () {
   await urlSet()
+  window.scrollTo({top: 0})
   enterAnime()
   sidebar()
   draggable();

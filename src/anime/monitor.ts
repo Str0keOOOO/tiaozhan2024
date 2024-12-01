@@ -276,7 +276,7 @@ function midUp(el: any) {
       CogsShowmidUp()
       midUpBool = true
       anime({
-        targets: [monitorRight.querySelector('#真_显示屏-1'), monitorRight.querySelector('#真_显示屏-2')],
+        targets: [monitorRight.querySelector('#真_显示屏-1'), monitorRight.querySelector('#真_显示屏-2'), monitorRight.querySelector('#真_显示屏')],
         transform: "translate(-32 11.867)",
         easing: 'easeOutCubic',
         duration: 1200,
@@ -488,14 +488,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#ff9747",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -569,14 +569,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#FF3E0F",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -650,14 +650,14 @@ function leftLampUpControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#FF3E0F",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -735,14 +735,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#FF3E0F",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -816,14 +816,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#FF3E0F",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,
@@ -897,14 +897,14 @@ function leftLampDownControl() {
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient stop'),
+      targets: monitorLeft.querySelector('#radial-gradient-left stop'),
       stopColor: "#FF3E0F",
       easing: 'easeInOutCubic',
       duration: 1200,
       delay: 0
     })
     anime({
-      targets: monitorLeft.querySelector('#radial-gradient_1 stop'),
+      targets: monitorLeft.querySelector('#radial-gradient_1-left stop'),
       stopColor: "#c0ffd7",
       easing: 'easeInOutCubic',
       duration: 1200,

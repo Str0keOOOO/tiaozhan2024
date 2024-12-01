@@ -54,3 +54,4 @@ export async function urlSet() {
 
   document.body.classList.remove("set-opacity")
 }
+

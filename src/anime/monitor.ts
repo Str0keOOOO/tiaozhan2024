@@ -276,7 +276,7 @@ function midUp(el: any) {
       CogsShowmidUp()
       midUpBool = true
       anime({
-        targets: [monitorRight.querySelector('#真_显示屏-1'), monitorRight.querySelector('#真_显示屏-2')],
+        targets: [monitorRight.querySelector('#真_显示屏-1'), monitorRight.querySelector('#真_显示屏-2'), monitorRight.querySelector('#真_显示屏')],
         transform: "translate(-32 11.867)",
         easing: 'easeOutCubic',
         duration: 1200,

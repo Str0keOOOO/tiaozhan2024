@@ -139,7 +139,7 @@ function logoColor() {
     targets: logo[3],
     translateY: [
       { value: '-2rem', easing: 'easeOutCubic', duration: 1000, delay: 0 },
-      { value: '-59.165vh', easing: 'linear', duration: 1, delay: 0 }
+      { value: '-56.165vh', easing: 'linear', duration: 1, delay: 0 }
     ],
     opacity: [
       { value: 0, easing: 'easeOutCubic', duration: 1000, delay: 0 },

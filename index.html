@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>挑战网首页</title>
+</head>
+
+<body>
+  <iframe src="./mobile/index.html" frameborder="0" title="app"></iframe>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    body, html {
+      overflow: hidden;
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
+  <script>
+    const iframe = document.querySelector("iframe");
+    function match() {
+      if (window.matchMedia("(max-aspect-ratio: 2/3)").matches) { // 手机端：横纵比小于2/3
+        if (!iframe.src.match("mobile")) {
+          iframe.src = "./mobile/index.html";
+        }
+      }
+      else if (window.matchMedia("(max-aspect-ratio: 11/9)").matches) { // 介于两者之间：横纵比大于2/3，小于11/9
+        if (!iframe.src.match("911223")) {
+          iframe.src = "./911223/index.html";
+        }
+      }
+      else { // 电脑端：横纵比大于11/9
+        if (!iframe.src.match("pc")) {
+          iframe.src = "./pc/index.html";
+        }
+      }
+    }
+    match();
+    window.addEventListener("resize", match);
+  </script>
+</body>
+
+</html>

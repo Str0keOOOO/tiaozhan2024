@@ -1,0 +1,46 @@
+name: Deploy to tiaozhan Pages
+
+on:
+  push:
+    branches:
+      - main
+      - mobile
+      - 911223
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy mobile branch
+        if: github.ref == 'refs/heads/mobile'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          target-folder: mobile
+
+      - name: Deploy 911223 branch
+        if: github.ref == 'refs/heads/911223'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          target-folder: 911223
+
+      - name: Deploy pc (main) branch
+        if: github.ref == 'refs/heads/main'
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
+          target-folder: pc

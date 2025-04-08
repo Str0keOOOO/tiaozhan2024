@@ -27,7 +27,7 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-          folder-path: mobile
+          target-folder: mobile
 
       - name: Deploy 911223 branch
         if: github.ref == 'refs/heads/911223'
@@ -35,7 +35,7 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-          folder-path: 911223
+          target-folder: 911223
 
       - name: Deploy pc (main) branch
         if: github.ref == 'refs/heads/main'
@@ -43,4 +43,4 @@ jobs:
         with:
           branch: gh-pages
           folder: dist
-          folder-path: pc
+          target-folder: pc

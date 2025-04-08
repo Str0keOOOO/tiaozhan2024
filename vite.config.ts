@@ -4,5 +4,5 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0
   },
-  base: '/mobile/',
+  base: 'tiaozhan2024/mobile/',
 })

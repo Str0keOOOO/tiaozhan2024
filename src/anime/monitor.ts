@@ -30,7 +30,7 @@ let rightCanvas: any
 // 记录状态
 let dict: { [key1: string]: any[] }
 let midUpBool: boolean = false
-let midButtonInitial: string
+let midButtonInitial: string = ''
 let midCanvasInt2: number = 120000000
 let midCanvasInt3: number = 120000000
 let state1: string

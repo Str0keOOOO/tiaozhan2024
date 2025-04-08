@@ -13,7 +13,7 @@ export function getScrollbarWidth() {
   outer.appendChild(inner)
   // 计算滚动条的宽度
   let scrollbarWidth = outer.offsetWidth - inner.offsetWidth
-  // 清理
+  // 清理滚动条
   outer.parentNode.removeChild(outer)
   return scrollbarWidth
 }

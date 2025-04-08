@@ -1,8 +1,8 @@
-// import { defineConfig } from 'vite'
+import { defineConfig } from 'vite'
 
-// export default defineConfig({
-//   build: {
-//     assetsInlineLimit: 0
-//   },
-//   base: '/pc/'
-// })
+export default defineConfig({
+  build: {
+    assetsInlineLimit: 0
+  },
+  // base: '/pc/'
+})

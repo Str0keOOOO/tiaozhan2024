@@ -4,5 +4,5 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0
   },
-  // base: '/pc/'
-})
+  base: '/tiaozhan2024/' // 替换为你的仓库名称
+});

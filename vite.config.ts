@@ -4,5 +4,5 @@ export default defineConfig({
   build: {
     assetsInlineLimit: 0
   },
-  base: '/tiaozhan2024/911223/',
+  base: '/911223/',
 })
